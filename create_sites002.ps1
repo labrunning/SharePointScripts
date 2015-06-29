@@ -23,7 +23,7 @@ $confirmation = Read-Host "Are you Sure You Want To Proceed: (press 'y' to proce
 if ($confirmation -eq 'y') {
     # Create each site in the list
     ForEach ($site in $SitesList) {
-        $SiteCollection = "https://devunishare.hud.ac.uk/"
+        $SiteCollection = "https://devunishare.hud.ac.uk/test/"
         $SiteURL = $SiteCollection + $site.URL
         New-SPWeb -Url $SiteURL -Name $site.Name -Description $site.Description -Template "BDR#0" -UniquePermissions | Out-Null
         $currentWeb = Get-SPWeb $SiteURL
@@ -33,9 +33,6 @@ if ($confirmation -eq 'y') {
         # Enable Tree View
         $currentWeb.TreeViewEnabled = "True"
         $currentWeb.Update()
-        # Enable site features
-        $myFeatures = @("DocumentRouting","Hold","WorkflowAppOnlyPolicyManager")
-        ForEach ($ft in $myFeatures) { Enable-SPFeature -Identity $ft -Url $currentWeb }
         Write-Host "Created site "$currentWeb.Title" at "$currentWeb.Url 
         $currentWeb.Dispose()
     }
