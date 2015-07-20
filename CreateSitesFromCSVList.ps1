@@ -40,9 +40,10 @@ if ($confirmation -eq 'y') {
         $culture=[System.Globalization.CultureInfo]::CreateSpecificCulture(“en-UK”) 
         $currentWeb.Locale=$culture 
         # Enable Tree View
-        $currentWeb.TreeViewEnabled = "True"
+        $currentWeb.TreeViewEnabled = $true
+        # turn off quick launch?
         $currentWeb.Update()
-        Write-Host "Created site "$currentWeb.Title" at "$currentWeb.Url 
+        Write-Host "Created site"$currentWeb.Title"at"$currentWeb.Url 
         $currentWeb.Dispose()
     }
 }
