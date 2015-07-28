@@ -1,11 +1,17 @@
-<# 
-Title: Create organizer rules from CSV list
-Author: Luke Brunning
-Category: SharePoint EDRMS Scripts
-Description
-This script takes a CSV file of organizer rules and makes them in a site
+<#
+.SYNOPSIS
+Sets Content Organizer Rules from a CSV file
+.DESCRIPTION
+This script will create a number of content organizer rules from a valid CSV file. See RuleTest001.csv for an example.
+.PARAMETER csv
+a valid CSV file with the rules
+.PARAMETER siteUrl
+a valid SharePoint Site Url where you want the rules to be created
+.EXAMPLE
+Set-ContentOrganizerRules.ps1 -csv .\RuleTest001.csv -siteUrl https://devunishare.hud.ac.uk/unifunctions/committees/University-Committees 
+.NOTES
+! ! WARNING ! ! Use this script with caution, there is no error checking. Do not run unless you are exactly sure you know what to expect
 #>
-
 Param(
     [string]$csv,
     [string]$siteUrl

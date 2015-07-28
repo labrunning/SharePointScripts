@@ -1,14 +1,18 @@
 <#
-Title: Create document libraries from CSV list
-Author: Luke Brunning
-Category: SharePoint EDRMS Scripts
-Description
-This script takes a CSV file of Titles and Descriptions and makes document libraries
+.SYNOPSIS
+Creates a number of document libraries from a CSV list
+.DESCRIPTION
+This script will create a number of document libraries from a valid CSV file which contains the titles and descriptions for each of the document libraries. There must be a title for each document library but there does not need to be a description.
+.PARAMETER url
+a valid SharePoint Site Url
+.PARAMETER csv
+a valid CSV file
+.EXAMPLE
+Set-DocumentLibraries.ps1 -url https://devunishare.hud.ac.uk/unifunctions/committees/University-Committees -csv .\DocLibList.csv
 #>
-
 param(
-    [string]$csv,
-    [string]$url
+    [string]$url,
+    [string]$csv
     )
 
 if(-not($csv)) { throw "You must enter a value for -csv"}

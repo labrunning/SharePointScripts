@@ -1,0 +1,678 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"write",
+				"write-debug"
+			],
+			[
+				"list",
+				"listName"
+			],
+			[
+				"Content",
+				"ContentTypeString"
+			],
+			[
+				"ru",
+				"rulesList"
+			],
+			[
+				"Con",
+				"Condition"
+			],
+			[
+				"user",
+				"userLogin"
+			],
+			[
+				"sp",
+				"spWeb"
+			],
+			[
+				"publi",
+				"publishing"
+			],
+			[
+				"Group",
+				"GroupBy"
+			],
+			[
+				"view",
+				"viewQuery"
+			],
+			[
+				"doc",
+				"docLibrary"
+			],
+			[
+				"content",
+				"contentTypeName"
+			],
+			[
+				"site",
+				"siteUrl"
+			],
+			[
+				"url",
+				"urlPath"
+			],
+			[
+				"Get-S",
+				"Get-SPFeature"
+			],
+			[
+				"spS",
+				"spSourceList"
+			],
+			[
+				"T",
+				"Title"
+			],
+			[
+				"my",
+				"myFeatures"
+			],
+			[
+				"Site",
+				"SiteCollection"
+			],
+			[
+				"Sites",
+				"SitesList"
+			],
+			[
+				"field",
+				"fields"
+			],
+			[
+				"date",
+				"DateCreated"
+			],
+			[
+				"Date",
+				"DateCreated"
+			],
+			[
+				"item",
+				"itemID"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Set-UniCommitteeName.ps1",
+			"settings":
+			{
+				"buffer_size": 3280,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Set-AllRecordsUndeclared.ps1",
+			"settings":
+			{
+				"buffer_size": 955,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "rein",
+		"selected_items":
+		[
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"i",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"comm",
+				"Toggle Comment"
+			],
+			[
+				"rein	",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"com",
+				"Toggle Comment"
+			],
+			[
+				"powers",
+				"SublimeREPL: PowerShell"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Comment block"
+			],
+			[
+				"snippet",
+				"Snippet: Comment block"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"pre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"previ",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"prev",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"mark",
+				"Markdown Preview: Export HTML in Sublime Text"
+			],
+			[
+				"in",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"markdown",
+				"Markdown Preview: Copy to Clipboard"
+			],
+			[
+				"fold",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"",
+				"ANF: New File"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 664.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"view.run_command(\"show_scope_name\")",
+			"show_scope_name",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts"
+	],
+	"file_history":
+	[
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/azlogin.ps1",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Azure.sublime-build",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/pwrshdesc.sublime-snippet",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Azure_Generic.sublime-build",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-UniCommitteeName.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/azupload.bat",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SetCommitteeNames.ps1",
+		"/A/scripts/docValues001.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/AddContentOrganizerRule.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-SPDocumentValues.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SetAllDefaulDocValues.ps1",
+		"/A/migrationLogs/proofOfConcept_7 27 2015 9-45-38 AM.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/migrationXML",
+		"/A/scripts/docValues.csv",
+		"/A/migrationLogs/proofOfConcept_7 27 2015 8-54-21 AM.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-SPItemValues.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-SPItemValues_LB.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/CreateListViews.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/AddContentOrganizerRulesFromCSV.ps1",
+		"/A/scripts/RuleTest001.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ChangeCreated.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/PublishTimerJobs.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/CreateSitesFromCSVList.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/CreateDocLibsFromCSVList.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SetDocLibDefaults.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Republish-HubContentTypes.ps1",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/Azure.sublime-build",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/DocLibList.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SiteListTest.csv",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/SideBarGit.sublime-settings",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/SideBarGit/SideBarGit.sublime-settings",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/C/Users/cmsxlb/OneDrive/SharePoint Scripts/create_sites002.ps1",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/cmsxlb/Dropbox/GitHub/README.md",
+		"/C/Users/cmsxlb/Dropbox/scripts/.git/config",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/A/scripts/AddContentType.ps1",
+		"/A/scripts/HS.csv",
+		"/A/scripts/Republish-HubContentTypes.ps1",
+		"/A/scripts/AddViewToLists.ps1",
+		"/A/scripts/CreateLibrariesFromCSV.ps1",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/sharepoint powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/edrms/Migration Log Checklist.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/Disable_Windows_Key_Hotkeys.reg",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/Enable_Windows_Key_Hotkeys.reg",
+		"/A/migrationLogs/proofOfConcept_7 16 2015 11-55-15 AM.xls",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/edrms/Test Migration Checklist.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/spdesign.bat",
+		"/A/scripts/Publish.ps1",
+		"/A/scripts/AddGroupedViewToLists.ps1",
+		"/A/scripts/RemoveContentType.ps1",
+		"/A/scripts/CreateSitesFromCSV.ps1",
+		"/A/scripts/EnableSideLoading.ps1",
+		"/A/scripts/Test_Uni_Com_Libs.csv",
+		"/A/scripts/GetCT.ps1",
+		"/A/scripts/Committees_Libraries.csv",
+		"/A/scripts/Committees.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/edrms/Audit Committee List.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/remotePowershell/RemotePowershell.taskpaper",
+		"/A/scripts/Functions.csv",
+		"/A/scripts/ContentOrganizerRule.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/GTD/Outgoing/Request.20150710141945340",
+		"/C/Users/cmsxlb/Dropbox/Work/win2GTD/Windows/Win2GTD.ini",
+		"/A/scripts/.git/config",
+		"/A/scripts/ActivatedSiteFeatures.ps1",
+		"/A/scripts/create_sites_comms002.ps1",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/Git.sublime-settings",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/Git/Git.sublime-settings",
+		"/A/scripts/Organizer_Example.cs",
+		"/A/scripts/create_libraries.ps1",
+		"/A/scripts/LibsList.csv",
+		"/C/Users/cmsxlb/Dropbox/scripts/azlog.ps1",
+		"/A/scripts/UploadFileInLibrary.ps1",
+		"/A/scripts/read_list.ps1",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/pwrshdesc.snippet",
+		"/D/Software/Cygwin/ssh-host-config_install_log.txt",
+		"/A/scripts/SiteCommitteesList.csv",
+		"//azspstfdapp1/d$/scripts/create_sites002.ps1",
+		"//nas01/staffhome/cmsxlb/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
+		"/K/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
+		"/C/Users/cmsxlb/Desktop/GitHubLog.txt",
+		"//azspstfdapp1/d$/scripts/create_sites.ps1",
+		"//azspstfdapp1/d$/create_sites.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/tmp/SiteFeatures.csv",
+		"//azspstfdapp1/d$/SiteListTest.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/tmp/SPWebTemplates.csv",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/sublime regex cheat sheet.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/huds uni open day.txt",
+		"/C/Users/cmsxlb/Dropbox/scripts/ad_names.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/tmp/SiteList.csv",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/powershell remoting onto server.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls awards/Awards Comments.html",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls awards/nominations.html",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls admin forms/CLS Admin Vehicle Hire Request Emails.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/EDRMS Structure.txt",
+		"//accra/d$/scripts/release_lock.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/tmp/cls homepage promoted links.html",
+		"/C/Users/cmsxlb/Dropbox/Work/tmp/Test.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/wisdom/Site Collection Features.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/Finalists Email.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls awards/Awards Finalists.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/work appraisals.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/tmp/CLSA-B-2015-06-09T15_18_58.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls admin forms/InfoPath End Dates Validation.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls awards/Awards Codes.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls awards/CLS Awards Voting Script.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/tmp/CLS Admin Forms Update 2015-05-20.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls admin forms/CLS Admin Alert Emails.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls admin forms/CLS Admin Forms - Building Fault Emails.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/Office Documents Do Not Open From SharePoint.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/training feedback form.txt",
+		"//devunishare.hud.ac.uk@SSL/DavWWWRoot/cls/PublishingImages/PromotedLinks/README.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/How to Resolve Problems with Office Docs in SharePoint.md",
+		"/C/Users/cmsxlb/AppData/Local/Temp/Temp1_SharePoint Office Documents.zip/SharePoint Office Documents/How to Resolve Problems with Office Docs in SharePoint.md",
+		"//unishare.hud.ac.uk@SSL/DavWWWRoot/cls/teams/admin/BuildingFaults/Forms/template.xml",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/azure useful links.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/hosts/sp2013.hosts",
+		"//vaduz/d$/SPLogs/2015-04-29.log",
+		"//southport/d$/scripts/MimeType.ps1",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/azure powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/user profile service.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/portalDevelopmentGroup/PortalPlus Development Group.md",
+		"/C/Users/cmsxlb/Desktop/2015-04-29-9-02.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/check a file lock on SharePoint.txt"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work\\project reference",
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work\\project reference,\\\\accra\\d$\\SPLogs",
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work\\project reference",
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work",
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\\$ct",
+			"$ct",
+			"siteUrl",
+			"item",
+			"map",
+			"\\$url",
+			"$url",
+			"snippet",
+			"publish",
+			"	",
+			"\\,",
+			"$\\,",
+			"\\[.*?,",
+			"].",
+			",.\\[",
+			", [",
+			"remote",
+			"content",
+			"stats",
+			"portal",
+			"startDate",
+			"endDate",
+			"portal",
+			"event",
+			"getevent",
+			"spevent",
+			"eventlog",
+			"algiers",
+			"shutdown",
+			"Identity",
+			"event",
+			"image",
+			"active directory",
+			"sql",
+			"ecb12360996c4d12b61886e30b8061f5",
+			"metadata",
+			"get-splogevent",
+			"sp-logevent",
+			"get-speventlog",
+			"powershell",
+			"hidden",
+			"--.*--",
+			"-.*-",
+			"metadata",
+			"solarized",
+			"get-speventlog",
+			"metadata",
+			"correlation",
+			"metadata",
+			"solarized",
+			"profile",
+			"timer",
+			"content timer",
+			"content",
+			"icon",
+			"get-splog",
+			"powershell",
+			"powershell remote",
+			"] (",
+			"remote",
+			"powershell",
+			"publishing",
+			"proxy",
+			"FieldLevelSecurityEventReceiver",
+			"credential",
+			"Portal",
+			"portal",
+			"printer",
+			"proxy",
+			"printer",
+			"proxy"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"\\$urlPath",
+			"$urlPath",
+			",",
+			"",
+			"]",
+			",[",
+			"CLSAHStartDate",
+			"CLSAHEndDate",
+			"",
+			"]("
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Set-UniCommitteeName.ps1",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3280,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								929,
+								881
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Set-AllRecordsUndeclared.ps1",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 955,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								401,
+								401
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 196.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 130.0
+	},
+	"pinned_build_system": "Packages/User/Azure.sublime-build",
+	"project": "Azure SharePoint EDRMS Scripts.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 266.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
