@@ -11,10 +11,10 @@ a valid SharePoint Site URL where you want all the sites creating
 .PARAMETER csv
 a valid CSV file with the information about the sites to be created
 .PARAMETER template
-a valid SharePoint Template code (default is BDR#0 which is a Document Centre )
+a valid SharePoint Template code (default is BDR#0 which is a Document Centre ); use Get-SPWebTemplate to see a full list
 .EXAMPLE
 An example of how the script can be used
-.NOTES
+.NOTESy
 Some notes about the script
 .LINK
 a cross-reference to another help topic; you can have more than one of these. If you include a URL beginning with http:// or https://, the shell will open that URL when the Help command’s –online parameter is used.
@@ -22,18 +22,16 @@ a cross-reference to another help topic; you can have more than one of these. If
 function New-SitesFromList {
     [CmdletBinding()]
         Param(
-        [Parameter(Mandatory=$true,Position=1)]
-        [alias("url")]
-        [string[]]
-        $urlPath,
-        [Parameter(Mandatory=$true,Position=2)]
-        [alias("csv")]
-        [string[]]
-        $csvFile,
-        [Parameter(Mandatory=$false,Position=3)]
-        [string]$SiteTemplate
+            [Parameter(Mandatory=$true,Position=1)]
+            [string]$urlPath,
+            [Parameter(Mandatory=$true,Position=2)]
+            [string]$csvFile,
+            [Parameter(Mandatory=$false,Position=3)]
+            [string]$SiteTemplate = "BDR#0"
         )
     
+    Write-Debug "Site template is $SiteTemplate"
+
     Write-Verbose -Message "Importing list of sites from $csv"
     $SitesFile = Import-Csv -Path "$csvFile"
     $SitesList = $SitesFile
@@ -42,10 +40,7 @@ function New-SitesFromList {
     $SitesList
     $ConfirmCreateSites = Read-Host "Are you Sure You Want To Proceed: (press 'y' to proceed)"
     
-    If ($SiteTemplate -eq $null) {
-        Write-Verbose "Site template parameter is blank, setting to Document Centre"
-        $SiteTemplate = "BDR#0"
-    }
+    Break
 
     If ($ConfirmCreateSites -eq 'y') {
         ForEach ($site in $SitesList) {
