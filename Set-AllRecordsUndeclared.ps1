@@ -13,24 +13,24 @@ Set-AllRecordsUndeclared -url https://devunishare.hud.ac.uk/unifunctions/univers
 .LINK
 http://www.mysharepointadventures.com/2012/06/undeclare-declare-all-some-records-in-a-list/
 #>
-function Set-AllRecordsUndeclared($url, $list) {
+function Set-AllRecordsUndeclared {
     [CmdletBinding()]
     Param(
       [Parameter(Mandatory=$True,Position=1)]
-       [string]$url,
-        
-       [Parameter(Mandatory=$True)]
-       [string]$list
+      [string]$url,
+      [Parameter(Mandatory=$True)]
+      [string]$list
     )
 
-    $web = Get-SPWeb $url
+    $SPAssignment = Start-SPAssignment
+    $web = Get-SPWeb $url -AssignmentCollection $spAssignment
     $list = $web.lists[$list].items
     foreach ($item in $list) {
         $IsRecord = [Microsoft.Office.RecordsManagement.RecordsRepository.Records]::IsRecord($Item)
         if ($IsRecord -eq $true) {
-            Write-Verbose "Undeclared $($item.Title)"
+            # Write-Verbose "Undeclared $($item.Title)"
             [Microsoft.Office.RecordsManagement.RecordsRepository.Records]::UndeclareItemAsRecord($Item)
         }
     }
-    $web.Dispose()
+    Stop-SPAssignment $SPAssignment
 }

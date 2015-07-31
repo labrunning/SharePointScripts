@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"Cont",
+				"ContentTypesToApply"
+			],
+			[
+				"For",
+				"ForEach"
+			],
+			[
+				"Content",
+				"ContentTypes"
+			],
+			[
+				"list",
+				"listname"
+			],
+			[
 				"Write",
 				"Write-Debug"
 			],
@@ -14,14 +30,6 @@
 			[
 				"write",
 				"write-debug"
-			],
-			[
-				"list",
-				"listName"
-			],
-			[
-				"Content",
-				"ContentTypeString"
 			],
 			[
 				"ru",
@@ -111,38 +119,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "New-SitesFromList.ps1",
-			"settings":
-			{
-				"buffer_size": 2377,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Get-SPDocumentValues.ps1",
-			"settings":
-			{
-				"buffer_size": 1446,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Azure.sublime-build",
-			"settings":
-			{
-				"buffer_size": 33,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Azure_Generic.sublime-build",
-			"settings":
-			{
-				"buffer_size": 78,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -295,16 +271,33 @@
 	],
 	"file_history":
 	[
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPDocumentLibraries.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/ComputingServicesShareddocuments.webpart",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Undeclare.ps1",
+		"//accra/d$/scripts/Get-SiteGUID.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/README.md",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-AllRecordsUndeclared.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-LibraryDeleteTrue.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/Computing Services Shared documents.webpart",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/Web Part Page Title Bar.dwp",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CSSharedDocuments.webpart",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLSDocs.dwp",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/UHSCSite.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPDocumentValues.ps1",
+		"//accra/d$/scripts/Get-HUSPDocumentValues.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-DocumentLibraries.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-SPItemValues.ps1",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-SitesFromList.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-SPDocumentValues.ps1",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Azure.sublime-build",
 		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Azure_Generic.sublime-build",
 		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/psparam.sublime-snippet",
 		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/pwrshdesc.sublime-snippet",
-		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Del.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-LibraryDeleteTrue.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-Messages.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-UniCommitteeName.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-AllRecordsUndeclared.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-ContentOrganizerRules.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-DocumentLibraries.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-ListViews.ps1",
@@ -313,18 +306,15 @@
 		"/C/Users/cmsxlb/Dropbox/scripts/work_backup.bat",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Enter-AzureAppServer.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/azlogin.ps1",
-		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Azure.sublime-build",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/azupload.bat",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SetCommitteeNames.ps1",
 		"/A/scripts/docValues001.csv",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/AddContentOrganizerRule.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-SPDocumentValues.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SetAllDefaulDocValues.ps1",
 		"/A/migrationLogs/proofOfConcept_7 27 2015 9-45-38 AM.xml",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/migrationXML",
 		"/A/scripts/docValues.csv",
 		"/A/migrationLogs/proofOfConcept_7 27 2015 8-54-21 AM.xml",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-SPItemValues.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-SPItemValues_LB.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/CreateListViews.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/AddContentOrganizerRulesFromCSV.ps1",
@@ -408,21 +398,7 @@
 		"/C/Users/cmsxlb/Dropbox/Work/tmp/cls homepage promoted links.html",
 		"/C/Users/cmsxlb/Dropbox/Work/tmp/Test.txt",
 		"/C/Users/cmsxlb/Dropbox/Work/project reference/wisdom/Site Collection Features.txt",
-		"/C/Users/cmsxlb/Dropbox/Apps/Notes/Finalists Email.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls awards/Awards Finalists.txt",
-		"/C/Users/cmsxlb/Dropbox/Apps/Notes/work appraisals.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/tmp/CLSA-B-2015-06-09T15_18_58.xml",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls admin forms/InfoPath End Dates Validation.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls awards/Awards Codes.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls awards/CLS Awards Voting Script.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/tmp/CLS Admin Forms Update 2015-05-20.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls admin forms/CLS Admin Alert Emails.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls admin forms/CLS Admin Forms - Building Fault Emails.txt",
-		"/C/Users/cmsxlb/Dropbox/Apps/Notes/Office Documents Do Not Open From SharePoint.txt",
-		"/C/Users/cmsxlb/Dropbox/Apps/Notes/training feedback form.txt",
-		"//devunishare.hud.ac.uk@SSL/DavWWWRoot/cls/PublishingImages/PromotedLinks/README.txt",
-		"/C/Users/cmsxlb/Dropbox/Apps/Notes/How to Resolve Problems with Office Docs in SharePoint.md",
-		"/C/Users/cmsxlb/AppData/Local/Temp/Temp1_SharePoint Office Documents.zip/SharePoint Office Documents/How to Resolve Problems with Office Docs in SharePoint.md"
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/Finalists Email.txt"
 	],
 	"find":
 	{
@@ -446,6 +422,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"%2D",
+			"Title",
 			"\\$ct",
 			"$ct",
 			"siteUrl",
@@ -524,6 +502,8 @@
 		"regex": true,
 		"replace_history":
 		[
+			"-",
+			"FileName",
 			"\\$urlPath",
 			"$urlPath",
 			",",
@@ -544,132 +524,13 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "New-SitesFromList.ps1",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2377,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								521,
-								521
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Get-SPDocumentValues.ps1",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1446,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								811,
-								811
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 60.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Azure.sublime-build",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 33,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		},
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 3,
-					"file": "/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Azure_Generic.sublime-build",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 78,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								75,
-								75
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -692,21 +553,21 @@
 				1
 			],
 			[
-				1,
 				0,
-				2,
-				1
+				1,
+				1,
+				2
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
+			0.5,
 			1.0
 		]
 	},
@@ -723,11 +584,11 @@
 	{
 		"height": 130.0
 	},
-	"pinned_build_system": "Packages/User/Azure_Generic.sublime-build",
+	"pinned_build_system": "Packages/User/Azure.sublime-build",
 	"project": "Azure SharePoint EDRMS Scripts.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 66.0
 	},
 	"save_all_on_build": true,
 	"select_file":

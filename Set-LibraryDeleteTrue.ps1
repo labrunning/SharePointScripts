@@ -11,10 +11,17 @@ a valid SharePoint list name
 Set-LibraryDeleteTrue -url https://devunishare.hud.ac.uk/unifunctions/committees/University-Committees -list 'University Health and Safety Committee'
 #>
 
-function Set-LibraryDeleteTrue($url, $list) {
+function Set-LibraryDeleteTrue {
+    [CmdletBinding()]
+    Param(
+        [Parameter(Mandatory=$true,Position=1)]
+        [string]$url,
+        [Parameter(Mandatory=$true,Position=2)]
+        [string]$list
+    )
     $web = Get-SPWeb $url
-    $list = $web.Lists[$list]
-    $list.AllowDeletion = $true
-    $list.Update()
+    $doclist = $web.Lists[$list]
+    $doclist.AllowDeletion = $true
+    $doclist.Update()
     $web.Dispose()
 }
