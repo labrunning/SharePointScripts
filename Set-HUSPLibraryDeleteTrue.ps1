@@ -11,7 +11,7 @@ a valid SharePoint list name
 Set-LibraryDeleteTrue -url https://devunishare.hud.ac.uk/unifunctions/committees/University-Committees -list 'University Health and Safety Committee'
 #>
 
-function Set-LibraryDeleteTrue {
+function Set-HUSPLibraryDeleteTrue {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$true,Position=1)]

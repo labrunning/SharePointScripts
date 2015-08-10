@@ -6,41 +6,39 @@ This script republishes all published content types from the specified content t
 .PARAMETER CTHubURL
 a valid content type hub url
 .EXAMPLE
-Republish-HubContentTypes -CTHubURL 'https://devunishare.hud.ac.uk/sites/ct'
+Invoke-HUSPRepublishContentTypes -CTHubURL 'https://devunishare.hud.ac.uk/sites/ct'
 #>
-function Republish-HubContentTypes ($CTHubURL)
+function Invoke-HUSPRepublishContentTypes
 {
-    #Get Content Type site and web objects
+    [CmdletBinding()]
+    Param(
+        [Parameter(Mandatory=$true,Position=1)]
+        [string]$CTHubURL
+    )
+        
     $ctHubSite = Get-SPSite $CTHubURL
     $ctHubWeb = $ctHubSite.RootWeb
 
-    #Check the site is a content type hub
     if ([Microsoft.SharePoint.Taxonomy.ContentTypeSync.ContentTypePublisher]::IsContentTypeSharingEnabled($ctHubSite))
     {
-        #Set up ContentTypePublisher object to allow publishing through the Content Type Hub site
         $spCTPublish = New-Object Microsoft.SharePoint.Taxonomy.ContentTypeSync.ContentTypePublisher ($ctHubSite)
-        
-        #Step through each content type in the content type hub
         $ctHubWeb.ContentTypes | Sort-Object Name | ForEach-Object {
-            
-            #Has the content type been published?
+            $CurrentContentType = $_.Name
             if ($spCTPublish.IsPublished($_))
             {
-                #Republish content type
                 $spCTPublish.Publish($_)
-                write-host "Content type" $_.Name "has been republished" -foregroundcolor Green
+                write-verbose "*** Content type $CurrentContentType has been republished ***"
             }
             else
             {
-                write-host "Content type" $_.Name "is not a published content type"
+                write-verbose "Content type $CurrentContentType is not a published content type"
             }
         }
     }
     else
     {
-        write-host $CTHubURL "is not a content type hub site"
+        write-verbose "$CTHubURL is not a content type hub site"
     }
-    #Dispose of site and web objects
     $ctHubWeb.Dispose()
     $ctHubSite.Dispose()
 }

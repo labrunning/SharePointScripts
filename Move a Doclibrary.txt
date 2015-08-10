@@ -1,0 +1,5 @@
+$spWeb = Get-SPWeb https://unishare.hud.ac.uk/uniwide/bss; $spWeb | Export-SPWeb -Path ./bss_site.cmp -IncludeUserSecurity -IncludeVersions All -NoFileCompression; $spWeb.Dispose()
+
+New-SPWeb "https://unishare.hud.ac.uk/hhs/bss" -Name "Behavioural & Social Sciences" -Template "STS#0"
+
+Import-SPWeb "https://unishare.hud.ac.uk/hhs/bss" -path "D:\moves\bss_site.cmp"

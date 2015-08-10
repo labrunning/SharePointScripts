@@ -8,7 +8,7 @@ Set-PublishJobs
 .NOTES
 Even though this job runs the Content Type Publishing jobs immediately the effects of changes to content types can still take a while to appear in sites.
 #>
-function Set-PublishJobs {
+function Invoke-HUSPPublishJobs {
     Write-Verbose 'Running CT Publishing Timer Job...'
     Get-SPTimerJob MetadataHubTimerJob | Start-SPTimerJob
     Write-Verbose 'Running CT Subscriber Timer Job...'

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"doc",
+				"docLib"
+			],
+			[
 				"Cont",
 				"ContentTypesToApply"
 			],
@@ -58,10 +62,6 @@
 			[
 				"view",
 				"viewQuery"
-			],
-			[
-				"doc",
-				"docLibrary"
 			],
 			[
 				"content",
@@ -119,6 +119,40 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "$spWeb = Get-SPWeb https://unishare.hud.ac.uk/uniwide/bss; $spWeb | Export-SPWeb -Path ./bss_site.cmp -IncludeUserSecurity -IncludeVersions All -NoFileCompression; $spWeb.Dispose()\n\nNew-SPWeb \"https://unishare.hud.ac.uk/hhs/bss\" -Name \"Behavioural & Social Sciences\" -Template \"STS#0\"\n\nImport-SPWeb \"https://unishare.hud.ac.uk/hhs/bss\" -path \"D:\\moves\\bss_site.cmp\"\n",
+			"settings":
+			{
+				"buffer_size": 366,
+				"line_ending": "Windows",
+				"name": "$spWeb = Get-SPWeb https://unishare.hud.ac.uk/uniw"
+			}
+		},
+		{
+			"file": "New-HUSPContentOrganizerRules.ps1",
+			"settings":
+			{
+				"buffer_size": 2981,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Undeclare.ps1",
+			"settings":
+			{
+				"buffer_size": 579,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "A56D3FB2-20FD-4D2D-965A-C03EE41FFE28\n\nhttps://unishare.hud.ac.uk/cls/_vti_bin/exportwp.aspx?pageurl=https://unishare.hud.ac.uk/cls/teams/it/SitePages/Home.aspx&guidstring=A56D3FB2-20FD-4D2D-965A-C03EE41FFE28\n\nhttps://unishare.hud.ac.uk/cls/_vti_bin/exportwp.aspx?pageurl=https://unishare.hud.ac.uk/cls/SitePages/TestWebParts.aspx&guidstring=D3AB8FD9-F4F2-4058-8D18-DCF36D1C744A",
+			"settings":
+			{
+				"buffer_size": 377,
+				"line_ending": "Windows",
+				"name": "A56D3FB2-20FD-4D2D-965A-C03EE41FFE28"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -271,10 +305,38 @@
 	],
 	"file_history":
 	[
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPDocumentLibraries.ps1",
+		"/C/findhotkey.vbs",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/1_ Staff Management.webpart",
+		"//accra/d$/scripts/Get-HUSPSiteGUIDs.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/wktmp/ComputingServicesShareddocuments.webpart",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Undeclare.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPDocumentValues.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/clsAwards.js",
+		"//accra/d$/moves/bss_site.cmp.export.log",
+		"//accra/d$/moves/bss.cmp.export.log",
 		"//accra/d$/scripts/Get-SiteGUID.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPListViews.ps1",
+		"/C/Users/cmsxlb/Scripts/Enter-HUSPAppServer.ps1",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/SharePoint - How to Export a Web Part of an App",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CSSD.webpart",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPCreatedDetails.ps1",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Azure_Generic.sublime-build",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Markdown to DOCX.sublime-build",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/psparam.sublime-snippet",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPRecordsUndeclared.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Undeclare.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPPublishJobs.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPLibraryDeleteTrue.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDocumentLibraryDefaults.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDefaulValues.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPUniCommitteeName.ps1",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/pwrshdesc.sublime-snippet",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ListTestingMassSiteCreation.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPSitesFromList.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Invoke-HUSPRepublishContentTypes.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ListSites.csv",
+		"/C/Users/cmsxlb/Documents/Enter-HUAzureAppServer.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPDocumentLibraries.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/README.md",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-AllRecordsUndeclared.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-LibraryDeleteTrue.ps1",
@@ -283,7 +345,6 @@
 		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CSSharedDocuments.webpart",
 		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLSDocs.dwp",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/UHSCSite.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPDocumentValues.ps1",
 		"//accra/d$/scripts/Get-HUSPDocumentValues.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-DocumentLibraries.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-SPItemValues.ps1",
@@ -291,9 +352,6 @@
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-SitesFromList.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-SPDocumentValues.ps1",
 		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Azure.sublime-build",
-		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Azure_Generic.sublime-build",
-		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/psparam.sublime-snippet",
-		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/pwrshdesc.sublime-snippet",
 		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Del.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-Messages.ps1",
@@ -374,31 +432,7 @@
 		"/A/scripts/read_list.ps1",
 		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/pwrshdesc.snippet",
 		"/D/Software/Cygwin/ssh-host-config_install_log.txt",
-		"/A/scripts/SiteCommitteesList.csv",
-		"//azspstfdapp1/d$/scripts/create_sites002.ps1",
-		"//nas01/staffhome/cmsxlb/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
-		"/K/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
-		"/C/Users/cmsxlb/Desktop/GitHubLog.txt",
-		"//azspstfdapp1/d$/scripts/create_sites.ps1",
-		"//azspstfdapp1/d$/create_sites.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/tmp/SiteFeatures.csv",
-		"//azspstfdapp1/d$/SiteListTest.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/tmp/SPWebTemplates.csv",
-		"/C/Users/cmsxlb/Dropbox/Apps/Notes/sublime regex cheat sheet.txt",
-		"/C/Users/cmsxlb/Dropbox/Apps/Notes/huds uni open day.txt",
-		"/C/Users/cmsxlb/Dropbox/scripts/ad_names.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/tmp/SiteList.csv",
-		"/C/Users/cmsxlb/Dropbox/Apps/Notes/powershell.txt",
-		"/C/Users/cmsxlb/Dropbox/Apps/Notes/powershell remoting onto server.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls awards/Awards Comments.html",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls awards/nominations.html",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls admin forms/CLS Admin Vehicle Hire Request Emails.txt",
-		"/C/Users/cmsxlb/Dropbox/Apps/Notes/EDRMS Structure.txt",
-		"//accra/d$/scripts/release_lock.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/tmp/cls homepage promoted links.html",
-		"/C/Users/cmsxlb/Dropbox/Work/tmp/Test.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/wisdom/Site Collection Features.txt",
-		"/C/Users/cmsxlb/Dropbox/Apps/Notes/Finalists Email.txt"
+		"/A/scripts/SiteCommitteesList.csv"
 	],
 	"find":
 	{
@@ -422,6 +456,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"uk",
+			"Dispose()\n",
+			"uk",
+			"Behavioural",
+			"Social",
+			"Sciences",
+			"Import-SPWeb \"https://unishare.hud.ac.uk/hhs/bss\" -path \"D:\\moves\\bss_site.cmp\"\n",
+			"Import-SPWeb \"https://unishare.hud.ac.uk/hhs/bss\" -path \"D:\\moves\\bss_site.cmp\"",
+			"New-SPWeb \"https://unishare.hud.ac.uk/hhs/bss\" -Name \"Behavioural & Social Sciences\" -Template \"STS#0\"",
+			"$spWeb = Get-SPWeb https://unishare.hud.ac.uk/uniwide/bss; $spWeb | Export-SPWeb -Path ./bss_site.cmp -IncludeUserSecurity -IncludeVersions All -NoFileCompression; $spWeb.Dispose()",
+			"WPQ3",
+			"DivWPQ3",
+			"ribbonrow",
+			"#s4-ribbonrow",
+			"powershell",
+			"listName",
+			"urlPath",
 			"%2D",
 			"Title",
 			"\\$ct",
@@ -502,6 +553,8 @@
 		"regex": true,
 		"replace_history":
 		[
+			"list",
+			"url",
 			"-",
 			"FileName",
 			"\\$urlPath",
@@ -524,13 +577,125 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
-			]
-		},
-		{
-			"sheets":
-			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								366,
+								366
+							]
+						],
+						"settings":
+						{
+							"auto_name": "$spWeb = Get-SPWeb https://unishare.hud.ac.uk/uniw",
+							"default_dir": "C:\\Users\\cmsxlb\\Dropbox\\Work\\SharePointScripts",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "New-HUSPContentOrganizerRules.ps1",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2981,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								858,
+								868
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Undeclare.ps1",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 579,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								579,
+								579
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 377,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								377,
+								209
+							]
+						],
+						"settings":
+						{
+							"auto_name": "A56D3FB2-20FD-4D2D-965A-C03EE41FFE28",
+							"default_dir": "C:\\Users\\cmsxlb\\Dropbox\\Work\\SharePointScripts",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -551,12 +716,6 @@
 				0,
 				1,
 				1
-			],
-			[
-				0,
-				1,
-				1,
-				2
 			]
 		],
 		"cols":
@@ -567,7 +726,6 @@
 		"rows":
 		[
 			0.0,
-			0.5,
 			1.0
 		]
 	},
@@ -584,7 +742,7 @@
 	{
 		"height": 130.0
 	},
-	"pinned_build_system": "Packages/User/Azure.sublime-build",
+	"pinned_build_system": "Packages/User/Azure_Generic.sublime-build",
 	"project": "Azure SharePoint EDRMS Scripts.sublime-project",
 	"replace":
 	{
@@ -597,17 +755,29 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"organi",
+				"New-HUSPContentOrganizerRules.ps1"
+			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 0.0,
-		"last_filter": "",
+		"height": 500.0,
+		"last_filter": "jou",
 		"selected_items":
 		[
+			[
+				"jou",
+				"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Sublime\\User\\journal.sublime-project"
+			],
+			[
+				"",
+				"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Sublime\\User\\notes(Windows).sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
@@ -621,6 +791,15 @@
 	"selected_group": 0,
 	"settings":
 	{
+		"last_automatic_layout":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		]
 	},
 	"show_minimap": true,
 	"show_open_files": false,
