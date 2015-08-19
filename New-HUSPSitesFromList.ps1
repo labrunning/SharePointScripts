@@ -10,25 +10,26 @@
     a valid SharePoint Site URL where you want all the sites creating
     .PARAMETER csv
     a valid CSV file with the information about the sites to be created
-    .PARAMETER template
-    a valid SharePoint Template code (default is BDR#0 which is a Document Centre ); use Get-SPWebTemplate to see a full list
+    .PARAMETER st
+    a valid SharePoint Site Template code (default is BDR#0 which is a Document Centre ); use Get-SPWebTemplate to see a full list
     .EXAMPLE
     An example of how the script can be used
     .NOTES
     When the sites are created, they are set to UK regional settings and Tree View is enabled. If you do not specify a template, the default will be used.
 #>
+
 function New-HUSPSitesFromList {
     [CmdletBinding()]
-        Param(
-            [Parameter(Mandatory=$true,Position=1)]
-            [string]$url,
-            [Parameter(Mandatory=$true,Position=2)]
-            [string]$csv,
-            [Parameter(Mandatory=$false,Position=3)]
-            [string]$temp = "BDR#0"
-        )
+    Param(
+        [Parameter(Mandatory=$true,Position=1)]
+        [string]$url,
+        [Parameter(Mandatory=$true,Position=2)]
+        [string]$csv,
+        [Parameter(Mandatory=$false,Position=3)]
+        [string]$st = "BDR#0"
+    )
     
-    Write-Debug "Site template is $temp"
+    Write-Debug "Site template is $st"
 
     Write-Verbose -Message "Importing list of sites from $csv"
     $SitesList = Import-Csv -Path "$csv"
@@ -41,8 +42,8 @@ function New-HUSPSitesFromList {
         ForEach ($site in $SitesList) {
             $SiteCollection = "$url"
             $SiteURL = $SiteCollection.TrimEnd("/") + "/" + $site.URL
-            Write-Debug "Creating $SiteURL..."
-            New-SPWeb -Url $SiteURL -Name $site.Name -Description $site.Description -Template $temp -UniquePermissions | Out-Null
+            Write-Verbose "Creating $SiteURL..."
+            New-SPWeb -Url $SiteURL -Name $site.Name -Description $site.Description -Template $st -UniquePermissions | Out-Null
             $currentWeb = Get-SPWeb $SiteURL
             Write-Verbose -Message 'Set the locale to en-UK'
             $culture=[System.Globalization.CultureInfo]::CreateSpecificCulture(“en-UK”) 
@@ -50,7 +51,7 @@ function New-HUSPSitesFromList {
             Write-Verbose -Message 'Enabling Tree View...'
             $currentWeb.TreeViewEnabled = $true
             $currentWeb.Update()
-            Write-Debug -Message "Created site $SiteURL"
+            Write-Verbose -Message "Created site $SiteURL"
             $currentWeb.Dispose()
         }
     }
