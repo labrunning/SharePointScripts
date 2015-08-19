@@ -25,9 +25,9 @@ function Set-HUSPRecordsUndeclared {
     $SPWeb = Get-SPWeb $url
     $SPList = $SPWeb.Lists[$list]
     $SPListItems = $SPList.Items
-    foreach ($Item in $SPListItems) {
+    ForEach ($Item In $SPListItems) {
         $IsRecord = [Microsoft.Office.RecordsManagement.RecordsRepository.Records]::IsRecord($Item)
-        if ($IsRecord -eq $true) {
+        If ($IsRecord -eq $true) {
             $CurrentRecord = $Item.Name
             Write-Verbose "Undeclared $CurrentRecord"
             [Microsoft.Office.RecordsManagement.RecordsRepository.Records]::UndeclareItemAsRecord($Item)
@@ -36,3 +36,4 @@ function Set-HUSPRecordsUndeclared {
     $SPList.AllowDeletion = $true
     $SPList.Update()
     $SPWeb.Dispose()
+}

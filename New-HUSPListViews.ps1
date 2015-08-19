@@ -1,26 +1,26 @@
 <#
-.SYNOPSIS
-Creates a set list view on a document Library
-.DESCRIPTION
-This script sets a specific view on a doument library. The view has;
-- Committee Title
-- Committee Document Type
-- Committee Date
-- Document ID
-- Version
-- Modified
-- Modified By
-Which is also grouped by Committee Academic Year. This script is a starting point to develop a set of standard views across all committee libraries.
-.PARAMETER url
-a valid SharePoint Site Url
-.PARAMETER list
-a valid SharePoint Document Library name
-.EXAMPLE
-Set-ListViews.ps1 -url https://devunishare.hud.ac.uk/unifunctions/committees/University-Committees -list 'University Health and Safety Committee'
-.NOTES
-Some notes about the script
-.LINK
-a cross-reference to another help topic; you can have more than one of these. If you include a URL beginning with http:// or https://, the shell will open that URL when the Help command’s –online parameter is used.
+    .SYNOPSIS
+    Creates a set list view on a document Library
+    .DESCRIPTION
+    This script sets a specific view on a doument library. The view has;
+    - Committee Title
+    - Committee Document Type
+    - Committee Date
+    - Document ID
+    - Version
+    - Modified
+    - Modified By
+    Which is also grouped by Committee Academic Year. This script is a starting point to develop a set of standard views across all committee libraries.
+    .PARAMETER url
+    a valid SharePoint Site Url
+    .PARAMETER list
+    a valid SharePoint Document Library name
+    .EXAMPLE
+    Set-ListViews.ps1 -url https://devunishare.hud.ac.uk/unifunctions/committees/University-Committees -list 'University Health and Safety Committee'
+    .NOTES
+    Some notes about the script
+    .LINK
+    a cross-reference to another help topic; you can have more than one of these. If you include a URL beginning with http:// or https://, the shell will open that URL when the Help command’s –online parameter is used.
 #>
 
 function New-HUSPListViews {
@@ -50,7 +50,6 @@ function New-HUSPListViews {
     $viewDefaultView = $false
     
     Write-Verbose ("Creating View '" + $newview.Title + "' created in list '" + $listName.Title + "' on site " + $web.Url)
-    break
     $newview = $listName.Views.Add($viewTitle, $viewFields, $viewQuery, $viewRowLimit, $viewPaged, $viewDefaultView)
     
     $web.Dispose()

@@ -1,21 +1,21 @@
 <#
-.SYNOPSIS
-Creates SharePoint Sites from a list
-.DESCRIPTION
-Creates SharePoint Sites from a CSV list and a given url. The CSV file must have a header with the following column headings;
-- Name
-- Description
-- URL
-.PARAMETER url
-a valid SharePoint Site URL where you want all the sites creating
-.PARAMETER csv
-a valid CSV file with the information about the sites to be created
-.PARAMETER template
-a valid SharePoint Template code (default is BDR#0 which is a Document Centre ); use Get-SPWebTemplate to see a full list
-.EXAMPLE
-An example of how the script can be used
-.NOTES
-When the sites are created, they are set to UK regional settings and Tree View is enabled. If you do not specify a template, the default will be used.
+    .SYNOPSIS
+    Creates SharePoint Sites from a list
+    .DESCRIPTION
+    Creates SharePoint Sites from a CSV list and a given url. The CSV file must have a header with the following column headings;
+    - Name
+    - Description
+    - URL
+    .PARAMETER url
+    a valid SharePoint Site URL where you want all the sites creating
+    .PARAMETER csv
+    a valid CSV file with the information about the sites to be created
+    .PARAMETER template
+    a valid SharePoint Template code (default is BDR#0 which is a Document Centre ); use Get-SPWebTemplate to see a full list
+    .EXAMPLE
+    An example of how the script can be used
+    .NOTES
+    When the sites are created, they are set to UK regional settings and Tree View is enabled. If you do not specify a template, the default will be used.
 #>
 function New-HUSPSitesFromList {
     [CmdletBinding()]

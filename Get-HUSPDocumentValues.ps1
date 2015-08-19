@@ -2,13 +2,17 @@
 .SYNOPSIS
 Gets a list of site columns from a document in a list given the Document ID
 .DESCRIPTION
-A longer more detailed description of what the script does
-.PARAMETER param
-a description of a parameter
+This script outputs the values of a list as a powershell object that can then be piped to other powershell commands (see example)
+.PARAMETER url
+a valid SharePoint site url
+.PARAMETER list
+a valid SharePoint list name
+.PARAMETER file
+a valid SharePoint document filename (optional)
 .EXAMPLE
 To get a list of values from a particular site column; 
 
-    Get-SPDocumentValues | Where-Object {$_."Display Name" -eq "Archived Metadata" }
+    Get-HUSPDocumentValues -url https://devunishare.hud.ac.uk/unifunctions/committees/University-Committees -list "University Health and Safety Committee" | Where-Object {$_."Display Name" -eq "Archived Metadata" }
 .NOTES
 Some notes about the script
 .LINK
@@ -18,22 +22,22 @@ function Get-HUSPDocumentValues {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$true,Position=1)]
-        [string]$WebName,
+        [string]$url,
         [Parameter(Mandatory=$true,Position=2)]
-        [string]$ListName,
+        [string]$list,
         [Parameter(Mandatory=$false)]
         [AllowEmptyString()]
-        [string]$File
+        [string]$file
     )
     
-    $web = Get-SPWeb $WebName
-    $list = $web.Lists[$ListName]
+    $SPWeb = Get-SPWeb $url
+    $SPList = $SPWeb.Lists[$list]
 
-    $FileNamePresent = $PSBoundParameters.ContainsKey('File') 
+    $FileNamePresent = $PSBoundParameters.ContainsKey('file') 
 
     If ($FileNamePresent -eq $false) {
         Write-Verbose "No specified file"
-        $FullList = $list.GetItems()
+        $FullList = $SPList.GetItems()
         ForEach ($item in $FullList) {
             $item.Fields | foreach {
                 $fieldValues = @{
@@ -45,12 +49,12 @@ function Get-HUSPDocumentValues {
             }            
         }
     } else {
-        Write-Verbose "File '$File' specified"
+        Write-Verbose "Filename '$file' specified"
         [string]$queryString = $null 
         $queryString = "<Where><Eq><FieldRef Name='FileLeafRef' /><Value Type='Text'>" + $File + "</Value></Eq></Where>"
         $query = New-Object Microsoft.SharePoint.SPQuery
         $query.Query = $queryString
-        $item = $list.GetItems($query)[0] 
+        $item = $SPList.GetItems($query)[0] 
         
         $item.Fields | foreach {
             $fieldValues = @{
@@ -61,5 +65,5 @@ function Get-HUSPDocumentValues {
             New-Object PSObject -Property $fieldValues | Select @("Display Name","Internal Name","Value")
         }
     }
-    $web.Dispose()
+    $SPWeb.Dispose()
 }

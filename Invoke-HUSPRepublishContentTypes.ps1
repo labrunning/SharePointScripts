@@ -27,11 +27,11 @@ function Invoke-HUSPRepublishContentTypes
             if ($spCTPublish.IsPublished($_))
             {
                 $spCTPublish.Publish($_)
-                write-verbose "*** Content type $CurrentContentType has been republished ***"
+                Write-Host "*** Content type $CurrentContentType has been republished ***"
             }
             else
             {
-                write-verbose "Content type $CurrentContentType is not a published content type"
+                Write-Verbose "Content type $CurrentContentType is not a published content type"
             }
         }
     }
