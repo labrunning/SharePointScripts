@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"docuemnt",
+				"DocumentLibrary"
+			],
+			[
 				"Cont",
 				"ContentTypeID"
 			],
@@ -123,31 +127,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "New-HUSPSitesFromList.ps1",
-			"settings":
-			{
-				"buffer_size": 2267,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/HUSPPSTools.sublime-build",
-			"settings":
-			{
-				"buffer_size": 344,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "EDRMSFunctionsSiteList.csv",
-			"settings":
-			{
-				"buffer_size": 1565,
-				"line_ending": "Windows",
-				"name": "Name,Description,URL"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -308,6 +287,24 @@
 	],
 	"file_history":
 	[
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPDocumentValues.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Import-HUSPSiteColumns.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/AzureShutdownScript.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-ManagedMetadataFieldUses.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Export-HUSPSiteColumns.ps1",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/pwrshdesc.sublime-snippet",
+		"/A/SPOutput/EDRMSDefault.xml",
+		"/A/scripts/ArchivedMetadata.xml",
+		"/A/SPOutput/ArchivedMetadata.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/EDRMSFunctionsSiteList.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPContentType.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPUniCommitteeName.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPSitesFromList.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPDocumentLibraries.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/EDRMSCommitteesSubsiteList.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/EDRMSUniversityCommitteesDocumentLibraryList.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/EDRMSUniversityCommitteesSubsiteList.csv",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/HUSPPSTools.sublime-build",
 		"/C/Users/cmsxlb/Dropbox/Work/wktmp/SPInput/SiteListTest002.csv",
 		"/C/Users/cmsxlb/Dropbox/Work/wktmp/SPInput/SiteListTest001.csv",
 		"/C/Users/cmsxlb/Dropbox/Work/wktmp/SPInput/SiteListTest.csv",
@@ -318,9 +315,7 @@
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/PS_GetSiteCollectionSize.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SiteReportLB.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPPermissionsReport.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPSitesFromList.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPListViews.ps1",
-		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/HUSPPSTools.sublime-build",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ExportTermsIntoCsv.ps1",
 		"/C/Users/cmsxlb/Scripts/Enter-DevHUAzureServer.ps1",
 		"/C/Users/cmsxlb/Scripts/Enter-TestHUAzureServer.ps1",
@@ -333,8 +328,6 @@
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Invoke-HUSPRepublishContentTypes.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Invoke-HUSPPublishJobs.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/wktmp/UniShare.html",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPDocumentValues.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPContentType.ps1",
 		"//azspstfdapp1/C$/Windows/System32/WindowsPowerShell/v1.0/Profile.ps1",
 		"/A/scripts/migrationXML",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Move a Doclibrary.txt",
@@ -359,12 +352,9 @@
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPLibraryDeleteTrue.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDocumentLibraryDefaults.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDefaulValues.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPUniCommitteeName.ps1",
-		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/pwrshdesc.sublime-snippet",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ListTestingMassSiteCreation.csv",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ListSites.csv",
 		"/C/Users/cmsxlb/Documents/Enter-HUAzureAppServer.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPDocumentLibraries.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-AllRecordsUndeclared.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-LibraryDeleteTrue.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/wktmp/Computing Services Shared documents.webpart",
@@ -424,18 +414,7 @@
 		"/A/scripts/CreateLibrariesFromCSV.ps1",
 		"/C/Users/cmsxlb/Dropbox/Apps/Notes/sharepoint powershell.txt",
 		"/C/Users/cmsxlb/Dropbox/Work/project reference/edrms/Migration Log Checklist.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/Disable_Windows_Key_Hotkeys.reg",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/Enable_Windows_Key_Hotkeys.reg",
-		"/A/migrationLogs/proofOfConcept_7 16 2015 11-55-15 AM.xls",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/edrms/Test Migration Checklist.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/spdesign.bat",
-		"/A/scripts/Publish.ps1",
-		"/A/scripts/AddGroupedViewToLists.ps1",
-		"/A/scripts/RemoveContentType.ps1",
-		"/A/scripts/CreateSitesFromCSV.ps1",
-		"/A/scripts/EnableSideLoading.ps1",
-		"/A/scripts/Test_Uni_Com_Libs.csv",
-		"/A/scripts/GetCT.ps1"
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/Disable_Windows_Key_Hotkeys.reg"
 	],
 	"find":
 	{
@@ -460,6 +439,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"-",
+			"\\$spWeb",
+			"-",
+			"\",",
+			"-",
 			"\\$temp",
 			"D/:/\\scripts/\\output",
 			"D\\:\\\\scripts\\\\output",
@@ -568,6 +552,11 @@
 		"regex": true,
 		"replace_history":
 		[
+			" ",
+			"\\$SPWeb",
+			" ",
+			"\",\"",
+			" ",
 			"\\$st",
 			"\\$SPWeb",
 			"list",
@@ -596,96 +585,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "New-HUSPSitesFromList.ps1",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2267,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								855,
-								855
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 120.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/HUSPPSTools.sublime-build",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 344,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								293,
-								293
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "EDRMSFunctionsSiteList.csv",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1565,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1565,
-								1565
-							]
-						],
-						"settings":
-						{
-							"auto_name": "Name,Description,URL",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -755,11 +656,11 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "j",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"j",
+				"",
 				"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Sublime\\User\\journal.sublime-project"
 			],
 			[
@@ -767,12 +668,12 @@
 				"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Sublime\\User\\notes.sublime-project"
 			],
 			[
-				"jou",
+				"j",
 				"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Sublime\\User\\journal.sublime-project"
 			],
 			[
-				"",
-				"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Sublime\\User\\notes(Windows).sublime-project"
+				"jou",
+				"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Sublime\\User\\journal.sublime-project"
 			]
 		],
 		"width": 380.0

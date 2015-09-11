@@ -14,6 +14,7 @@
     .NOTES
     Warning!! the content type must be available on the list. There is no error checking in the script so if you don't know what it does, don't use it!
 #>
+
 function Set-HUSPContentType {
     [CmdletBinding()]
     Param(
@@ -22,24 +23,27 @@ function Set-HUSPContentType {
         [Parameter(Mandatory=$True,Position=2)]
         [string]$list,
         [Parameter(Mandatory=$True,Position=2)]
-        [string]$newct,
+        [string]$newct
     )
 
     $SPWeb = Get-SPWeb $url
     Write-Verbose "Begin changing content type of .docx documents..."
+    $ListName = $SPWeb.GetList(($SPWeb.ServerRelativeURL.TrimEnd('/') + '/' + $list))
     $DocumentLibrary = $SPWeb.Lists[$list]
     $NewContentType = $SPWeb.AvailableContentTypes[$newct]
-
+    
     Write-Verbose "Changing Content type of items"
-    $Items = $DocumentLibrary.Items
+    $Items = $ListName.Items
     $NewContentTypeID = $NewContentType.id
     ForEach ($Item in $Items) {
+        Write-Verbose $Item.Title
         If ($Item["ContentTypeId"] -ne $NewContentTypeID) {
             If ($DocumentLibrary.ForceCheckout -eq $true) {
                 Write-Verbose "Item needs to be checked out"
                 $Item.checkout()
             }
             If ($Item.Name -Like "*.docx") {
+                Write-Verbose "$Item.Name being updated"
                 $Item["ContentTypeId"] = $NewContentTypeID
                 $Item.Update()
             }
@@ -50,4 +54,5 @@ function Set-HUSPContentType {
             }
         }
     }
+    $SPWeb.Dispose()
 }

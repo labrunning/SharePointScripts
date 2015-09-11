@@ -1,22 +1,22 @@
 <#
-.SYNOPSIS
-Gets a list of site columns from a document in a list given the Document ID
-.DESCRIPTION
-This script outputs the values of a list as a powershell object that can then be piped to other powershell commands (see example)
-.PARAMETER url
-a valid SharePoint site url
-.PARAMETER list
-a valid SharePoint list name
-.PARAMETER file
-a valid SharePoint document filename (optional)
-.EXAMPLE
-To get a list of values from a particular site column; 
-
-    Get-HUSPDocumentValues -url https://devunishare.hud.ac.uk/unifunctions/committees/University-Committees -list "University Health and Safety Committee" | Where-Object {$_."Display Name" -eq "Archived Metadata" }
-.NOTES
-Some notes about the script
-.LINK
-http://get-spscripts.com/2010/09/get-all-column-values-from-sharepoint.html
+    .SYNOPSIS
+    Gets a list of site columns from a document in a list given the Document ID
+    .DESCRIPTION
+    This script outputs the values of a list as a powershell object that can then be piped to other powershell commands (see example)
+    .PARAMETER url
+    a valid SharePoint site url
+    .PARAMETER list
+    a valid SharePoint list name
+    .PARAMETER file
+    a valid SharePoint document filename (optional)
+    .EXAMPLE
+    To get a list of values from a particular site column; 
+    
+        Get-HUSPDocumentValues -url https://devunishare.hud.ac.uk/unifunctions/committees/University-Committees -list "University Health and Safety Committee" | Where-Object {$_."Display Name" -eq "Archived Metadata" }
+    .NOTES
+    Some notes about the script
+    .LINK
+    http://get-spscripts.com/2010/09/get-all-column-values-from-sharepoint.html
 #>
 function Get-HUSPDocumentValues {
     [CmdletBinding()]
