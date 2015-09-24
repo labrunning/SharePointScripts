@@ -26,7 +26,7 @@ function New-HUSPSitesFromList {
         [Parameter(Mandatory=$true,Position=2)]
         [string]$csv,
         [Parameter(Mandatory=$false,Position=3)]
-        [string]$st = "BDR#0"
+        [string]$st = "BDR#0" # Document Centre
     )
     
     Write-Debug "Site template is $st"
@@ -50,6 +50,8 @@ function New-HUSPSitesFromList {
             $currentWeb.Locale=$culture 
             Write-Verbose -Message 'Enabling Tree View...'
             $currentWeb.TreeViewEnabled = $true
+            Write-Verbose -Message 'Disabling Quick Launch...'
+            $currentWeb.QuickLaunchEnabled = $false
             $currentWeb.Update()
             Write-Verbose -Message "Created site $SiteURL"
             $currentWeb.Dispose()

@@ -4,16 +4,48 @@
 		"selected_items":
 		[
 			[
+				"The",
+				"themeUrl"
+			],
+			[
+				"Url",
+				"ServerRelativeUrl"
+			],
+			[
+				"site",
+				"siteLogoUrl"
+			],
+			[
+				"Group",
+				"GroupName"
+			],
+			[
+				"theme",
+				"themeUrl"
+			],
+			[
+				"SP",
+				"SPWeb"
+			],
+			[
+				"My",
+				"MyColourFile"
+			],
+			[
+				"the",
+				"themeName"
+			],
+			[
+				"image",
+				"imageUrl"
+			],
+			[
 				"docuemnt",
 				"DocumentLibrary"
 			],
 			[
 				"Cont",
 				"ContentTypeID"
-			],
-			[
-				"SP",
-				"SPList"
 			],
 			[
 				"doc",
@@ -64,20 +96,12 @@
 				"publishing"
 			],
 			[
-				"Group",
-				"GroupBy"
-			],
-			[
 				"view",
 				"viewQuery"
 			],
 			[
 				"content",
 				"contentTypeName"
-			],
-			[
-				"site",
-				"siteUrl"
 			],
 			[
 				"url",
@@ -127,6 +151,31 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Set-HUSPTestTheme.ps1",
+			"settings":
+			{
+				"buffer_size": 658,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Set-HUSPLogo.ps1",
+			"settings":
+			{
+				"buffer_size": 453,
+				"line_ending": "Windows",
+				"name": "$sitelogo=\"/images/siteIcon-SPEDRMS.png\""
+			}
+		},
+		{
+			"file": "New-HUSPSitesFromList.ps1",
+			"settings":
+			{
+				"buffer_size": 2404,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -136,16 +185,60 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "sn",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"sn",
-				"Snippet: pwrshdesc"
+				"color",
+				"Color Picker"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"in",
+				"Indent XML"
+			],
+			[
+				"inden",
+				"Indent XML"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"indent",
+				"Indent XML"
+			],
+			[
+				"xml",
+				"Indent XML"
+			],
+			[
+				"rein	",
+				"Indentation: Reindent Lines"
 			],
 			[
 				"rein",
 				"Indentation: Reindent Lines"
+			],
+			[
+				"snipp",
+				"Snippet: pwrshdesc"
+			],
+			[
+				"sn",
+				"Snippet: pwrshdesc"
 			],
 			[
 				"snippe",
@@ -158,10 +251,6 @@
 			[
 				"comm",
 				"Toggle Comment"
-			],
-			[
-				"rein	",
-				"Indentation: Reindent Lines"
 			],
 			[
 				"com",
@@ -180,18 +269,6 @@
 				"Snippet: Comment block"
 			],
 			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
-				"package",
-				"Package Control: List Packages"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
 				"install pa",
 				"Package Control: Install Package"
 			],
@@ -208,10 +285,6 @@
 				"Markdown Preview: Preview in Browser"
 			],
 			[
-				"indent",
-				"Indentation: Reindent Lines"
-			],
-			[
 				"preview",
 				"Markdown Preview: Preview in Browser"
 			],
@@ -220,20 +293,8 @@
 				"Markdown Preview: Preview in Browser"
 			],
 			[
-				"xml",
-				"Set Syntax: XML"
-			],
-			[
 				"mark",
 				"Markdown Preview: Export HTML in Sublime Text"
-			],
-			[
-				"in",
-				"Indentation: Reindent Lines"
-			],
-			[
-				"inden",
-				"Indentation: Reindent Lines"
 			],
 			[
 				"markdown",
@@ -248,10 +309,6 @@
 				"ANF: New File"
 			],
 			[
-				"remo",
-				"Package Control: Remove Package"
-			],
-			[
 				"instal",
 				"Package Control: Install Package"
 			],
@@ -260,11 +317,11 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 1096.0
+		"width": 664.0
 	},
 	"console":
 	{
-		"height": 126.0,
+		"height": 371.0,
 		"history":
 		[
 			"view.run_command(\"show_scope_name\")",
@@ -287,6 +344,36 @@
 	],
 	"file_history":
 	[
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPSitesFromList.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPDocLibsFromList.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPListView_ComAcYear.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ExampleListView.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPContentTypeSiteColumns.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/Palette999.spcolor",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/Color Highlighter/ColorHighlighter.sublime-settings",
+		"//azspstfdweb1/c$/Program Files/Common Files/microsoft shared/Web Server Extensions/15/TEMPLATE/GLOBAL/Lists/themes/Palette007.spcolor",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/EDRMSContentTypes.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/EDRMS Content Types.xml",
+		"/B/SPOutput/EDRMS Content Types.xml",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/sublimetext_indentxml-master/README.md",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/sublimetext_indentxml-master/License.txt",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Installed Packages/Indent XML.sublime-package",
+		"/B/SPOutput/EDRMS Document.xml",
+		"/B/SPOutput/EDRMS Default.xml",
+		"/C/Users/cmsxlb/Scripts/Enter-HUSPServer.ps1",
+		"/B/SPOutput/Script-SiteColumns.xml",
+		"//accra/C$/Windows/System32/WindowsPowerShell/v1.0/Profile.ps1",
+		"/C/Users/cmsxlb/Scripts/Enter-DevHUAzureServer.ps1",
+		"/B/SPInput/EDRMS-Functions-SiteList.csv",
+		"/C/Users/cmsxlb/Dropbox/Sites/draft-lukebrunning.co.uk/FellasTour2015.md",
+		"/B/SPInput/EDRMS-Committees-SiteList.csv",
+		"/B/SPInput/ManagedMetadata-Committees.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPTestTheme.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPAllWebAppSites.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDevTheme.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPTheme.ps1",
+		"//azspstfdapp1/C$/Program Files/Common Files/microsoft shared/Web Server Extensions/15/TEMPLATE/GLOBAL/Lists/themes/Palette011.spcolor",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SiteReportLB.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPDocumentValues.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Import-HUSPSiteColumns.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/AzureShutdownScript.ps1",
@@ -299,7 +386,6 @@
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/EDRMSFunctionsSiteList.csv",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPContentType.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPUniCommitteeName.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPSitesFromList.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPDocumentLibraries.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/EDRMSCommitteesSubsiteList.csv",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/EDRMSUniversityCommitteesDocumentLibraryList.csv",
@@ -313,11 +399,9 @@
 		"/C/Users/cmsxlb/Dropbox/Work/wktmp/SPInput/ListUHSCSite.csv",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPMetadataTermSet.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/PS_GetSiteCollectionSize.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SiteReportLB.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPPermissionsReport.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPListViews.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ExportTermsIntoCsv.ps1",
-		"/C/Users/cmsxlb/Scripts/Enter-DevHUAzureServer.ps1",
 		"/C/Users/cmsxlb/Scripts/Enter-TestHUAzureServer.ps1",
 		"/D/RoboTest/README.md",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SetAllDefaulDocValues.ps1",
@@ -387,34 +471,7 @@
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/AddContentOrganizerRule.ps1",
 		"/A/migrationLogs/proofOfConcept_7 27 2015 9-45-38 AM.xml",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/migrationXML",
-		"/A/scripts/docValues.csv",
-		"/A/migrationLogs/proofOfConcept_7 27 2015 8-54-21 AM.xml",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-SPItemValues_LB.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/CreateListViews.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/AddContentOrganizerRulesFromCSV.ps1",
-		"/A/scripts/RuleTest001.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ChangeCreated.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/CreateSitesFromCSVList.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/CreateDocLibsFromCSVList.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SetDocLibDefaults.ps1",
-		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/Azure.sublime-build",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/DocLibList.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SiteListTest.csv",
-		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/SideBarGit.sublime-settings",
-		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/SideBarGit/SideBarGit.sublime-settings",
-		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
-		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/SublimeREPL.sublime-settings",
-		"/C/Users/cmsxlb/OneDrive/SharePoint Scripts/create_sites002.ps1",
-		"/C/Users/cmsxlb/Dropbox/GitHub/README.md",
-		"/C/Users/cmsxlb/Dropbox/scripts/.git/config",
-		"/A/scripts/AddContentType.ps1",
-		"/A/scripts/HS.csv",
-		"/A/scripts/Republish-HubContentTypes.ps1",
-		"/A/scripts/AddViewToLists.ps1",
-		"/A/scripts/CreateLibrariesFromCSV.ps1",
-		"/C/Users/cmsxlb/Dropbox/Apps/Notes/sharepoint powershell.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/edrms/Migration Log Checklist.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/Disable_Windows_Key_Hotkeys.reg"
+		"/A/scripts/docValues.csv"
 	],
 	"find":
 	{
@@ -439,6 +496,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Date",
+			"Committee Date",
+			"closeconnection",
+			"Microsoft.SharePoint",
+			"Microsoft.SharePoint.Utilities",
 			"-",
 			"\\$spWeb",
 			"-",
@@ -552,6 +614,8 @@
 		"regex": true,
 		"replace_history":
 		[
+			"Time",
+			"Booking Start Date",
 			" ",
 			"\\$SPWeb",
 			" ",
@@ -585,8 +649,98 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Set-HUSPTestTheme.ps1",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								658,
+								658
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Set-HUSPLogo.ps1",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 453,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								42,
+								42
+							]
+						],
+						"settings":
+						{
+							"auto_name": "$sitelogo=\"/images/siteIcon-SPEDRMS.png\"",
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "New-HUSPSitesFromList.ps1",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2404,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -623,7 +777,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 244.0
+		"height": 130.0
 	},
 	"output.find_results":
 	{
@@ -691,7 +845,7 @@
 	"settings":
 	{
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,

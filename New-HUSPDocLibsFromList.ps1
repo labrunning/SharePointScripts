@@ -15,7 +15,7 @@
     .EXAMPLE
     New-HUSPDocumentLibraries -url https://devunishare.hud.ac.uk/unifunctions/committees/University-Committees -csv .\DocLibList.csv
 #>
-function New-HUSPDocumentLibraries {
+function New-HUSPDocLibsFromList {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$true,Position=1)]

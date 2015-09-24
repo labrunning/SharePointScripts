@@ -3,14 +3,15 @@
     Creates a set list view on a document Library
     .DESCRIPTION
     This script sets a specific view on a doument library. The view has;
-    - Committee Title
+    - File (with linked edit menu)
+    - Title
     - Committee Document Type
     - Committee Date
-    - Document ID
     - Version
     - Modified
     - Modified By
-    Which is also grouped by Committee Academic Year. This script is a starting point to develop a set of standard views across all committee libraries.
+    - Document ID
+    Which is also grouped by Committee Academic Year and then committee date. This script is a starting point to develop a set of standard views across all committee libraries.
     .PARAMETER url
     a valid SharePoint Site Url
     .PARAMETER list
@@ -23,7 +24,7 @@
     a cross-reference to another help topic; you can have more than one of these. If you include a URL beginning with http:// or https://, the shell will open that URL when the Help command’s –online parameter is used.
 #>
 
-function New-HUSPListViews {
+function New-HUSPListView_ComAcYear {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True,Position=1)]
@@ -35,16 +36,17 @@ function New-HUSPListViews {
     $web = Get-SPWeb $url
     $listName = $web.GetList(($web.ServerRelativeURL.TrimEnd("/") + "/" + $list))
     
-    $viewTitle = "University Committee by Academic Year"
+    $viewTitle = "By Academic Year and Committee Date"
     $viewFields = New-Object System.Collections.Specialized.StringCollection
-    $viewFields.Add("Committee Title") > $null
+    $viewFields.Add("LinkFilename") > $null
+    $viewFields.Add("Title") > $null
     $viewFields.Add("Committee Document Type") > $null
     $viewFields.Add("Committee Date") > $null
-    $viewFields.Add("Document ID") > $null
     $viewFields.Add("Version") > $null
     $viewFields.Add("Modified") > $null
     $viewFields.Add("Modified By") > $null
-    $viewQuery = "<OrderBy><FieldRef Name='Modified' Ascending='FALSE'/></OrderBy><GroupBy Collapse = 'FALSE'><FieldRef Name = 'Committee_x0020_Academic_x0020_Year'/></GroupBy>"
+    $viewFields.Add("Document ID") > $null
+    $viewQuery = "<OrderBy><FieldRef Name='Committee_x0020_Date' Ascending='FALSE'/><FieldRef Name='Committee_x0020_Document_x0020_Type'/></OrderBy><GroupBy Collapse = 'FALSE'><FieldRef Name = 'Committee_x0020_Academic_x0020_Year'/><FieldRef Name='Committee_x0020_Date' Ascending='FALSE'/></GroupBy>"
     $viewRowLimit = 50
     $viewPaged = $true
     $viewDefaultView = $false

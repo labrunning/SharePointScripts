@@ -1,0 +1,28 @@
+<View Name="{A4B98A22-2E53-43DB-8143-A5F942C9A1DF}" DefaultView="TRUE" Type="HTML" DisplayName="University Committee by Academic Year" Url="/demo/COM/University-Committees/University Health and Safety Committee/Forms/University Committee by Academic Year.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=23" >
+	<Query>
+		<GroupBy Collapse="TRUE" GroupLimit="30">
+			<FieldRef Name="Committee_x0020_Academic_x0020_Year" Ascending="FALSE"/>
+			<FieldRef Name="Committee_x0020_Date" Ascending="FALSE"/>
+		</GroupBy>
+		<OrderBy>
+			<FieldRef Name="Committee_x0020_Date" Ascending="FALSE"/>
+			<FieldRef Name="Committee_x0020_Document_x0020_Type"/>
+		</OrderBy>
+	</Query>
+	<ViewFields>
+		<FieldRef Name="Committee_x0020_Title"/>
+		<FieldRef Name="LinkFilename"/>
+		<FieldRef Name="Committee_x0020_Document_x0020_Type"/>
+		<FieldRef Name="Committee_x0020_Date"/>
+		<FieldRef Name="_dlc_DocIdUrl"/>
+		<FieldRef Name="_UIVersionString"/>
+		<FieldRef Name="Modified"/>
+		<FieldRef Name="Editor"/>
+		<FieldRef Name="Title"/>
+	</ViewFields>
+	<RowLimit Paged="TRUE">50</RowLimit>
+	<Aggregations Value="Off"/>
+	<JSLink>clienttemplates.js</JSLink>
+	<XslLink Default="TRUE">main.xsl</XslLink>
+	<Toolbar Type="Standard"/>
+</View>
