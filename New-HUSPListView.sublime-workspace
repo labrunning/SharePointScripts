@@ -1,0 +1,515 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Hi",
+				"HideSPField"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 173.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"markdown",
+				"Markdown Preview: Save to HTML"
+			],
+			[
+				"pre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"in",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"fold",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"previ",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"",
+				"ANF: New File"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do i search SharePoint log files.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I use foreach on the command line with powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/SettingsChange.log",
+		"/B/SPLogs/SettingsChange.log",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/LogView/logview.sublime-settings",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/Notes.sublime-project",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/active directory and windows admin commands.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/sharepoint powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I run powershell commands consecutively.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/~archive/firewall form for infrastructure/2016-01-28 emails.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what is the university desktop strategy.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how can i tell if a file is locked in SharePoint.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq which AD group do the SharePoint team belong to that we use to give admin access across the SharePoint farm.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I get a registry value with powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what software can I buy at work to use at home.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what is my static ip address.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what is the name of the AD group to use for all staff.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I set a SharePoint document library or list to hidden from browser with powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do you delete and recreate a single mysite.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq which AD group do staff have to be in to get a mysite.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how can I list unique filetypes in a directory.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/GTD/ControlCentre.md",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I get a list of properties available for a SharePoint list.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I get a property for a list in a SharePoint site.txt",
+		"/C/Users/cmsxlb/Downloads/Activities/Activities/AddRoleAssignments/AddRoleAssignments.xaml",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/m drive migration/Issues Log.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/m drive migration/1StaffManagementListing.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/m drive migration/StaffManagementListing.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I log on as a different user in SharePoint.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how can I find out what database server is in use on SharePoint content databases.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what foreground and background colours can I use in powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do i run the site collection administrators report for it support.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/windows.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/windows cli.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I show the top 5 largest files on a drive with powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what was the WWII strategy game I used to play.txt",
+		"/A/Test Folder Migration/1StaffManagement.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do i run the staff hub usage report.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I create work projects in omnifocus.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how can I delete all the mac temporary files on windows drives.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I convert characters in strings in powershell.txt",
+		"/A/Test Folder Migration/6. Regulations, Policies and Procedures/Policies/folders.txt",
+		"/Users/luke/Dropbox/Apps/Notes/thought on tasks and omnifocu and work.txt",
+		"/Users/luke/Dropbox/Apps/Copy-iOS-2-Mac/lorem003.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do i move a SharePoint site from one location to another.txt",
+		"/B/SPOutput/PreandPostAward.cmp.import.log",
+		"/B/SPOutput/PreandPostAwardMove.cmp.export.log",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how can i check what template was used to create a SharePoint site.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what do the default permissions in SharePoint grant.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do i create a site collection with a content database in sharepoint via powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/sharepoint move or copy site collection or subsite.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/change record database/change record database recommendations.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/azure server farm.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how can you calculate the academic year in SharePoint.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/journal/2015-12-08.taskpaper",
+		"/H/SiteAssets/UniStyle.css",
+		"/H/SiteAssets/SPAdministratorsReport.xsl",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how is the site collection administrators report run for it support.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what are the function keys mapped to on windows for my apple keyboard.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq who is the wisdom system owner.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what songs would i like played at my funeral.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/notes.sublime-workspace",
+		"/Users/luke/Dropbox/Apps/Sublime/User/Markdown to DOCX.sublime-build",
+		"/Users/luke/Dropbox/Apps/Sublime/User/notes.sublime-project",
+		"/Users/luke/Dropbox/Apps/Sublime/User/notes(Windows).sublime-project",
+		"/Users/luke/Dropbox/Apps/Sublime/User/journal.sublime-project",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what is the name of the database server for our sharepoint farm.txt",
+		"/Users/luke/Dropbox/Apps/Sublime/User/SublimeREPL.sublime-settings",
+		"/Users/luke/Dropbox/Apps/Sublime/User/Preferences (Windows).sublime-settings",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/broke.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/sharepoint.txt",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/prevent/ReferralsNewForm.js",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I apply the default master page.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/student portal notes.txt",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/~archive/sp2013test/UniShare.master",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/SharePoint Designer.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/MyNextSteps.html",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Preferences (Windows).sublime-settings",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Preferences.sublime-settings",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/how can I access my work calendar without email.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/how can i tell if a file is locked in SharePoint.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/staffhub notes.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/Staff Hub Usage Report.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/~archive/staff hub usage report/Staff Hub Usage Report.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/SharePoint MySites.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/EDRMS Document ID Settings.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/Document IDs in SharePoint.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/powershell remoting onto server.txt",
+		"/C/Users/cmsxlb/Scripts/Enter-DevHUAzureServer.ps1",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/Office Documents Do Not Open From SharePoint.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/SharePoint Themes.txt",
+		"/C/Users/cmsxlb/Scripts/Enter-TestHUAzureServer.ps1",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/Beer Pairings.txt",
+		"//unishare.hud.ac.uk@SSL/DavWWWRoot/cls/teams/it/dcsitnetworks/it/Virtual Server Requests/VSR385 - Baghdad - SharePoint 2013 Web Server 1.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls admin forms/CLS Admin Catering Form.xsn",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/mac clipboard.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/2015-08-14-web-part-page-error.log",
+		"/C/Users/cmsxlb/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.IE5/CUO2AM20/CustomEditingMenu.xml",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/office jargon.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/slackware.txt",
+		"/C/Users/cmsxlb/Scripts/Enter-HUSPServer.ps1",
+		"/C/Users/cmsxlb/Scripts/Enter-HUAzureServer.ps1",
+		"//vilnius/d$/SPLogs/VILNIUS-20150811-0935.log",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/Automys_Scheduled-Virtual-Machine-Shutdown-Startup-Microsoft-Azure/Assert-AutoShutdownSchedule.ps1",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/SharePoint Content Types.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/azupload.bat",
+		"//southport/d$/scripts/GetSiteStorage.ps1",
+		"//southport/d$/scripts/SiteReport.ps1",
+		"//southport/d$/scripts/SiteStorage.ps1",
+		"//southport/d$/scripts/CT001.ps1",
+		"//southport/d$/scripts/CT.ps1",
+		"//southport/d$/scripts/ContentTypes.ps1",
+		"//southport/d$/scripts/CT003.ps1",
+		"//southport/d$/scripts/CT002.ps1",
+		"//southport/d$/scripts/PS_GetSiteCollectionSize.ps1",
+		"//southport/d$/scripts/PublishCTTypes.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/wisdom/uniCommiteeHealthSafty.xml",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences (Windows).sublime-settings",
+		"/C/Users/cmsxlb/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/SJBJ2IYD/docData.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/wisdom/ReviewClasses.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/wisdom/docData.txt",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/Users/cmsxlb/Dropbox/Work/tmp/mmdata/ECMPackage.dat",
+		"/C/Users/cmsxlb/Downloads/Work-UniCouncil/Read Me.txt",
+		"/C/Users/cmsxlb/Dropbox/vim/doc/NERD_tree.txt"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<open folders>",
+			"/Users/luke/Dropbox/Apps/Sublime/User",
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work\\project reference,<open folders>",
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work\\project reference",
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work\\project reference,\\\\accra\\d$\\SPLogs",
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work\\project reference",
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work",
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"message",
+			"phone",
+			"voice",
+			"Audit%20Committee",
+			"Audit%20Committe",
+			"folder",
+			"TestUnifunctions",
+			"12:48",
+			"policy",
+			"AD",
+			"active directory",
+			"lock",
+			"the",
+			"foreach",
+			"for each",
+			"database",
+			"log",
+			"correlation",
+			"order",
+			"SharePoint order",
+			"azure",
+			"database",
+			"backup",
+			"new-spweb",
+			"import",
+			"copy site",
+			"site collection",
+			"osx",
+			"[OSX]",
+			"sputility",
+			"countryField",
+			"master page",
+			"content database",
+			"lock",
+			"import",
+			"SharePoint Designer",
+			"mysite",
+			"lock",
+			"correlation",
+			"contentdatabase",
+			"SharePoint",
+			"Huddersfield University",
+			"profile",
+			"loginasanotheruser",
+			"Content Type HUb",
+			"content database",
+			"login",
+			"d6e3229d-8d78-c096-7c33-2c66fb402d8f",
+			"remote",
+			"powershell",
+			"publishing",
+			"proxy",
+			"FieldLevelSecurityEventReceiver",
+			"credential",
+			"Portal",
+			"portal",
+			"printer",
+			"proxy",
+			"printer",
+			"proxy"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"ReferralActionTakenField"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Markdown Preview/Markdown.sublime-build",
+	"project": "New-HUSPListView.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"active",
+				"active directory and windows admin commands.txt"
+			],
+			[
+				"qqad",
+				"qq what is the name of the AD group to use for all staff.txt"
+			],
+			[
+				"foreach",
+				"qq how do I use foreach on the command line with powershell.txt"
+			],
+			[
+				"qqlog",
+				"qq how do i search SharePoint log files.txt"
+			],
+			[
+				"browser",
+				"qq how do I set a SharePoint document library or list to hidden from browser with powershell.txt"
+			],
+			[
+				"powershell",
+				"qq how do I run powershell commands consecutively.txt"
+			],
+			[
+				"static",
+				"qq what is my static ip address.txt"
+			],
+			[
+				"lock",
+				"qq how can i tell if a file is locked in SharePoint.txt"
+			],
+			[
+				"qqdirectory",
+				"qq how can I list unique filetypes in a directory.txt"
+			],
+			[
+				"qqsharepoint",
+				"qq how do i search SharePoint log files.txt"
+			],
+			[
+				"windows",
+				"windows.txt"
+			],
+			[
+				"for",
+				"qq how do I use foreach on the command line with powershell.txt"
+			],
+			[
+				"consec",
+				"qq how do I run powershell commands consecutively.txt"
+			],
+			[
+				"sitecollection",
+				"qq how do i run the site collection administrators report for it support.txt"
+			],
+			[
+				"",
+				"sharepoint powershell.txt"
+			],
+			[
+				"sharepointpowe",
+				"sharepoint powershell.txt"
+			],
+			[
+				"document",
+				"Office Documents Do Not Open From SharePoint.txt"
+			],
+			[
+				"documetn",
+				"EDRMS Document ID Settings.txt"
+			],
+			[
+				"sharepoint",
+				"sharepoint.txt"
+			],
+			[
+				"sharepointpower",
+				"sharepoint powershell.txt"
+			],
+			[
+				"sharpointpowershell",
+				"sharepoint powershell.txt"
+			],
+			[
+				"power",
+				"powershell.txt"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\cmsxlb\\Dropbox\\Work\\SharePointScripts\\Azure SharePoint EDRMS Scripts.sublime-project"
+			],
+			[
+				"j",
+				"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Sublime\\User\\journal.sublime-project"
+			],
+			[
+				"n",
+				"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Sublime\\User\\notes.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 331.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

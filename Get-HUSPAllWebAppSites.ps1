@@ -1,4 +1,4 @@
-$siteUrl = "https://testunishare.hud.ac.uk"
+$siteUrl = "https://devunishare.hud.ac.uk/"
  
 $rootSite = New-Object Microsoft.SharePoint.SPSite($siteUrl)
 $spWebApp = $rootSite.WebApplication

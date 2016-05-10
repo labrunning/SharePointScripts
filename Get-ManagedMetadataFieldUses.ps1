@@ -17,8 +17,23 @@ function Get-ManagedMetadataFieldUses
 	#.OUTPUTS
 	#  A collection of objects containing the field name and id, the list the field is from, and the web the list is in.
 	#.EXAMPLE 
-	#  $matchingFields = Get-ManagedMetadataFieldUses -web (Get-SPWeb http://sharepointsite) -TermSet $termSet -Recurse
-	#  Get a list of all the fields in the http://sharepointsite web that reference the TermSet in the $termSet variable. Check all lists and sub webs.	
+	#  This script needs to set up a few variables first:
+	#  **Get the SPWeb object            
+	#  $w = Get-SPWeb http://mdysp13;            
+	#  **Get the taxonomy session used by the SPWeb's site            
+	#  $tsession = Get-SPTaxonomySession -Site $w.Site;            
+	#  **Get all the TermSets with the name "Countries", and the web's default Language ID
+	#  $termSets = $tsession.GetTermSets("Countries",$w.Language)            
+	#  **Display the TermSets found            
+	#  $termSets | FT @{Label="Group";Expression={($_.Group).Name}},Name,ID            
+	#  **Select the first TermSet            
+	#  $termSet = $termSets[0]
+	#  $matchingFields = Get-ManagedMetadataFieldUses -web $w -TermSet $termSet -Recurse
+	#  $matchingFields | FT
+	#  $matchingFields | Group-Object ParentListUrl
+	#  $matchingFields | Group-Object ParentListUrl | Select -ExpandProperty Group  | Format-Table -GroupBy ParentListUrl
+	#.LINK
+	#  http://social.technet.microsoft.com/wiki/contents/articles/23494.sharepoint-use-powershell-to-find-fields-using-a-managed-metadata-termset.aspx
 	################################################################
 	[CmdletBinding()]
 		Param(	 

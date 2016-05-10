@@ -1,0 +1,6 @@
+$SPWeb = Get-SPWeb "https://unishare.hud.ac.uk/TestUnifunctions/COM/University-Committees"
+$myAggregation = "<FieldRef Name='LinkFilename' Type='COUNT'/>"
+
+ForEach ($dl in "University Executive", "Human Resources Committee", "Independent Members", "Nominations Committee", "Planning and Resources Committee", "Planning and Resource Group", "University Race and Religion Forum", "Teaching and Learning Development Group") { $SPList = $SPWeb.Lists[$dl] ; $SPView = $SPList.Views | ? {$_.Title -eq "Metadata Audit"} ; $SPView.Aggregations = $myAggregation ; $SPView.AggregationsStatus = $true ; $SPView.Update() ; $SPList.Update() }
+
+$SPWeb.Dispose()

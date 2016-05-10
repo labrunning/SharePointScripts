@@ -3,7 +3,6 @@
     Creates a number of document libraries from a CSV list
     .DESCRIPTION
     This script will create a number of document libraries from a valid CSV file which contains the titles and descriptions for each of the document libraries. There must be a title for each document library but there does not need to be a description. The content types must be seperated with a semi-colon.
-    
     EXAMPLE
     -------
     Title,Description,ContentTypes
@@ -40,26 +39,22 @@ function New-HUSPDocLibsFromList {
             Write-Verbose "Creating Document Library $listname..."
             $SPWeb.Lists.Add($listname,$docLib.Description,$listTemplate)
             $CurrentList = $SPWeb.Lists[$listname]
-            Write-Verbose "Be Ye Disabling Yon Folder Creation"
+            Write-Verbose "Disabling Folder Creation"
             $CurrentList.EnableFolderCreation = $false
-            Write-Verbose "Be Ye Disabling Yon Content Approval"
+            Write-Verbose "Disabling Content Approval"
             $CurrentList.EnableModeration = $false
-            Write-Verbose "Be Ye Enabling Yon Version Control"
+            Write-Verbose "Enabling Version Control"
             $CurrentList.EnableVersioning = $true
-            Write-Verbose "Be Ye Enabling Yon Minor Versions"
+            Write-Verbose "Enabling Minor Versions"
             $CurrentList.EnableMinorVersions = $true
-            Write-Verbose "Be Ye Disabling Yon Force Check Out"
+            Write-Verbose "Disabling Force Check Out"
             $CurrentList.ForceCheckout = $false
-            Write-Verbose "Be Ye Enabling Yon Content Types"
+            Write-Verbose "Enabling Content Types"
             $CurrentList.ContentTypesEnabled = $true
             $CurrentList.Update()
-            $ContentTypesToApply = $docLib.ContentTypes
-            $ContentTypeArray = $ContentTypesToApply.Split(";")
-            ForEach ($ContentType in $ContentTypeArray) {
-                Write-Verbose "Adding '$ContentType' Content Type to Document Library $CurrentList..."
-                $ContentTypeToAdd = $SPWeb.RootWeb.ContentTypes[$ContentType]
-                $AddContentType = $CurrentList.ContentTypes.Add($ContentTypeToAdd)
-            }
+            $ContentTypeToApply = $docLib.ContentType
+            $ContentTypeToAdd = $SPWeb.RootWeb.ContentTypes[$ContentType]
+            $AddContentType = $CurrentList.ContentTypes.Add($ContentTypeToAdd)
         }
         $SPWeb.Dispose()
     }

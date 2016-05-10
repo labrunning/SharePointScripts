@@ -4,6 +4,202 @@
 		"selected_items":
 		[
 			[
+				"tse",
+				"tsession"
+			],
+			[
+				"view",
+				"viewData"
+			],
+			[
+				"SPI",
+				"SPItem"
+			],
+			[
+				"Env",
+				"EnvType"
+			],
+			[
+				"com",
+				"committeeDate"
+			],
+			[
+				"fil",
+				"filename"
+			],
+			[
+				"SP",
+				"SPFriendlyAccount"
+			],
+			[
+				"View",
+				"ViewData"
+			],
+			[
+				"F",
+				"Force"
+			],
+			[
+				"fore",
+				"foregroundcolor"
+			],
+			[
+				"me",
+				"message"
+			],
+			[
+				"D",
+				"Ditem"
+			],
+			[
+				"SPSo",
+				"SPSourceItemDesc"
+			],
+			[
+				"No",
+				"Change_x0020_No"
+			],
+			[
+				"SPTas",
+				"SPTaskAssignedTo"
+			],
+			[
+				"SPLoo",
+				"SPLookupItem"
+			],
+			[
+				"SPLo",
+				"SPLookupItem"
+			],
+			[
+				"SPLook",
+				"SPLookupItem"
+			],
+			[
+				"Li",
+				"LibraryToDelete"
+			],
+			[
+				"SPT",
+				"SPThemeFile"
+			],
+			[
+				"site",
+				"sitelogo"
+			],
+			[
+				"argu",
+				"arguments"
+			],
+			[
+				"spFil",
+				"spFilePath"
+			],
+			[
+				"wrtie",
+				"Write-Verbose"
+			],
+			[
+				"pre",
+				"pre-wrap"
+			],
+			[
+				"atr",
+				"attribute"
+			],
+			[
+				"vla",
+				"value-of"
+			],
+			[
+				"Site",
+				"SiteCollection"
+			],
+			[
+				"for",
+				"for-each"
+			],
+			[
+				"Uni",
+				"university-committees"
+			],
+			[
+				"l",
+				"list"
+			],
+			[
+				"Recor",
+				"RecordsManagement"
+			],
+			[
+				"Record",
+				"RecordStatus"
+			],
+			[
+				"Va",
+				"Values"
+			],
+			[
+				"T",
+				"TaxonomyField"
+			],
+			[
+				"Curre",
+				"CurrentRecord"
+			],
+			[
+				"C",
+				"CurrentRecord"
+			],
+			[
+				"Current",
+				"CurrentRecord"
+			],
+			[
+				"list",
+				"listName"
+			],
+			[
+				"un",
+				"unsafeUpdates"
+			],
+			[
+				"All",
+				"AllowUnsafeUpdates"
+			],
+			[
+				"cur",
+				"CurrentTime"
+			],
+			[
+				"my",
+				"myCheckString"
+			],
+			[
+				"Input",
+				"InputBox"
+			],
+			[
+				"csv",
+				"csvFilePath"
+			],
+			[
+				"uni",
+				"unifunctions"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"backgro",
+				"background-color"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
 				"The",
 				"themeUrl"
 			],
@@ -12,20 +208,12 @@
 				"ServerRelativeUrl"
 			],
 			[
-				"site",
-				"siteLogoUrl"
-			],
-			[
 				"Group",
 				"GroupName"
 			],
 			[
 				"theme",
 				"themeUrl"
-			],
-			[
-				"SP",
-				"SPWeb"
 			],
 			[
 				"My",
@@ -60,10 +248,6 @@
 				"ContentTypes"
 			],
 			[
-				"list",
-				"listname"
-			],
-			[
 				"Write",
 				"Write-Debug"
 			],
@@ -96,10 +280,6 @@
 				"publishing"
 			],
 			[
-				"view",
-				"viewQuery"
-			],
-			[
 				"content",
 				"contentTypeName"
 			],
@@ -114,18 +294,6 @@
 			[
 				"spS",
 				"spSourceList"
-			],
-			[
-				"T",
-				"Title"
-			],
-			[
-				"my",
-				"myFeatures"
-			],
-			[
-				"Site",
-				"SiteCollection"
 			],
 			[
 				"Sites",
@@ -152,27 +320,18 @@
 	"buffers":
 	[
 		{
-			"file": "Set-HUSPTestTheme.ps1",
+			"file": "/C/Users/cmsxlb/Desktop/GitHubLog.txt",
 			"settings":
 			{
-				"buffer_size": 658,
+				"buffer_size": 80797,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Set-HUSPLogo.ps1",
-			"settings":
-			{
-				"buffer_size": 453,
-				"line_ending": "Windows",
-				"name": "$sitelogo=\"/images/siteIcon-SPEDRMS.png\""
 			}
 		},
 		{
 			"file": "New-HUSPSitesFromList.ps1",
 			"settings":
 			{
-				"buffer_size": 2404,
+				"buffer_size": 3561,
 				"line_ending": "Windows"
 			}
 		}
@@ -180,21 +339,117 @@
 	"build_system": "",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"Packages/PowerShell/Support/Powershell.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Azure.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Azure_Generic.sublime-build",
+					""
+				],
+				[
+					"Packages/User/HUSPPSTools.sublime-build",
+					""
+				],
+				[
+					"Packages/User/xslt2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/xsltproc.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/HUSPPSTools.sublime-build",
+				""
+			]
+		]
 	],
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 375.0,
 		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"color",
-				"Color Picker"
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"packa",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"snipp",
+				"Snippet: wiswp"
+			],
+			[
+				"Snippet: ",
+				"Snippet: wiswp"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"snip",
+				"Snippet: pwrshdesc"
+			],
+			[
+				"task",
+				"Tasks: New document"
+			],
+			[
+				"prev",
+				"Markdown Preview: Save to HTML"
 			],
 			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"sni",
+				"Snippet: pwrshdesc"
+			],
+			[
+				"pre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"snp",
+				"Snippet: pwrshdesc"
+			],
+			[
+				"sn",
+				"Snippet: pwrshdesc"
+			],
+			[
+				"in",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"syntax: cs",
+				"Set Syntax: CSS"
+			],
+			[
+				"color",
+				"Color Picker"
 			],
 			[
 				"remove",
@@ -203,10 +458,6 @@
 			[
 				"package",
 				"Package Control: List Packages"
-			],
-			[
-				"in",
-				"Indent XML"
 			],
 			[
 				"inden",
@@ -229,18 +480,6 @@
 				"Indentation: Reindent Lines"
 			],
 			[
-				"rein",
-				"Indentation: Reindent Lines"
-			],
-			[
-				"snipp",
-				"Snippet: pwrshdesc"
-			],
-			[
-				"sn",
-				"Snippet: pwrshdesc"
-			],
-			[
 				"snippe",
 				"Snippet: pwrshdesc"
 			],
@@ -261,10 +500,6 @@
 				"SublimeREPL: PowerShell"
 			],
 			[
-				"Snippet: ",
-				"Snippet: Comment block"
-			],
-			[
 				"snippet",
 				"Snippet: Comment block"
 			],
@@ -273,23 +508,11 @@
 				"Package Control: Install Package"
 			],
 			[
-				"pack",
-				"Package Control: List Packages"
-			],
-			[
-				"pre",
-				"Markdown Preview: Preview in Browser"
-			],
-			[
 				"previ",
 				"Markdown Preview: Preview in Browser"
 			],
 			[
 				"preview",
-				"Markdown Preview: Preview in Browser"
-			],
-			[
-				"prev",
 				"Markdown Preview: Preview in Browser"
 			],
 			[
@@ -311,13 +534,9 @@
 			[
 				"instal",
 				"Package Control: Install Package"
-			],
-			[
-				"packa",
-				"Package Control: Install Package"
 			]
 		],
-		"width": 664.0
+		"width": 1082.0
 	},
 	"console":
 	{
@@ -344,144 +563,148 @@
 	],
 	"file_history":
 	[
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/csv/EDRMSCommitteesSubsiteList.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/csv/UFDEVTest006.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPSiteCollectionTheme.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPChangeRecordCopy.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPSitesFromList.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPDocLibsFromList.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPListView_ComAcYear.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ExampleListView.xml",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPContentTypeSiteColumns.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/Palette999.spcolor",
-		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/Color Highlighter/ColorHighlighter.sublime-settings",
-		"//azspstfdweb1/c$/Program Files/Common Files/microsoft shared/Web Server Extensions/15/TEMPLATE/GLOBAL/Lists/themes/Palette007.spcolor",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/EDRMSContentTypes.xml",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/EDRMS Content Types.xml",
-		"/B/SPOutput/EDRMS Content Types.xml",
-		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/sublimetext_indentxml-master/README.md",
-		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/sublimetext_indentxml-master/License.txt",
-		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Installed Packages/Indent XML.sublime-package",
-		"/B/SPOutput/EDRMS Document.xml",
-		"/B/SPOutput/EDRMS Default.xml",
-		"/C/Users/cmsxlb/Scripts/Enter-HUSPServer.ps1",
-		"/B/SPOutput/Script-SiteColumns.xml",
-		"//accra/C$/Windows/System32/WindowsPowerShell/v1.0/Profile.ps1",
-		"/C/Users/cmsxlb/Scripts/Enter-DevHUAzureServer.ps1",
-		"/B/SPInput/EDRMS-Functions-SiteList.csv",
-		"/C/Users/cmsxlb/Dropbox/Sites/draft-lukebrunning.co.uk/FellasTour2015.md",
-		"/B/SPInput/EDRMS-Committees-SiteList.csv",
-		"/B/SPInput/ManagedMetadata-Committees.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPTestTheme.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPAllWebAppSites.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDevTheme.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPTheme.ps1",
-		"//azspstfdapp1/C$/Program Files/Common Files/microsoft shared/Web Server Extensions/15/TEMPLATE/GLOBAL/Lists/themes/Palette011.spcolor",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SiteReportLB.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPDocumentValues.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Import-HUSPSiteColumns.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/AzureShutdownScript.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-ManagedMetadataFieldUses.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Export-HUSPSiteColumns.ps1",
-		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/pwrshdesc.sublime-snippet",
-		"/A/SPOutput/EDRMSDefault.xml",
-		"/A/scripts/ArchivedMetadata.xml",
-		"/A/SPOutput/ArchivedMetadata.xml",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/EDRMSFunctionsSiteList.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPContentType.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPUniCommitteeName.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPDocumentLibraries.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/EDRMSCommitteesSubsiteList.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/EDRMSUniversityCommitteesDocumentLibraryList.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/EDRMSUniversityCommitteesSubsiteList.csv",
-		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/HUSPPSTools.sublime-build",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/SPInput/SiteListTest002.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/SPInput/SiteListTest001.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/SPInput/SiteListTest.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/SPInput/ListTestingMassSiteCreation.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/SPInput/ListSites.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/SPInput/ListUHSCSite.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPMetadataTermSet.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/PS_GetSiteCollectionSize.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPPermissionsReport.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPListViews.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ExportTermsIntoCsv.ps1",
-		"/C/Users/cmsxlb/Scripts/Enter-TestHUAzureServer.ps1",
-		"/D/RoboTest/README.md",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SetAllDefaulDocValues.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/README.md",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/PublishTimerJobs.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Undeclare.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPRecordsUndeclared.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Invoke-HUSPRepublishContentTypes.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Invoke-HUSPPublishJobs.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/UniShare.html",
-		"//azspstfdapp1/C$/Windows/System32/WindowsPowerShell/v1.0/Profile.ps1",
-		"/A/scripts/migrationXML",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Move a Doclibrary.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPContentOrganizerRules.ps1",
-		"/C/findhotkey.vbs",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/1_ Staff Management.webpart",
-		"//accra/d$/scripts/Get-HUSPSiteGUIDs.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/ComputingServicesShareddocuments.webpart",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/clsAwards.js",
-		"//accra/d$/moves/bss_site.cmp.export.log",
-		"//accra/d$/moves/bss.cmp.export.log",
-		"//accra/d$/scripts/Get-SiteGUID.ps1",
-		"/C/Users/cmsxlb/Scripts/Enter-HUSPAppServer.ps1",
-		"/C/Users/cmsxlb/Dropbox/Apps/Notes/powershell.txt",
-		"/C/Users/cmsxlb/Dropbox/Apps/Notes/SharePoint - How to Export a Web Part of an App",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CSSD.webpart",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPCreatedDetails.ps1",
-		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Azure_Generic.sublime-build",
-		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Markdown to DOCX.sublime-build",
-		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/psparam.sublime-snippet",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPPublishJobs.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPLibraryDeleteTrue.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDocumentLibraryDefaults.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDefaulValues.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ListTestingMassSiteCreation.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ListSites.csv",
-		"/C/Users/cmsxlb/Documents/Enter-HUAzureAppServer.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-AllRecordsUndeclared.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-LibraryDeleteTrue.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/Computing Services Shared documents.webpart",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/Web Part Page Title Bar.dwp",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CSSharedDocuments.webpart",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLSDocs.dwp",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/UHSCSite.csv",
-		"//accra/d$/scripts/Get-HUSPDocumentValues.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-DocumentLibraries.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-SPItemValues.ps1",
-		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-SitesFromList.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-SPDocumentValues.ps1",
-		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Azure.sublime-build",
-		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Del.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-Messages.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-UniCommitteeName.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-ContentOrganizerRules.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/edrms/2016-05-10-Dev Committees Creation.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPContentOrganizerRules.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Export-HUSPSiteColumns.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/explorer.pac",
+		"/A/SPLogs/UFCommittee.txt",
+		"/C/Users/cmsxlb/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/SJBJ2IYD/hotel.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls admin forms 2/manifest.xsf",
+		"/B/SPLogs/2016-04-15-Mail-Dupes.log",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLSA-C-2016-04-12T11_34_37.xml",
+		"/C/Users/cmsxlb/AppData/Local/Smile/TextExpander/log.txt",
+		"/B/SPLogs/2016-04-18T11-08-04.log",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/view1.xsl",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/upgrade.xsl",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/sampledata.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/template.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/myschema.xsd",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/manifest.xsf",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/GetUserProfileByName5.xsd",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/GetUserProfileByName4.xsd",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/GetUserProfileByName3.xsd",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/GetUserProfileByName1.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/CLSAdmin.xsl",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/BuiltInActiveXControls.xsd",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/Building Fault Types4.xsd",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/Building Fault Types3.xsd",
+		"/B/SPLogs/2016-04-14T16-22-33.log",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/Building Fault Types2.xsd",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/Building Fault Types1.xsd",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/Building Fault Types.xsd",
+		"/B/forms/CLS Admin Building Fault.xsn",
+		"/C/Users/cmsxlb/AppData/Local/Smile/TextExpander/crash-log-20160413T164553Z.txt",
+		"/C/Users/cmsxlb/AppData/Local/Smile/TextExpander/crash-log-20160413T134741Z.txt",
+		"/C/Users/cmsxlb/AppData/Local/Smile/TextExpander/te_f6056eb.db",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPUnifunctionsSite.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPTheme.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/edrms/dev/UoHColours.spcolor",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/Palette001.spcolor",
+		"/B/SPLogs/ADA-SiteContents-2016-03-31.log",
+		"/C/Users/cmsxlb/Dropbox/Action/Timesheet Data.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/edrms/Site Collection Features Activated.markdown",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Send-PushoverMessage.ps1",
+		"/B/SPOutput/Workflows-2016-03-16-10-00.log",
+		"/B/SPOutput/Workflows-2016-03-15-11-50.log",
+		"/B/SPLogs/Workflows-2016-03-14-17-06.log",
+		"/B/SPOutput/Workflows-2016-03-16-08-45.log",
+		"/C/Users/cmsxlb/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.IE5/EHD4L185/log.txt",
+		"/B/SPLogs/ContentType-2016-03-14-15-41.log",
+		"/Users/luke/Dropbox/Apps/Notes/qq which gamepad device should I buy for my apple devices.txt",
+		"/Users/luke/Dropbox/Work/SharePointScripts/ViewCommitteeGroupedByAcademicYear.xml",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/wiswp.sublime-snippet",
+		"/C/Users/cmsxlb/Dropbox/workflow.json",
+		"//unishare.hud.ac.uk@SSL/DavWWWRoot/cls/se/CLS Service DC/GetUserProfileByNameCLS.udcx",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/~archive/firewall form for infrastructure/email FCR form.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/GetUserProfileByName.udcx",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/template.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLSA-B-2015-06-09T15_18_58.xml",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPWebPermissionsReport.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-ManagedMetadataFieldUses.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Invoke-HUSPFileLockRelease.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-Created.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/release_lock.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ViewUniversityCommitteesMetadataAudit.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPListView.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Manual Run of Aggregations.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Invoke-HUSPRepublishContentTypes.ps1",
+		"/B/SPOutput/SiteError-2016-02-16.log",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/migrationLogs/computingLibraryServicesComm_05 11 2015 12-41-20.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/migrationLogs/computingLibraryServicesComm_05 11 2015 13-44-56.xml",
+		"/B/scripts/ViewUniversityCommitteesMetadataAudit.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/qq how do I access my voicemail messages on my phone at work.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPDocLibsFromList.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/EDRMSTestUniversityCommitteesDocumentLibraryList.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPTestTheme.ps1",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq where is the University Retention Schdeule.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/~archive/impact statements/retrospective/code/clean_impacts002.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/edrms/FileListReport.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Copy-HUSPFilesToSP.ps1",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how can i tell if a file is locked in SharePoint.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPUserByUserId.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPDocumentValues.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPRecordsUndeclared.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Profile.ps1",
+		"/B/SPOutput/2016-01-21_Error.log",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDocumentMetadata.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPComDocType.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPMetadataNavigation.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Invoke-HUSPPublishJobs.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Import-HUSPSiteColumns.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPCommitteeRecordDate.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ViewUniversityCommitteeMetadataAudit.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ViewCommitteeGroupedByAcademicYear.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDocumentLibraryPermissions.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ViewEFCommitteeMetadataAudit.xml",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/pwrshdesc.sublime-snippet",
+		"/C/Users/cmsxlb/Downloads/Media.ps1",
+		"//unishare.hud.ac.uk@SSL/DavWWWRoot/cls/teams/bqp/admin/Catering/CLSA-C-2015-06-08T11_49_21.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/CommitteesAcademicYearView.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPListView_ComAcYear.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ViewExampleDefinition.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPListView_MetadataAudit.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDocumentLibraryDefaults.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/GetSPAdministratorsReport.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/Staff Suggestions.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPEmptyListItems.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPLibraryDeleteTrue.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPLogo.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/MetadataTest.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/MetadataTest001.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPSiteCollectionPermissionsInheritance.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPContentTypeSiteColumns.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPAllWebAppSiteOwners.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPSiteGUIDs.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Remove-HUSPSitesSubsites.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-DocumentLibraries.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-ListViews.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-PublishJobs.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Republish-HubContentTypes.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPChangeRecordITSystem.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HULBFolderSizes.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-SPScripts.Copy-FilesToSP.ps1",
 		"/C/Users/cmsxlb/Dropbox/scripts/work_backup.bat",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Enter-AzureAppServer.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/azlogin.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/azupload.bat",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SetCommitteeNames.ps1",
-		"/A/scripts/docValues001.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/AddContentOrganizerRule.ps1",
-		"/A/migrationLogs/proofOfConcept_7 27 2015 9-45-38 AM.xml",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/migrationXML",
-		"/A/scripts/docValues.csv"
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/m drive migration/Example Manifest File.xml",
+		"/C/Users/cmsxlb/Downloads/Get-SPScripts.Copy-FilesToSP.ps1",
+		"/A/Profile.ps1"
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
+			"<current file>",
+			"<current file>,<open folders>",
+			"<current file>",
+			"",
 			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work\\project reference,<open folders>D:",
 			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work\\project reference",
 			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work\\project reference,\\\\accra\\d$\\SPLogs",
@@ -496,6 +719,49 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\\$currentWeb",
+			" ",
+			"staffmail",
+			"BuildingFaults",
+			"dispose",
+			"\"",
+			"site",
+			"try",
+			"\\$s ",
+			"\\$i",
+			"\\$l",
+			"\\$w",
+			"lock",
+			"foregroun",
+			"-contains",
+			"-matches",
+			"-",
+			"\\$LocalPath",
+			"\\$_.Name",
+			"query",
+			"h3",
+			"- ",
+			";#",
+			";# ",
+			"where",
+			"siteUrl",
+			"\\$spFullPath",
+			"$spFullPath",
+			"d",
+			"File",
+			"FileName",
+			"Files",
+			"List",
+			"Web",
+			"WebURL",
+			"xmlPath",
+			"\\$taxonomyFieldValue",
+			"\\$field",
+			"&gt;",
+			"&lt;",
+			"$list",
+			"term",
+			"\\$web",
 			"Date",
 			"Committee Date",
 			"closeconnection",
@@ -580,33 +846,7 @@
 			"--.*--",
 			"-.*-",
 			"metadata",
-			"solarized",
-			"get-speventlog",
-			"metadata",
-			"correlation",
-			"metadata",
-			"solarized",
-			"profile",
-			"timer",
-			"content timer",
-			"content",
-			"icon",
-			"get-splog",
-			"powershell",
-			"powershell remote",
-			"] (",
-			"remote",
-			"powershell",
-			"publishing",
-			"proxy",
-			"FieldLevelSecurityEventReceiver",
-			"credential",
-			"Portal",
-			"portal",
-			"printer",
-			"proxy",
-			"printer",
-			"proxy"
+			"solarized"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -614,6 +854,24 @@
 		"regex": true,
 		"replace_history":
 		[
+			"\\$SPWeb",
+			"-",
+			"'",
+			"\\$SPSite",
+			"\\$SPItem",
+			"\\$SPList",
+			"\\$SPWeb",
+			" ",
+			"\\$SharePointLegalName",
+			"h4",
+			"",
+			"\\n",
+			"\\r",
+			"<cr>",
+			"url",
+			">",
+			"<",
+			"\\$SPWeb",
 			"Time",
 			"Booking Start Date",
 			" ",
@@ -649,75 +907,44 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Set-HUSPTestTheme.ps1",
+					"file": "/C/Users/cmsxlb/Desktop/GitHubLog.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 658,
+						"buffer_size": 80797,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								658,
-								658
+								36590,
+								36590
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 29578.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "Set-HUSPLogo.ps1",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 453,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								42,
-								42
-							]
-						],
-						"settings":
-						{
-							"auto_name": "$sitelogo=\"/images/siteIcon-SPEDRMS.png\"",
-							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "New-HUSPSitesFromList.ps1",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 2404,
+						"buffer_size": 3561,
 						"regions":
 						{
 						},
@@ -734,11 +961,11 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
-						"translation.y": 540.0,
+						"translation.x": 0.0,
+						"translation.y": 741.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -746,7 +973,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -777,7 +1004,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 130.0
+		"height": 132.0
 	},
 	"output.find_results":
 	{
@@ -791,7 +1018,7 @@
 	"project": "Azure SharePoint EDRMS Scripts.sublime-project",
 	"replace":
 	{
-		"height": 66.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -800,6 +1027,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"content",
+				"New-HUSPContentOrganizerRules.ps1"
+			],
 			[
 				"organi",
 				"New-HUSPContentOrganizerRules.ps1"
@@ -810,12 +1041,16 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "notes",
 		"selected_items":
 		[
 			[
+				"notes",
+				"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes\\Notes.sublime-project"
+			],
+			[
 				"",
-				"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Sublime\\User\\journal.sublime-project"
+				"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes\\Notes.sublime-project"
 			],
 			[
 				"n",
@@ -845,11 +1080,11 @@
 	"settings":
 	{
 	},
-	"show_minimap": false,
-	"show_open_files": false,
+	"show_minimap": true,
+	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 330.0,
+	"side_bar_visible": false,
+	"side_bar_width": 422.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

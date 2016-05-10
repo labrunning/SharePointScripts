@@ -1,0 +1,25 @@
+<View Name="By Academic Year and Committee Date" DefaultView="TRUE">
+	<ViewFields>
+		<FieldRef Name="DocIcon"/>
+		<FieldRef Name="LinkFilename"/>
+		<FieldRef Name="Title"/>
+		<FieldRef Name="Committee_x0020_Document_x0020_Type"/>
+		<FieldRef Name="Committee_x0020_Date"/>
+		<FieldRef Name="Version"/>
+		<FieldRef Name="Modified"/>
+		<FieldRef Name="Modified By"/>
+		<FieldRef Name="Document ID"/>
+	</ViewFields>
+	<Query>
+		<!-- **YOU CAN ONLY GROUP BY TWO LEVELS** -->
+		<GroupBy Collapse='TRUE' GroupLimit='30'>
+			<FieldRef Name='Committee_x0020_Academic_x0020_Year' Ascending='FALSE'/>
+			<FieldRef Name='Committee_x0020_Date' Ascending='FALSE'/>
+		</GroupBy>
+		<OrderBy>
+			<FieldRef Name='Committee_x0020_Date' Ascending='FALSE'/>
+			<FieldRef Name='Committee_x0020_Document_x0020_Type'/>
+		</OrderBy>
+	</Query>
+	<RowLimit Paged="TRUE">50</RowLimit>
+</View>

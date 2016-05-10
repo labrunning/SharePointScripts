@@ -44,17 +44,42 @@ function New-HUSPSitesFromList {
             $SiteURL = $SiteCollection.TrimEnd("/") + "/" + $site.URL
             Write-Verbose "Creating $SiteURL..."
             New-SPWeb -Url $SiteURL -Name $site.Name -Description $site.Description -Template $st -UniquePermissions | Out-Null
-            $currentWeb = Get-SPWeb $SiteURL
+            $SPWeb = Get-SPWeb $SiteURL
             Write-Verbose -Message 'Set the locale to en-UK'
             $culture=[System.Globalization.CultureInfo]::CreateSpecificCulture(“en-UK”) 
-            $currentWeb.Locale=$culture 
+            $SPWeb.Locale=$culture 
             Write-Verbose -Message 'Enabling Tree View...'
-            $currentWeb.TreeViewEnabled = $true
+            $SPWeb.TreeViewEnabled = $true
             Write-Verbose -Message 'Disabling Quick Launch...'
-            $currentWeb.QuickLaunchEnabled = $false
-            $currentWeb.Update()
-            Write-Verbose -Message "Created site $SiteURL"
-            $currentWeb.Dispose()
+            $SPWeb.QuickLaunchEnabled = $false
+            $SPWeb.Update()
+
+            # get rid of the documents and tasks apps
+            foreach ($DefaultLibrary in "Documents","Tasks") {
+                $LibraryToDelete = $SPWeb.Lists[$DefaultLibrary]
+                $LibraryToDelete.Delete()
+            }
+
+            # turn on/off the feature we need
+            ## Content Organizer
+            Enable-SPFeature -Identity "DocumentRouting" -URL $SPWeb.url | Out-Null
+            $SPDropOffLib = $SPWeb.Lists["Drop Off Library"]
+            $SPDropOffLib.Title = "@Drop Off Library"
+            $SPDropOffLib.Update()
+
+            # Create a audit log document library for the site
+            $listTemplate = [Microsoft.SharePoint.SPListTemplateType]::DocumentLibrary
+            $SPWeb.Lists.Add("@Audit Reports","A place to save audit log reports.",$listTemplate)
+
+            # Disabling Unwanted Features
+            Disable-SPFeature -Identity "FollowingContent" -URL $SPWeb.url -Force -Confirm:$false | Out-Null
+            Disable-SPFeature -Identity "MBrowserRedirect" -URL $SPWeb.url -Force -COnfirm:$false | Out-Null
+
+            # Update everything before we leave
+            $SPWeb.Update()
+            Write-Verbose -Message "Created site $SPWeb"
+            Write-Host "Site GUID is " $SPWeb.ID
+            $SPWeb.Dispose()
         }
     }
 }

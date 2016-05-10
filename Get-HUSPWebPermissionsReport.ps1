@@ -23,7 +23,7 @@ Param(
     [string]$recursive
 )
 
-function Get-HUSPPermissionsReport {
+function Get-HUSPWebPermissionsReport {
     Get-SPWeb $url | Get-SPUser -Limit ALL | % {
         New-Object PSObject -Property @{
             UserLogin = $_.UserLogin
@@ -33,6 +33,7 @@ function Get-HUSPPermissionsReport {
             Url = $web.Url
         }
     }
+    $url.Dispose()
 
     if($recursive) {
         $web.Webs | % {

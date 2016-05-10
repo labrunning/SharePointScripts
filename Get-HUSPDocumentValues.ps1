@@ -1,23 +1,18 @@
 <#
     .SYNOPSIS
-    Gets a list of site columns from a document in a list given the Document ID
+     Gets a list of site columns from a document in a list given the Document ID
     .DESCRIPTION
-    This script outputs the values of a list as a powershell object that can then be piped to other powershell commands (see example)
+     This script outputs the values of a list as a powershell object that can then be piped to other powershell commands (see example)
     .PARAMETER url
-    a valid SharePoint site url
+     a valid SharePoint site url
     .PARAMETER list
-    a valid SharePoint list name
+     a valid SharePoint list name
     .PARAMETER file
-    a valid SharePoint document filename (optional)
+     a valid SharePoint document filename (optional)
     .EXAMPLE
-    To get a list of values from a particular site column; 
-    
-        Get-HUSPDocumentValues -url https://devunishare.hud.ac.uk/unifunctions/committees/University-Committees -list "University Health and Safety Committee" | Where-Object {$_."Display Name" -eq "Archived Metadata" }
-    .NOTES
-    Some notes about the script
-    .LINK
-    http://get-spscripts.com/2010/09/get-all-column-values-from-sharepoint.html
+     Get-HUSPDocumentValues -url https://devunishare.hud.ac.uk/unifunctions/committees/University-Committees -list "University Health and Safety Committee" | Where-Object {$_."Display Name" -eq "Archived Metadata" }
 #>
+
 function Get-HUSPDocumentValues {
     [CmdletBinding()]
     Param(
@@ -27,15 +22,15 @@ function Get-HUSPDocumentValues {
         [string]$list,
         [Parameter(Mandatory=$false)]
         [AllowEmptyString()]
-        [string]$file
+        [int]$Id
     )
     
     $SPWeb = Get-SPWeb $url
     $SPList = $SPWeb.Lists[$list]
 
-    $FileNamePresent = $PSBoundParameters.ContainsKey('file') 
+    $IdPresent = $PSBoundParameters.ContainsKey('id') 
 
-    If ($FileNamePresent -eq $false) {
+    If ($IdPresent -eq $false) {
         Write-Verbose "No specified file"
         $FullList = $SPList.GetItems()
         ForEach ($item in $FullList) {
@@ -47,11 +42,12 @@ function Get-HUSPDocumentValues {
                 }
                 New-Object PSObject -Property $fieldValues | Select @("Display Name","Internal Name","Value")
             }            
+            Write-Host "+++------------------------------------------------------+++"
         }
     } else {
-        Write-Verbose "Filename '$file' specified"
+        Write-Verbose "Id '$Id' specified"
         [string]$queryString = $null 
-        $queryString = "<Where><Eq><FieldRef Name='FileLeafRef' /><Value Type='Text'>" + $File + "</Value></Eq></Where>"
+        $queryString = "<Where><Eq><FieldRef Name='ID' /><Value Type='Counter'>" + $Id + "</Value></Eq></Where>"
         $query = New-Object Microsoft.SharePoint.SPQuery
         $query.Query = $queryString
         $item = $SPList.GetItems($query)[0] 

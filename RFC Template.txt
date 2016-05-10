@@ -1,0 +1,52 @@
+# RFC - Request for Change
+
+## Basic Details
+
+- RFC Number
+- Date
+- Name of Requester
+- Details of change
+- Reason for Change
+- Consequences of not carrying out the change
+    + short tem
+    + long term
+- Change Priority
+
+## Planning
+
+- Proposed date of change
+- Change implementers
+- What systems will be affected?
+- What users will be affected?
+- What could we do to reduce the impact?
+- Proposed back out plan
+- Pre checks
+- Method of implementation
+- Post checks
+
+## Communication
+
+- Internal
+    + Team
+    + Notify
+    + Information Required
+- External
+- Change Authorisation
+    + Authorised by
+    + Date
+
+## Closure
+
+- Closure date
+- Name of requester
+- Details of any problems encountered
+- Could anything have been done differently
+- Have all communications as specified in section 3 been undertaken?
+    + yes/no
+    + dates of communications
+- Change successful (y/n)
+- Server database updated (y/n)
+- Notified Networks Team to update concord
+- Closure Authorisation
+    + Authorised by
+    + Date

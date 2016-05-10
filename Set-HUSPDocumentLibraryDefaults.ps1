@@ -2,15 +2,7 @@
     .SYNOPSIS
     Sets the Document Library settings to the defaults for the EDMRS system
     .DESCRIPTION
-    This goes through all the document libraries in a site and sets the defaults for the EDRMS system which are;
-
-        - OnQuickLaunch = $false
-        - EnableVersioning = $true
-        - EnableModeration = $false
-        - EnableMinorVersions = $true
-        - ForceCheckOut = $false
-        - EnableFolderCreation = $false
-        - ContentTypesEnabled = $true
+    This goes through all the document libraries in a site and sets the defaults for the EDRMS system
     .PARAMETER param
     a description of a parameter
     .EXAMPLE
@@ -24,25 +16,18 @@
 function Set-HUSPDocumentLibraryDefaults {
     [CmdletBinding()]
     Param(
-        [Parameter(Mandatory=,Position=1)]
-        [string]$url
+        [Parameter(Mandatory=$true,Position=1)]
+        [string]$url,
+        [Parameter(Mandatory=$true,Position=2)]
+        [string]$list
     )
 
-    $spWeb = Get-SPWeb $url
+    $SPWeb = Get-SPWeb $url
+    $SPList = $SPWeb.Lists[$list]
+    Write-Verbose -message "Setting library defaults for $SPList"
+    $SPList.EnableFolderCreation = $false
+    $SPList.DisableGridEditing = $true
+    $SPList.Update()
     
-    foreach($docLib in $spWeb.Lists)
-    {
-        if( ($docLib.BaseType -eq "DocumentLibrary") -and ($docLib.Hidden -eq $false) )
-        $CurrentDocumentLibrary = $docLib.Title
-        write-verbose "Setting library defaults for $CurrentDocumentLibrary"
-        $docLib.OnQuickLaunch = $false
-        $docLib.EnableVersioning = $true
-        $docLib.EnableModeration = $false
-        $docLib.EnableMinorVersions = $true
-        $docLib.ForceCheckOut = $false
-        $docLib.EnableFolderCreation = $false
-        $docLib.ContentTypesEnabled = $true
-        $docLib.Update()
-    }
-    $spWeb.Dispose()
+    $SPWeb.Dispose()
 }

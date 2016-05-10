@@ -11,3 +11,4 @@ $w = $s.OpenWeb($w.id)
 $l = $w.lists[$list]
 $i = $l.GetItemById($item)
 $i.File.ReleaseLock($i.File.LockId)
+$w.Dispose()

@@ -35,6 +35,7 @@ function Set-HUSPDefaulValues {
     $term = $tset.GetTerms($committeeName, $true) 
     $termValueGuid = $term.Id
     
+    # **FIX ME** - this needs to do any committee not just University Committees
     $committeeField = [Microsoft.SharePoint.Taxonomy.TaxonomyField]$docLib.Fields["University Committee Name"]
     [Microsoft.SharePoint.Taxonomy.TaxonomyFieldValue]$taxonomyFieldValue = New-Object Microsoft.SharePoint.Taxonomy.TaxonomyFieldValue($committeeField)    
     $taxonomyFieldValue.PopulateFromLabelGuidPair([Microsoft.SharePoint.Taxonomy.TermSet]::NormalizeName($committeeName) + "|" + $termValueGuid) 
@@ -54,4 +55,7 @@ function Set-HUSPDefaulValues {
             write-host Value set to $item["University Committee Name"] 
         }
     }
+
+    $ts.Dispose()
+    $web.Dispose()
 }

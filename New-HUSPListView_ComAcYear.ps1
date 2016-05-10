@@ -38,6 +38,7 @@ function New-HUSPListView_ComAcYear {
     
     $viewTitle = "By Academic Year and Committee Date"
     $viewFields = New-Object System.Collections.Specialized.StringCollection
+    $viewFields.Add("DocIcon") > $null
     $viewFields.Add("LinkFilename") > $null
     $viewFields.Add("Title") > $null
     $viewFields.Add("Committee Document Type") > $null
@@ -46,12 +47,12 @@ function New-HUSPListView_ComAcYear {
     $viewFields.Add("Modified") > $null
     $viewFields.Add("Modified By") > $null
     $viewFields.Add("Document ID") > $null
-    $viewQuery = "<OrderBy><FieldRef Name='Committee_x0020_Date' Ascending='FALSE'/><FieldRef Name='Committee_x0020_Document_x0020_Type'/></OrderBy><GroupBy Collapse = 'FALSE'><FieldRef Name = 'Committee_x0020_Academic_x0020_Year'/><FieldRef Name='Committee_x0020_Date' Ascending='FALSE'/></GroupBy>"
+    $viewQuery = "<GroupBy Collapse='TRUE' GroupLimit='30'><FieldRef Name='Committee_x0020_Academic_x0020_Year' Ascending='FALSE'/><FieldRef Name='Committee_x0020_Date' Ascending='FALSE'/></GroupBy><OrderBy><FieldRef Name='Committee_x0020_Date' Ascending='FALSE'/><FieldRef Name='Committee_x0020_Document_x0020_Type'/></OrderBy>"
     $viewRowLimit = 50
     $viewPaged = $true
-    $viewDefaultView = $false
+    $viewDefaultView = $true
     
-    Write-Verbose ("Creating View '" + $newview.Title + "' created in list '" + $listName.Title + "' on site " + $web.Url)
+    Write-Verbose -message "Creating View $viewTitle for $list"
     $newview = $listName.Views.Add($viewTitle, $viewFields, $viewQuery, $viewRowLimit, $viewPaged, $viewDefaultView)
     
     $web.Dispose()

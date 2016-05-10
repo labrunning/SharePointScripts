@@ -47,3 +47,5 @@ $item["Modified"] = $dateToStore
  
 #Store changes without overwriting the existing Modified details.
 $item.UpdateOverwriteVersion()
+
+$web.dispose()
