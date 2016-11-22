@@ -4,6 +4,8 @@
 
 # I added the function below to convert any SharePoint illegal characters
 
+# **USE THE FULL LOCAL PATH IN THE PARAMETERS OR THE SCRIPT WILL FAIL!!**
+
 function ConvertTo-NeutralString ($Text) {
     $changes = New-Object System.Collections.Hashtable
     $changes.'&' = 'and'
@@ -64,9 +66,9 @@ function Copy-HUSPFilesToSP
         } else {
         $files = Get-ChildItem $LocalPath
     }
-        
+
     $files | ForEach-Object {
-    
+
         #Check if the object is a folder - if so, create it in doc library
         if ($_.PSIsContainer) {
             if (($IncludeSubFolders) -and (!$FlattenStructure)) {
@@ -88,6 +90,7 @@ function Copy-HUSPFilesToSP
                 #Check to see if subfolder already exists
                 #and create it if not
                 $LegalFolderName = ConvertTo-NeutralString $_.Name
+
                 $testFolder = $currentFolder.SubFolders[$LegalFolderName]
 
                 if ($testFolder -eq $null) {
@@ -342,7 +345,7 @@ function Copy-HUSPFilesToSP
     }
     catch [System.SystemException]
     { 
-        write-host "The script has stopped because there has been an error.  "$_.Message
+        write-host "The script has stopped because there has been an error." $_.Message
     }
     finally
     {
