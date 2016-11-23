@@ -1,8 +1,8 @@
 <# 
     .Synopsis
-     Applies a metadata value to a field based on the list name
+     Applies Committee metadata value to a field based on the list name
     .DESCRIPTION
-     For a given list this script will apply a metadata value to every item in this list based on the list name. This can be used to apply metadata not brought over in the migration
+     For a given list this script will apply a metadata value to every item in this list based on the list name. This can be used to apply metadata not brought over in the migration; the field the contains the metadata MUST have a corresponding entry in the term set with all the values required in for this script to work.
     .Parameter url
       A valid SharePoint list url
     .Parameter list
@@ -16,7 +16,7 @@
     .OUTPUTS
       All the documents in the list will have the metadata term applied
     .EXAMPLE 
-      Set-HUSPDocumentMetadata -url https://unishare.hud.ac.uk/unifunctions/COM/University-Committees -list "University Health and Safety Committee" -group "EDRMS Fileplan" -set "Committees" -field "University Committee Name"
+      Set-HUSPDocumentMetadata -url https://unishare.hud.ac.uk/unifunctions/COM/University-Committees -list "University Health and Safety Committee" -group "UF Fileplan" -set "Committees" -field "University Committee Name"
 #>
 
 function Set-HUSPDocumentMetadata {
@@ -49,19 +49,8 @@ function Set-HUSPDocumentMetadata {
     $tstore = $ts.TermStores[0] 
     $tgroup = $tstore.Groups[$Group] 
     $tset = $tgroup.TermSets[$Set] 
-    $term = $tset.GetTerms($committeeName, $true)
-    $noOfTerms = $term.Count
-    if ($noOfTerms -gt 1) {
-            Write-Host "There is more than one matching term with this name"
-            for ($index = 0; $index -lt $term.Count; $index++) {
-                $humanNumber = $index + 1
-                Write-Host $humanNumber": " $term[$index].Id
-            }
-            $termChoice = Read-Host "Choose a number for the term you want to apply; (1 to $noOfTerms)"
-            $termValueGuid = $term[$termChoice - 1].Id
-        } else {
-            $termValueGuid = $term.Id
-    }
+    $term =  $tset.GetTerms($committeeName,$true) | Where { $_.Parent.Name -eq $field }
+    $termValueGuid = $term.Id
 
     # Create valid metadata object to apply to document
     $committeeField = [Microsoft.SharePoint.Taxonomy.TaxonomyField]$docLib.Fields[$field]
@@ -82,8 +71,13 @@ function Set-HUSPDocumentMetadata {
                     [Microsoft.Office.RecordsManagement.RecordsRepository.Records]::BypassLocks($item, $ModifyRecord)
         } else {
                     Write-Verbose -message "  $CurrentRecord $field will be updated to $taxonomyFieldValue"
-                    $item[$field] = $taxonomyFieldValue.ValidatedString
-                    $item.SystemUpdate($false)
+                    $ModifyRecord = {
+                        $item[$field] = $taxonomyFieldValue.ValidatedString
+                        $item.SystemUpdate($false)
+                    }
+                    [Microsoft.Office.RecordsManagement.RecordsRepository.Records]::BypassLocks($item, $ModifyRecord)
+                    <#$item[$field] = $taxonomyFieldValue.ValidatedString
+                    $item.SystemUpdate($false)#>
         }
     }
     

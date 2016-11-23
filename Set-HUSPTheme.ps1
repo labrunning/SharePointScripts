@@ -27,22 +27,20 @@ function Set-HUSPTheme {
         [Parameter(Mandatory=$True,Position=2)]
         [string]$name,
         [Parameter(Mandatory=$True,Position=3)]
-        [string]$color,
-        [Parameter(Mandatory=$True,Position=4)]
-        [string]$siteGUID
+        [string]$color
     )
         
     $themeName = $name
     $SPSite = Get-SPSite $url
     $spcolor = "/_catalogs/theme/15/" + $color + ".spcolor"
-    foreach ($SPWeb in $SPSite.AllWebs | Where-Object {$_.ID -eq $siteGUID}) {
+    foreach ($SPWeb in $SPSite.AllWebs ) {
         $SPWeb.allowunsafeupdates = $true
         Write-Verbose -message "Applying $color to $SPWeb.url"
         $fontSchemeUrl = Out-Null
         $themeUrl = [Microsoft.SharePoint.Utilities.SPUrlUtility]::CombineUrl($SPSite.ServerRelativeUrl, $spcolor)
         $imageUrl = Out-Null
         # add an if here to set to parameter if there is a value for image
-        # $imageUrl = [Microsoft.SharePoint.Utilities.SPUrlUtility]::CombineUrl($SPSite.ServerRelativeUrl, "/images/EDRMS_Background002.jpg")
+        # $imageUrl = [Microsoft.SharePoint.Utilities.SPUrlUtility]::CombineUrl($SPSite.ServerRelativeUrl, "/images/Unifunctions_logo.png")
         $SPWeb.ApplyTheme($themeUrl, $fontSchemeUrl, $imageUrl, $true);
         write-host $SPWeb.Title " theme has been set to " $themeName
         $SPWeb.allowunsafeupdates = $false

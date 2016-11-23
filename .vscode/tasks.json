@@ -1,0 +1,25 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "robocopy",
+    "isShellCommand": true,
+    "args": [],
+    "showOutput": "always",
+    "echoCommand": true,
+    "suppressTaskName": true,
+    "tasks": [
+        {
+            "taskName": "Dev Push",
+            "args": [
+                "${workspaceRoot}", "A:\\scripts\\", "/S", "/xd", ".git", ".vscode", "/xf", "*.sublime-*", "/mir", "/b"
+            ]
+        },
+        {
+            "taskName": "Live Push",
+            "args": [
+                "${workspaceRoot}", "B:\\scripts\\", "/S", "/xd", ".git", ".vscode", "/xf", "*.sublime-*", "/mir", "/b"
+            ]
+        }
+    ]
+}

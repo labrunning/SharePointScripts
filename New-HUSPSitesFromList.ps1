@@ -13,7 +13,7 @@
     .PARAMETER st
     a valid SharePoint Site Template code (default is BDR#0 which is a Document Centre ); use Get-SPWebTemplate to see a full list
     .EXAMPLE
-    An example of how the script can be used
+    An example of how the script can be used\script
     .NOTES
     When the sites are created, they are set to UK regional settings and Tree View is enabled. If you do not specify a template, the default will be used.
 #>
@@ -29,7 +29,7 @@ function New-HUSPSitesFromList {
         [string]$st = "BDR#0" # Document Centre
     )
     
-    Write-Debug "Site template is $st"
+    Write-Verbose "Site template is $st"
 
     Write-Verbose -Message "Importing list of sites from $csv"
     $SitesList = Import-Csv -Path "$csv"
@@ -45,8 +45,9 @@ function New-HUSPSitesFromList {
             Write-Verbose "Creating $SiteURL..."
             New-SPWeb -Url $SiteURL -Name $site.Name -Description $site.Description -Template $st -UniquePermissions | Out-Null
             $SPWeb = Get-SPWeb $SiteURL
-            Write-Verbose -Message 'Set the locale to en-UK'
-            $culture=[System.Globalization.CultureInfo]::CreateSpecificCulture(“en-UK”) 
+            Write-Verbose -Message 'Set the locale to en-GB'
+            # this is now GB
+            $culture=[System.Globalization.CultureInfo]::CreateSpecificCulture('en-GB') 
             $SPWeb.Locale=$culture 
             Write-Verbose -Message 'Enabling Tree View...'
             $SPWeb.TreeViewEnabled = $true

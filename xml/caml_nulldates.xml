@@ -1,0 +1,5 @@
+<Where>
+    <IsNull>
+        <FieldRef Name='Committee_x0020_Date1' />
+    </IsNull>
+</Where>

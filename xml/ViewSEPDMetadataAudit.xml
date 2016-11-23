@@ -1,0 +1,23 @@
+<View Name='Metadata Audit' DefaultView='FALSE'>
+	<Query>
+		<OrderBy>
+			<FieldRef Name='ID' Ascending='FALSE'/>
+		</OrderBy>
+	</Query>
+	<ViewFields>
+		<FieldRef Name='DocIcon'/>
+		<FieldRef Name='LinkFilename'/>
+        <FieldRef Name='School_x0020_of_x0020_Education_x0020_and_x0020_Professional_x0020_Development'/>
+		<FieldRef Name='Committee_x0020_Academic_x0020_Year1'/>
+		<FieldRef Name='Committee_x0020_Date1'/>
+		<FieldRef Name='Committee_x0020_Document_x0020_Type1'/>
+		<FieldRef Name='School_x002F_Service'/>
+        <FieldRef Name='_UIVersionString'/>
+		<FieldRef Name='_dlc_DocId'/>		
+		<FieldRef Name='ID'/>
+	</ViewFields>
+	<RowLimit Paged='TRUE'>100</RowLimit>
+	<Aggregations>
+		<FieldRef Name='LinkFilename' Type='COUNT'/>
+	</Aggregations>
+</View>

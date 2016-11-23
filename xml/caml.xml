@@ -1,0 +1,6 @@
+<Where>
+    <Eq>
+        <FieldRef Name='ID' />
+        <Value Type='Number'>3940</Value>
+    </Eq>
+</Where>

@@ -3,10 +3,10 @@
     Creates a new managed metadata term set 
     .DESCRIPTION
     This script creates a new managed metadata term set. It also allows the creation of a synonym for that term which is not supported by the CSV import function.
-    .PARAMETER param
-    a description of a parameter
+    .PARAMETER url
+    a valid SharePoint url
     .EXAMPLE
-    An example of how the script can be used
+    New-HUSPMetadataTermSet -url https://devunifunctions.hud.ac.uk/COM will add a new term set
     .NOTES
     Some notes about the script
     .LINK
@@ -16,10 +16,12 @@
 function New-HUSPMetadataTermSet {
     [CmdletBinding()]
     Param(
-        [Parameter(Mandatory=$True,Position=1)]
+        [Parameter(Mandatory=$true,Position=1)]
         [string]$url,
-        [Parameter(Mandatory=$True,Position=2)]
-        [string]$list
+        [Parameter(Mandatory=$true,Position=2)]
+        [string]$group,
+        [Parameter(Mandatory=$true,Position=3)]
+        [string]$ts
     )
     
     #Connect to Central Admin 
@@ -27,12 +29,20 @@ function New-HUSPMetadataTermSet {
     
     #Connect to Term Store in the Managed Metadata Service Application 
     $TaxonomySession = Get-SPTaxonomySession -site $TaxonomySite 
-    $TermStore = $TaxonomySession.TermStores["Managed Metadata Service"] 
+    
+    <#
+    We can specify the term store by name, but as there is just usually one, and this
+    is certainly the case in our environment I am just going to use the first one
+    $TermStore = $TaxonomySession.TermStores["Managed Metadata Service Application Proxy"]
+    #> 
+    
+    $TermStore = $TaxonomySession.TermStores[0] 
+
     Write-Verbose "Connection made with term store - $TermStore.Name"
     
     #Connect to the Group and Term Set 
-    $TermStoreGroup = $TermStore.Groups["Group Name"] 
-    $TermSet = $TermStoreGroup.TermSets["Term Set Name"] 
+    $TermStoreGroup = $TermStore.Groups[$group] 
+    $TermSet = $TermStoreGroup.TermSets[$ts] 
     
     #Create term, term description, and a synonym 
     $Term = $TermSet.CreateTerm("Test Term", 1033) 

@@ -3,7 +3,7 @@
      Adds fields to the metanavigation
     .DESCRIPTION
      Adds the fields specified on a paramater to the managed metadata navigation for a list
-    .Parameter web
+    .Parameter url
       A valid SharePoint Site url
     .Parameter list
       A valid SharePoint document library name
@@ -39,6 +39,7 @@ function Set-HUSPMetadataNavigation {
 
     #Configure key filters by adding columns
     foreach ($field in $fields) {
+        Write-Verbose -message "Setting $field navigation for $SPList"
         $listNavSettings.AddConfiguredHierarchy($SPList.Fields[$field])
     }
 

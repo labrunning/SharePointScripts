@@ -26,9 +26,9 @@ function Get-HUSPSitePermissionsReport {
     $RootURL = $url.Split("/") # Split function is required for Host based site collection
     $RootURL = $RootURL[0] + "/" + $RootURL[1] + "/" + $RootURL[2]
     
-    $logTime = Get-Date -Format "Mm-dd-yyyy_hh-mm-ss"
+    $logTime = Get-Date -Format "dd-MM-yyyy_H-mm-ss"
     $Columns = "WebURL" + ";" + "List Default View URL" + ";" + "List Title" + ";" + "Item URL" + ";" + "Name" + ";" + "Type" +";"+"Permission" 
-    $logFile = ".\UniquePermissions" + $logtime + ".csv" # Log Location
+    $logFile = ".\UniquePermissions-" + $logtime + ".csv" # Log Location
     $columns | out-file -filepath $logfile -append
     
     $site=Get-SPSite $url 

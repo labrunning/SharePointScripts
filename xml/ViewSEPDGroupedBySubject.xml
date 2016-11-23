@@ -1,0 +1,25 @@
+<View Name="By Subject and Committee Date" DefaultView="FALSE">
+	<ViewFields>
+		<FieldRef Name="DocIcon"/>
+		<FieldRef Name="LinkFilename"/>
+		<FieldRef Name='School_x0020_of_x0020_Education_x0020_and_x0020_Professional_x0020_Development_x0020_Course'/>
+		<FieldRef Name="Committee_x0020_Document_x0020_Type1"/>
+		<FieldRef Name="Committee_x0020_Date1"/>
+		<FieldRef Name="Version"/>
+		<FieldRef Name="Modified"/>
+		<FieldRef Name="Modified By"/>
+		<FieldRef Name="_dlc_DocId"/>
+	</ViewFields>
+	<Query>
+		<!-- **YOU CAN ONLY GROUP BY TWO LEVELS** -->
+		<GroupBy Collapse='TRUE' GroupLimit='30'>
+			<FieldRef Name='School_x0020_of_x0020_Education_x0020_and_x0020_Professional_x0020_Development_x0020_Course' Ascending='FALSE'/>
+			<FieldRef Name='Committee_x0020_Date1' Ascending='FALSE'/>
+		</GroupBy>
+		<OrderBy>
+			<FieldRef Name='School_x0020_of_x0020_Education_x0020_and_x0020_Professional_x0020_Development_x0020_Course'/>
+			<FieldRef Name='Committee_x0020_Date1' Ascending='FALSE'/>
+		</OrderBy>
+	</Query>
+	<RowLimit Paged="TRUE">50</RowLimit>
+</View>

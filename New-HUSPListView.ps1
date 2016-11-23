@@ -10,7 +10,7 @@
     .PARAMETER xml
     a valid path to an XML file with the view data
     .EXAMPLE
-    Set-ListViews.ps1 -url https://devunishare.hud.ac.uk/unifunctions/committees/University-Committees -list 'University Health and Safety Committee' xml '.\CommitteesAcademicYearView.xml'
+    New-HUSPListView -url https://devunishare.hud.ac.uk/unifunctions/committees/University-Committees -list 'University Health and Safety Committee' -xmlpath '.\CommitteesAcademicYearView.xml'
 #>
 
 function New-HUSPListView {
@@ -27,7 +27,7 @@ function New-HUSPListView {
     [xml]$viewData = Get-Content -Path $xmlpath
 
     $SPWeb = Get-SPWeb $url
-    $listName = $SPWeb.GetList(($SPWeb.ServerRelativeURL.TrimEnd("/") + "/" + $list))
+    $SPList = $SPWeb.Lists[$list]
 
     $viewTitle = $viewData.View.Name
 
@@ -42,32 +42,40 @@ function New-HUSPListView {
 
     $viewRowLimit = $viewData.View.RowLimit.InnerText 
     $viewPaged = $viewData.View.RowLimit.Paged
-    # the view setting is funny about it's booleans!
-    # a regular boolean won't work, so set to $true when TRUE
-    If ($viewPaged -eq "TRUE") {
-        $viewPaged = $true
-    } else {
-        $viewPaged = $false
+    
+    If ( $viewPaged -eq "TRUE" ) {
+            $viewPaged = $true
+        } else {
+            $viewPaged = $false
     }
+    
     $viewDefaultView = $viewData.View.DefaultView
-    If ($viewDefaultView -eq "TRUE") {
-        $viewDefaultView = $true
-    } else {
-        $viewDefaultView = $false
+    
+    If ( $viewDefaultView -eq "TRUE" ) {
+            $viewDefaultView = $true
+        } else {
+            $viewDefaultView = $false
     }
     
-    $newview = $listName.Views.Add($viewTitle, $viewFields, $viewQuery, $viewRowLimit, $viewPaged, $viewDefaultView)
-    Write-Host ("Created View '$viewTitle' for '$list'")
-    
-    $aggregations = Select-XML "//Aggregations" $viewData
-    
-    $SPList = $SPWeb.Lists[$list]
     $SPView = $SPList.Views[$viewTitle]
 
-    $SPView.Aggregations = $aggregations
-    $SPView.AggregationsStatus = $true
-    $SPView.Update()
-    $SPList.Update()
+    if ( $SPView -eq $null ) {
+            $newview = $SPList.Views.Add($viewTitle, $viewFields, $viewQuery, $viewRowLimit, $viewPaged, $viewDefaultView)
+            $aggregations = Select-XML "//Aggregations" $viewData
+            if ( $aggregations -eq $null ) {
+                    Write-Host "No aggreations set."
+                } else {
+                    $SPView = $SPList.Views[$viewTitle]
+                    $SPView.Aggregations = $aggregations
+                    $SPView.AggregationsStatus = $true
+                    $SPView.Update()
+            }
+            $SPList.Update()
+            Write-Host "Created view $viewTitle for $list"
+        } else {
+            Write-Host "View $viewTitle already exists; will not be created"
+    }
 
     $SPWeb.Dispose()
+
 }

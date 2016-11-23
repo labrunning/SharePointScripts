@@ -33,21 +33,19 @@ function Invoke-HUSPFileLockRelease {
 
     $SPFile = $SPItem.File
 
-    $SPLockType = Select-String -pattern "LockType" -InputObject $SPFile -List
+    $SPFile
 
-    Write-Verbose -Message $SPLockType
+    # $SPLockType = Select-String -pattern "LockType" -InputObject $SPFile -List
 
-
-    #try {
-    #    $SPSite = New-Object Microsoft.SharePoint.SPSite($SPWeb.Site.Id, $SPItem.File.LockedByUser.UserToken)
-    #    $SPWeb = $SPSite.OpenWeb($SPWeb.Id)
-    #    $SPList = $SPWeb.Lists[$SPListist]
-    #    $SPItem = $SPList.GetItemById($SPItem)
-    #    $SPItem.File.ReleaseLock($SPItem.File.LockId)
-    #} catch [System.SystemException] {
-    #    write-host "The script has stopped because there has been an error.  "$_.Message
-    #   
-    #}
+    try {
+        $SPSite = New-Object Microsoft.SharePoint.SPSite($SPWeb.Site.Id, $SPItem.File.LockedByUser.UserToken)
+        $SPWeb = $SPSite.OpenWeb($SPWeb.Id)
+        $SPList = $SPWeb.Lists[$SPListist]
+        $SPItem = $SPList.GetItemById($SPItem)
+        $SPItem.File.ReleaseLock($SPItem.File.LockId)
+    } catch [System.SystemException] {
+        write-host "The script has stopped because there has been an error.  "$_.Message   
+    }
 
     $SPWeb.Dispose()
     $SPSite.Dispose()

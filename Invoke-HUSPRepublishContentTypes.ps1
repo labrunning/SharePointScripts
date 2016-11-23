@@ -13,7 +13,7 @@ function Invoke-HUSPRepublishContentTypes {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$false,Position=1)]
-        [string]$CTHubURL="https://unishare.hud.ac.uk/ct"
+        [string]$CTHubURL="https://unifunctions.hud.ac.uk/ct"
     )
         
     $ctHubSite = Get-SPSite $CTHubURL
@@ -26,7 +26,9 @@ function Invoke-HUSPRepublishContentTypes {
             if ($spCTPublish.IsPublished($_)) {
                 $spCTPublish.Publish($_)
                 Write-Host "*** Content type $CurrentContentType has been republished ***" -foregroundcolor Green
-            } else { Write-Verbose -message "Content type $CurrentContentType is not a published content type" -foregroundcolor Yellow }
+            } else { 
+                Write-Verbose -message "Content type $CurrentContentType is not a published content type"
+            }
         }
     } else { Write-Host "$CTHubURL is not a content type hub site" -foregroundcolor Red }
     $ctHubWeb.Dispose()

@@ -5,7 +5,91 @@
 		[
 			[
 				"SP",
-				"SPItem"
+				"SPXmlValue"
+			],
+			[
+				"W",
+				"Where"
+			],
+			[
+				"Get-",
+				"Get-HUSPTaxonomyValue"
+			],
+			[
+				"SPI",
+				"SPItemId"
+			],
+			[
+				"File",
+				"Fileplan"
+			],
+			[
+				"SPTaxonomyFeid",
+				"SPTaxonomyFieldValue"
+			],
+			[
+				"set",
+				"setFieldValue"
+			],
+			[
+				"Write",
+				"Write-Host"
+			],
+			[
+				"Writ",
+				"Write-Host"
+			],
+			[
+				"Curre",
+				"CurrentField"
+			],
+			[
+				"myX",
+				"myXMLValue"
+			],
+			[
+				"CUrre",
+				"CurrentFieldType"
+			],
+			[
+				"SPFeid",
+				"SPFieldUserValue"
+			],
+			[
+				"Taxono",
+				"TaxonomyField"
+			],
+			[
+				"Term",
+				"TermGroup"
+			],
+			[
+				"Tax",
+				"TaxonomySession"
+			],
+			[
+				"Ta",
+				"TaxonomySession"
+			],
+			[
+				"S",
+				"SPGroups"
+			],
+			[
+				"ps",
+				"psparam\tThe default PowerShell parameters to include at the beginning of a script which enable the defaults such as -Verbose and -Debug"
+			],
+			[
+				"tax",
+				"taxonomyFieldValue"
+			],
+			[
+				"comm",
+				"committeeName"
+			],
+			[
+				"Get-SP",
+				"Get-SPWeb"
 			],
 			[
 				"myAu",
@@ -24,10 +108,6 @@
 				"LastWriteTime"
 			],
 			[
-				"Write",
-				"Write-Verbose"
-			],
-			[
 				"write",
 				"write-verbose"
 			],
@@ -41,7 +121,7 @@
 			],
 			[
 				"el",
-				"else	(else) else {...}"
+				"else\t(else) else {...}"
 			],
 			[
 				"my",
@@ -100,10 +180,6 @@
 				"CreateXmlDeclaration"
 			],
 			[
-				"S",
-				"SPSite"
-			],
-			[
 				"Lock",
 				"LockType"
 			],
@@ -126,10 +202,6 @@
 			[
 				"tse",
 				"tsession"
-			],
-			[
-				"SPI",
-				"SPItem"
 			],
 			[
 				"Env",
@@ -254,10 +326,6 @@
 			[
 				"T",
 				"TaxonomyField"
-			],
-			[
-				"Curre",
-				"CurrentRecord"
 			],
 			[
 				"C",
@@ -416,30 +484,32 @@
 	"buffers":
 	[
 		{
-			"file": "Set-HUSPMigrationFlag.ps1",
+			"file": "SADA-Master-Subjects.txt",
 			"settings":
 			{
-				"buffer_size": 1878,
+				"buffer_size": 319,
+				"encoding": "UTF-16 LE with BOM",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "Package Control Messages\n========================\n\nAppleScript Extensions\n----------------------\n\n  v2.2.1\n  ======\n  \n  Please take note that the triggers for all license snippets have changed from\n  `comment-*` to `license-*`\n\n\nTheme - Cobalt2\n---------------\n\n  ## Cobalt2 Updates 🎉🎉🎉🎉\n  \n  → HTML class names are now italic like the rest of the HTML attributes\n  → Added some ES6 Class Fixes\n  → Fixes ES6 extend syntax\n  → Added Docker icons\n  \n  🔥📼 ES6 JavaScript Course\n  \n  I just released a new course called ES6 for Everyone!\n  \n  A premium training course to strengthen your core JavaScript skills\n  and master all that ES6 has to offer.\n  \n  🔥📖 I also wrote a book + video series on Sublime Text! → SublimeTextBook.com\n  🔥📼 And I created a Training series on React.js → ReactForBeginners.com\n  \n  Use the coupon code COBALT2 for $15 off 💰 💵\n  \n  😘 With Love,\n  \n  @wesbos\n  \n  Tweets at twitter.com/@wesbos  😗 😗 😗\n",
+			"file": "New-HUSPMetadataTermSet.ps1",
 			"settings":
 			{
-				"buffer_size": 926,
+				"buffer_size": 1936,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nSublimeLinter-contrib-jslint\n----------------------------\n\n  SublimeLinter-jslint\n  -------------------------------\n  This linter plugin for SublimeLinter provides an interface to jslint.\n  \n  ** IMPORTANT! **\n  \n  Before this plugin will activate, you *must*\n  follow the installation instructions here:\n  \n  https://github.com/devdoc/SublimeLinter-jslint\n\n\nSublimeLinter-jshint\n--------------------\n\n  SublimeLinter-jshint\n  -------------------------------\n  This linter plugin for SublimeLinter provides an interface to jshint.\n  \n  ** IMPORTANT! **\n  \n  Before this plugin will activate, you *must*\n  follow the installation instructions here:\n  \n  https://github.com/SublimeLinter/SublimeLinter-jshint\n",
+			"settings":
+			{
+				"buffer_size": 758,
 				"line_ending": "Windows",
 				"name": "Package Control Messages",
 				"read_only": true,
 				"scratch": true
-			}
-		},
-		{
-			"file": "Get-HUSPDocumentValues.ps1",
-			"settings":
-			{
-				"buffer_size": 2427,
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -486,17 +556,25 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 375.0,
-		"last_filter": "sni",
+		"height": 392.0,
+		"last_filter": "re",
 		"selected_items":
 		[
 			[
-				"sni",
-				"Snippet: wiswp"
-			],
-			[
 				"re",
 				"Indentation: Reindent Lines"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"sni",
+				"Snippet: wiswp"
 			],
 			[
 				"sn",
@@ -517,10 +595,6 @@
 			[
 				"pre",
 				"Markdown Preview: Preview in Browser"
-			],
-			[
-				"rein",
-				"Indentation: Reindent Lines"
 			],
 			[
 				"remov",
@@ -587,15 +661,11 @@
 				"Package Control: Remove Package"
 			],
 			[
-				"indent",
-				"Indent XML"
-			],
-			[
 				"xml",
 				"Indent XML"
 			],
 			[
-				"rein	",
+				"rein\t",
 				"Indentation: Reindent Lines"
 			],
 			[
@@ -647,7 +717,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 418.0
+		"width": 1096.0
 	},
 	"console":
 	{
@@ -670,15 +740,88 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml"
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts"
 	],
 	"file_history":
 	[
+		"/C/Users/cmsxlb/Dropbox/Public/ESPC16/Session List.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SADA-SP-Subjects.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SADA-CAB-Subjects.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SAPP-SP-Subjects.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SAPP-CAB-Subjects.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SAPP-CC-Subjects.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPSitesFromList.ps1",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/HUSPPSTools.sublime-build",
+		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/Work Backup.sublime-build",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/Backup.sublime-build",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Test-HUSPCamlQuery.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPMetadataFromXML.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/caml_nullsubjects.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/2016-11-10.taskpaper",
+		"/B/SPLogs/2016-11-09T142212.log",
+		"/B/SPLogs/2016-11-10T110209.log",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Profile.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDocumentMetadata.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPLargeList.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPListEfficient.ps1",
+		"/B/SPLogs/2016-11-07T1311.log",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/GetWebSizes.ps1",
+		"/B/SPOutput/informatics.cmp/import.log",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPMetadataNavigation.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Copy-HUSPFilesToSP.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPMetadataValue.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDocumentMetadataMulti.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Invoke-HUSPFileLockRelease.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/release_lock.ps1",
+		"/C/Users/cmsxlb/Dropbox/Action/Timesheet Data.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/MetadataTest.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDefaulValues.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewDevSEPDMetadataAuditSubject.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewSEPDGroupedBySubject.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ImportCsvtoMMS.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewSEPDMetadataAuditSubject.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPMetadataTermSet.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/edrms/Wisdom document metadata extract.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDocumentDateFromMetadata.ps1",
+		"/A/SPLogs/2016-10-19T08-42-20.log",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPContentTypesInUse.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Remove-HUSPSetUpAccounts.ps1",
+		"/C/Users/cmsxlb/AppData/Local/Microsoft/Windows/Temporary Internet Files/WebTempDir/Palette032.spcolor",
+		"/B/SPLogs/2016-09-26T16-51-29.log",
+		"/B/SPLogs/Upgrade-20160920-154345-497.log",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Export-HUSPTermsIntoCsv.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/sptermset.xslt",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/295af05a-810c-4715-a141-a5a5ba4f4439.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/295af05a-810c-4715-a141-a5a5ba4f4439_xml.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/ExportMMStoCsv.ps1",
+		"/B/terms.xml",
+		"/C/Users/cmsxlb/AppData/Local/Microsoft/Office/TermSets/295af05a-810c-4715-a141-a5a5ba4f4439.xml",
+		"/C/Users/cmsxlb/AppData/Local/Microsoft/Office/TermSets/37bcf56d-2393-4de8-9b46-228ed40da297.xml",
+		"/C/Users/cmsxlb/AppData/Local/Microsoft/Office/TermSets/55233edd-6742-4870-b7b9-1c3232599503.xml",
+		"/C/Users/cmsxlb/AppData/Local/Microsoft/Office/TermSets/572d1027-e5ba-4cdd-8de9-fd4ce977af18.xml",
+		"/C/Users/cmsxlb/AppData/Local/Microsoft/Office/TermSets/ee33dbda-40d3-45b4-8309-672ce89d106d.xml",
+		"/C/Users/cmsxlb/AppData/Local/Microsoft/Office/TermSets/e2ab3d35-5ad9-40a2-82d2-88192a963c82.xml",
+		"/C/Users/cmsxlb/AppData/Local/Microsoft/Office/TermSets/f953a46d-2d0f-4100-8261-1d523abe71b1.xml",
+		"/B/AllSites.txt",
+		"/B/TESTUFCOM-34752598-2.xml",
+		"/B/error.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPContentOrganizerRules.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Old-HUSPContentOrganizerRules.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/legal case management/Add Link to Legal Matter Task - Copy/Add Link to Legal Matter TaskListInstances/Files/wfsvc/f8969e59ea8844c082c8bb0909b966eb/workflow.xaml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPDocLibsFromList.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/csv/TestUnifunction-COM-SAPP-DocLibrariesNAME.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewTestSAPCourseCommitteesMetadataAudit.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/csv/TestUnifunction-COM-SAPP-CourseDocLibrariesNAME.csv",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPComDocType.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewTestCommitteeGroupedByAcademicYear.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewEFSMetadataAudit.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewEFCommitteeMetadataAudit.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewCLSCommitteesMetadataAudit.xml",
+		"/C/Users/cmsxlb/Desktop/GitHubLog.txt",
+		"/C/Users/cmsxlb/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.IE5/EHD4L185/bannerads.js",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPMigrationFlag.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/project reference/edrms/Migrations.txt",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPTheme.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Invoke-HUSPFileLockRelease.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPSitesFromList.ps1",
 		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/B/SPLogs/2016-08-12T10-58-25.log",
 		"/C/Users/cmsxlb/Dropbox/Apps/Notes/my ancestral home.txt",
@@ -688,29 +831,21 @@
 		"/C/Users/cmsxlb/Dropbox/Work/project reference/uniCouncil/News-error.log",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPSitePermissionsReport.ps1",
 		"/C/Users/cmsxlb/Downloads/TESTUFCOM-1176534238-172.xml",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPDocLibsFromList.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/csv/TestREBOOTMigration.csv",
 		"/C/Users/cmsxlb/Downloads/TESTUFCOM-1176534238-175.xml",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewUniversityCommitteesMetadataSchSer.xml",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewSAPPCourseCommitteeMetadataAudit.xml",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewEFCommitteeMetadataAudit.xml",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewDEVMeta.xml",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewCommitteeGroupedByAcademicYear.xml",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewCLSCommitteesMetadataAudit.xml",
 		"/C/Users/cmsxlb/Downloads/MDriveAudit.txt",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPMDriveAudit.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Copy-HUSPFilesToSP.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/project reference/legal case management/Create Legal Matter ID and Title - Copy/manifest.xml",
 		"/C/Users/cmsxlb/Downloads/TESTUFCOM-1176534235-173.xml",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/legal case management/Add Link to Legal Matter Task - Copy/Add Link to Legal Matter TaskListInstances/Files/wfsvc/f8969e59ea8844c082c8bb0909b966eb/workflow.xaml",
 		"/C/Users/cmsxlb/Dropbox/Work/project reference/legal case management/Add Link to Legal Matter Task - Copy/Add Link to Legal Matter TaskListInstances/Files/wfsvc/f8969e59ea8844c082c8bb0909b966eb/WorkflowAssociation_8b634f4eb1b94267ae6a4c888c18a1ac",
 		"/C/Users/cmsxlb/Dropbox/Work/project reference/legal case management/Add Link to Legal Matter Task - Copy/Add Link to Legal Matter TaskListInstances/Elements.xml",
 		"/C/Users/cmsxlb/Dropbox/Work/project reference/legal case management/Add Link to Legal Matter Task - Copy/Add Link to Legal Matter TaskListInstances/Feature.xml",
 		"/C/Users/cmsxlb/Dropbox/Work/project reference/legal case management/Add Link to Legal Matter Task - Copy/manifest.xml",
-		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/HUSPPSTools.sublime-build",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPDocumentValues.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPContentOrganizerRules.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDocumentMetadata.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPTestAccountPermissions.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/csv/TestUnifunction-COM-SAPP-DocLibraries.csv",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Invoke-HUSPPublishJobs.ps1",
@@ -722,97 +857,40 @@
 		"/B/SPLogs/2016-07-12T14-10-52.log",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPFarmInfo.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Unlock-HUSPFile.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Profile.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewCLSMetadataDEV.xml",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPArchivedMetadata.ps1",
 		"//testunifunctions.hud.ac.uk@SSL/DavWWWRoot/COM/University-Committees/Audit Reports/TESTUFCOM-1176534236-45.xml",
 		"//testunifunctions.hud.ac.uk@SSL/DavWWWRoot/COM/University-Committees/Audit Reports/TESTUFCOM-1176534236-52.xml",
 		"/A/SPLogs/UFCOM-1176534237-9.xml",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPComDocType.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Export-HUSPUnifunctionsFileStructure.ps1",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewUniversityCommitteesMetadataSchSerDEV.xml",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/Get-HUSPArchivedMetadata.ps1",
 		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what is university blue or uniblue in HTML code.txt",
-		"/B/error.txt",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPListView.ps1",
 		"/B/SPLogs/2016-06-29-0930-ComDocType.txt",
 		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Remove-HUSPDuplicateViews.ps1",
 		"/H/Shared Documents/ControlCentre.html",
 		"/C/Users/cmsxlb/Dropbox/Work/GTD/ControlCentre.md",
-		"/H/First Line IT Support/ControlCentre.html",
-		"/C/Users/cmsxlb/Dropbox/Apps/Sublime/User/wiswp.sublime-snippet",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPSiteOwnersReport.ps1",
-		"/B/SPLogs/2016-06-23T14-43-57.log",
-		"/A/HUSPSiteOwnersReport.xml",
-		"/B/SPLogs/2016-06-23T11-25-07.log",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Copy-HUSPFilesToSPLogged.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/MetadataTest.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPDefaulValues.ps1",
-		"/A/SPLogs/2016-06-10T14-15-38.log",
-		"/A/SPLogs/2016-06-15T16-05-07.log",
-		"/B/SPLogs/2016-06-14T09-53-32-error.log",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/uniCouncil/UniCouncil site .txt",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/uniCouncil/UniCouncil Permissions.txt",
-		"/B/SPLogs/2016-06-14T09-53-32.log",
-		"/C/Users/cmsxlb/Scripts/RudeMessage.ps1",
-		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
-		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/MarkdownPreview.sublime-settings",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/m drive migration/Risks.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/m drive migration/RE Write access for the Disaster Recovery Plans folder.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/m drive migration/Illegal Characters.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/GetSPAdministratorsReport.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Get-HUSPWebPermissionsReport.ps1",
-		"/B/SPAdministratorsReport.xml",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPRecordsUndeclared.ps1",
-		"/C/Users/cmsxlb/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.IE5/EHD4L185/SPUnlockSandbox.wsp",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPApplyGroupPermissionsSiteCollection.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPAccessRequestEmails.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/New-HUSPGroupWithMembers.ps1",
-		"/C/Users/cmsxlb/Desktop/GitHubLog.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/csv/EDRMSCommitteesSubsiteList.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/csv/UFDEVTest006.csv",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPSiteCollectionTheme.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Set-HUSPChangeRecordCopy.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/edrms/2016-05-10-Dev Committees Creation.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Export-HUSPSiteColumns.ps1",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/explorer.pac",
-		"/A/SPLogs/UFCommittee.txt",
-		"/C/Users/cmsxlb/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/SJBJ2IYD/hotel.txt",
-		"/C/Users/cmsxlb/Dropbox/Work/project reference/cls admin forms 2/manifest.xsf",
-		"/B/SPLogs/2016-04-15-Mail-Dupes.log",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLSA-C-2016-04-12T11_34_37.xml",
-		"/C/Users/cmsxlb/AppData/Local/Smile/TextExpander/log.txt",
-		"/B/SPLogs/2016-04-18T11-08-04.log",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/view1.xsl",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/upgrade.xsl",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/sampledata.xml",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/template.xml",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/myschema.xsd",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/manifest.xsf",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/GetUserProfileByName5.xsd",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/GetUserProfileByName4.xsd",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/GetUserProfileByName3.xsd",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/GetUserProfileByName1.xml",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/CLSAdmin.xsl",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/BuiltInActiveXControls.xsd",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/Building Fault Types4.xsd",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/Building Fault Types3.xsd",
-		"/B/SPLogs/2016-04-14T16-22-33.log",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/Building Fault Types2.xsd",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/Building Fault Types1.xsd",
-		"/C/Users/cmsxlb/Dropbox/Work/wktmp/CLS Admin Building Fault/Building Fault Types.xsd",
-		"/B/forms/CLS Admin Building Fault.xsn",
-		"/C/Users/cmsxlb/AppData/Local/Smile/TextExpander/crash-log-20160413T164553Z.txt"
+		"/H/First Line IT Support/ControlCentre.html"
 	],
 	"find":
 	{
-		"height": 37.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
+			"<current file>",
+			"<current file>,<open folders>",
+			"<current file>",
+			"<current file>,<open folders>",
+			"<current file>",
+			"<current file>,<open folders>",
+			"<current file>",
+			"<current file>,<open folders>",
+			"<current file>",
 			"<current file>,<open folders>",
 			"<current file>",
 			"<current file>,<open folders>",
@@ -836,6 +914,40 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"workspace",
+			"-",
+			".Delete()",
+			"_x0020_",
+			"addEmptyFields",
+			"Write-Host",
+			"current field",
+			"Write-Verbose -message",
+			"/ce/informatics",
+			"\\$CurrentName",
+			"\\$item",
+			"item",
+			"CurrentRecordId",
+			"\\$metadataManifest",
+			"Fields",
+			"where",
+			"-",
+			"TermStores",
+			"DocumentRouting",
+			"try",
+			"\\$CurrentRecord",
+			"\\$docLib",
+			"$docLib",
+			"InfoPath",
+			"eval",
+			"$CSVOutput",
+			"\\$outputDir",
+			"\\$siteUrl",
+			"$siteUrl",
+			"Get-SPSite",
+			"\\$ct",
+			"\\$site",
+			"\\$urlPath",
+			"$committeeName",
 			"paisjs",
 			"Audit Reports",
 			"@{",
@@ -929,41 +1041,7 @@
 			"D:\\scripts\\output",
 			"D:\\\\scripts\\\\output",
 			"tree",
-			"\\$web",
-			"ListName",
-			"WebName",
-			"ItemsLib",
-			"$ItemsLib",
-			"uk",
-			"Dispose()\n",
-			"uk",
-			"Behavioural",
-			"Social",
-			"Sciences",
-			"Import-SPWeb \"https://unishare.hud.ac.uk/hhs/bss\" -path \"D:\\moves\\bss_site.cmp\"\n",
-			"Import-SPWeb \"https://unishare.hud.ac.uk/hhs/bss\" -path \"D:\\moves\\bss_site.cmp\"",
-			"New-SPWeb \"https://unishare.hud.ac.uk/hhs/bss\" -Name \"Behavioural & Social Sciences\" -Template \"STS#0\"",
-			"$spWeb = Get-SPWeb https://unishare.hud.ac.uk/uniwide/bss; $spWeb | Export-SPWeb -Path ./bss_site.cmp -IncludeUserSecurity -IncludeVersions All -NoFileCompression; $spWeb.Dispose()",
-			"WPQ3",
-			"DivWPQ3",
-			"ribbonrow",
-			"#s4-ribbonrow",
-			"powershell",
-			"listName",
-			"urlPath",
-			"%2D",
-			"Title",
-			"\\$ct",
-			"$ct",
-			"siteUrl",
-			"item",
-			"map",
-			"\\$url",
-			"$url",
-			"snippet",
-			"publish",
-			"	",
-			"\\,"
+			"\\$web"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -971,6 +1049,17 @@
 		"regex": true,
 		"replace_history":
 		[
+			" ",
+			"field",
+			"Write-Host",
+			"\\$SPItemName ",
+			"\\$SPItem ",
+			"SPItem ",
+			"SPRecordId ",
+			" ",
+			"\\$CurrentRecordId",
+			"\\$out",
+			"\\$url",
 			" ",
 			"-",
 			"\"",
@@ -1036,47 +1125,76 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Set-HUSPMigrationFlag.ps1",
+					"file": "SADA-Master-Subjects.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1878,
+						"buffer_size": 319,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1110,
-								1110
+								319,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "New-HUSPMetadataTermSet.ps1",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1936,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1689,
+								1689
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
-							"word_wrap": true
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 81.0,
+						"translation.y": 163.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 926,
+						"buffer_size": 758,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								926,
-								926
+								758,
+								758
 							]
 						],
 						"settings":
@@ -1090,37 +1208,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Get-HUSPDocumentValues.ps1",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2427,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1249,
-								1602
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 228.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1201,7 +1289,7 @@
 		[
 			[
 				"",
-				"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes\\Notes.sublime-project"
+				"C:\\Users\\cmsxlb\\Dropbox\\Work\\project reference\\legal case management\\legal case management.sublime-project"
 			],
 			[
 				"notes",

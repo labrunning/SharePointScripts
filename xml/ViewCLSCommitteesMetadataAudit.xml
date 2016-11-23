@@ -7,13 +7,12 @@
 	<ViewFields>
 		<FieldRef Name='DocIcon'/>
 		<FieldRef Name='LinkFilename'/>
-		<FieldRef Name='Title'/>
-		<FieldRef Name='CLS Committee Name'/>
-		<FieldRef Name='Committee Academic Year'/>
-		<FieldRef Name='Committee Date'/>
-		<FieldRef Name='Committee Document Type'/>
-		<FieldRef Name="Version"/>
-		<FieldRef Name="Document ID"/>		
+		<FieldRef Name='Computing_x0020_and_x0020_Library_x0020_Services'/>
+		<FieldRef Name='Committee_x0020_Academic_x0020_Year1'/>
+		<FieldRef Name='Committee_x0020_Date1'/>
+		<FieldRef Name='Committee_x0020_Document_x0020_Type1'/>
+		<FieldRef Name="_UIVersionString"/>
+		<FieldRef Name="_dlc_DocId"/>		
 		<FieldRef Name='ID'/>
 	</ViewFields>
 	<RowLimit Paged='TRUE'>100</RowLimit>

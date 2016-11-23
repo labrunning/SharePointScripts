@@ -2,7 +2,6 @@
 	<ViewFields>
 		<FieldRef Name="DocIcon"/>
 		<FieldRef Name="LinkFilename"/>
-		<FieldRef Name="Title"/>
 		<FieldRef Name="Estates and Facilities Committee Name"/>
 		<FieldRef Name="Committee Academic Year"/>
 		<FieldRef Name="Committee Date"/>

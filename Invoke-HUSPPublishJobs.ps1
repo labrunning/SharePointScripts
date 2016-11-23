@@ -9,8 +9,9 @@
     Even though this job runs the Content Type Publishing jobs immediately the effects of changes to content types can still take a while to appear in sites.
 #>
 function Invoke-HUSPPublishJobs {
-    Write-Host 'Running CT Publishing Timer Job...'
-    Get-SPTimerJob MetadataHubTimerJob | Start-SPTimerJob
-    Write-Host 'Running CT Subscriber Timer Job...'
-    Get-SPTimerJob MetadataSubscriberTimerJob | Start-SPTimerJob
+    [CmdletBinding()]
+    Param()
+        
+    Get-SPTimerJob MetadataHubTimerJob | Start-SPTimerJob -Verbose
+    Get-SPTimerJob | Where { $_.Name -eq "MetadataSubscriberTimerJob" } | Start-SPTimerJob -Verbose
 }

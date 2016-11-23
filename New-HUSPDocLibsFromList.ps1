@@ -5,8 +5,8 @@
     This script will create a number of document libraries from a valid CSV file which contains the titles and descriptions for each of the document libraries. There must be a title for each document library but there does not need to be a description. The content types must be seperated with a semi-colon.
     EXAMPLE
     -------
-    Title,Description,ContentTypes
-    "University Health and Safety Committee","","EDRMS University Committee;EDRMS Email"
+    Title,Description,ContentType
+    "University Health and Safety Committee","","UF University Committee"
     .PARAMETER url
     a valid SharePoint Site Url
     .PARAMETER csv
@@ -25,20 +25,24 @@ function New-HUSPDocLibsFromList {
     
     $docList = Import-Csv -Path "$csv"
     $libList = $docList
+
     $listTemplate = [Microsoft.SharePoint.SPListTemplateType]::DocumentLibrary 
+    
     $SPWeb = Get-SPWeb $url
   
-    Write-Verbose "You are about to create the following Document Libraries;"
+    Write-Host "You are about to create the following Document Libraries;"
     $libList
     $confirmation = Read-Host "Are you sure you want to proceeed? (press 'y' to proceed)"
         
     # Loop through all the document libraries in the list
     If ($confirmation -eq 'y') {
         ForEach ($docLib in $libList) {
-            $listname = $docLib.Title
             Write-Verbose "Creating Document Library $listname..."
+            $listname = $docLib.Title
             $SPWeb.Lists.Add($listname,$docLib.Description,$listTemplate)
             $CurrentList = $SPWeb.Lists[$listname]
+            
+            # Change List Settings
             Write-Verbose "Disabling Folder Creation"
             $CurrentList.EnableFolderCreation = $false
             Write-Verbose "Disabling Content Approval"
@@ -51,11 +55,23 @@ function New-HUSPDocLibsFromList {
             $CurrentList.ForceCheckout = $false
             Write-Verbose "Enabling Content Types"
             $CurrentList.ContentTypesEnabled = $true
-            $CurrentList.Update()
             $ContentTypeToApply = $docLib.ContentType
-            $ContentTypeToAdd = $SPWeb.RootWeb.ContentTypes[$ContentType]
-            $AddContentType = $CurrentList.ContentTypes.Add($ContentTypeToAdd)
+            # Apply Content Types
+            $SPSiteName = $SPWeb.Site 
+            $SPSiteUrl = $SPSiteName.Url
+            $SPSite = Get-SPSite $SPSiteUrl
+            Write-Verbose -message "Applying content type $ContentTypeToApply"
+            $ContentTypeToAdd = $SPSite.RootWeb.ContentTypes[$ContentTypeToApply]
+            $CurrentList.ContentTypes.Add($ContentTypeToAdd)
+            # Get the current default content type
+            $DefaultContentType = $CurrentList.ContentTypes["Document"]
+            # Remove the previous default content type
+            $CurrentList.ContentTypes.Delete($DefaultContentType.Id)
+            $SPSite.Dispose()
+            $CurrentList.Update()
         }
-        $SPWeb.Dispose()
     }
+    
+    $SPWeb.Dispose()
+
 }

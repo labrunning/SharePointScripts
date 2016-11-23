@@ -1,0 +1,5 @@
+<Where>
+    <IsNull>
+        <FieldRef Name='School_x0020_of_x0020_Education_x0020_and_x0020_Professional_x0020_Development_x0020_Course' />
+    </IsNull>
+</Where>

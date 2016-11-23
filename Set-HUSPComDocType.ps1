@@ -25,11 +25,12 @@ function Set-HUSPComDocType {
     )
     
     # Get destination site and list
-    $web = Get-SPWeb $url
-    $listName = $web.GetList(($web.ServerRelativeURL.TrimEnd("/") + "/" + $list))
-    $docLib = $web.Lists[$list]
+    $SPWeb = Get-SPWeb $url
+    $SPList = $SPWeb.Lists[$list]
+
+    Write-Host Examining $SPList.Title 
     
-    $web.AllowUnsafeUpdates = $true
+    $SPWeb.AllowUnsafeUpdates = $true
 
     $query = New-Object Microsoft.SharePoint.SPQuery
     $query.ViewAttributes = "Scope='Recursive'"
@@ -37,54 +38,30 @@ function Set-HUSPComDocType {
     $caml = '<FieldRef Name="_dlc_DocId" /><FieldRef Name="Document Description" /><FieldRef Name="Title" /><FieldRef Name="FileLeafRef" /><FieldRef Name="BaseName" /><FieldRef Name="Committee Document Type" />' 
     $query.Query = $caml 
 
-    do 
-    {
-        $listItems = $docLib.GetItems($query)
+    do {
+        $listItems = $SPList.GetItems($query)
         $query.ListItemCollectionPosition = $listItems.ListItemCollectionPosition
         
-        foreach($item in $listItems)
-        {
+        foreach($item in $listItems) {
             $CurrentRecord = $item['_dlc_DocId'].ToString()
-            Write-Verbose -message "Checking $CurrentRecord"
+            $MyPrintTitle = $item['FileLeafRef'].ToString()
             $ModifyDocumentType = {
-                $CurrentTime = Get-Date -format yyyy-MM-dd_hh:mm
-                $myCheckString = $CurrentTime
-                $item['Document Description'] = $myCheckString
-                $MyTitle = $item['BaseName']
+                $MyTitle = $item['FileLeafRef']
                 # do change
-                If ($MyTitle -match "agenda") {
-                    Write-Verbose -message "$CurrentRecord looks like an agenda as at $CurrentTime"
-                    $item['Committee Document Type'] = "Agenda"
-                }
-                ElseIf ($MyTitle -match "-A_") {
-                    Write-Verbose -message "$CurrentRecord looks like an agenda as at $CurrentTime"
-                    $item['Committee Document Type'] = "Agenda"
-                }
-                ElseIf ($MyTitle -match "_A_") {
-                    Write-Verbose -message "$CurrentRecord looks like an agenda as at $CurrentTime"
-                    $item['Committee Document Type'] = "Agenda"
-                }
-                ElseIf ($MyTitle -match "minutes") {
-                    Write-Verbose -message "$CurrentRecord looks like minutes as at $CurrentTime"
+                If ($MyTitle -imatch "^tor | tor |terms of ref") {
+                    $DocumentType = "Terms of Reference"
+                    $item['Committee Document Type'] = "Terms of Reference"
+                } ElseIf ($MyTitle -imatch "minutes|[\d _-]+?m(in)*?(inute)*?s*?[( _-]") {
+                    $DocumentType = "Minutes"
                     $item['Committee Document Type'] = "Minutes"
-                }
-                ElseIf ($MyTitle -match "-M_") {
-                    Write-Verbose -message "$CurrentRecord looks like minutes as at $CurrentTime"
-                    $item['Committee Document Type'] = "Minutes"
-                }
-                ElseIf ($MyTitle -match "_M_") {
-                    Write-Verbose -message "$CurrentRecord looks like minutes as at $CurrentTime"
-                    $item['Committee Document Type'] = "Minutes"
-                }
-                # ElseIf ($MyTitle -match "liaison notes") {
-                #     Write-Verbose -message "$CurrentRecord looks like minutes as at $CurrentTime"
-                #     $item['Committee Document Type'] = "Minutes"
-                # }
-                Else {
-                    Write-Verbose -message "$CurrentRecord looks like a paper as at $CurrentTime"
+                } ElseIf ($MyTitle -imatch "agenda|[^p\d\.?]?[_-]a(genda)*?[( _-]") {
+                    $DocumentType = "Agenda"
+                    $item['Committee Document Type'] = "Agenda"
+                } Else {
+                    $DocumentType = "Paper"
                     $item['Committee Document Type'] = "Paper"
                 }
-
+                Write-Verbose -message "DocID|$CurrentRecord|Title|$MyPrintTitle|Document Type|$DocumentType"
                 $item.SystemUpdate($false)
             }
             [Microsoft.Office.RecordsManagement.RecordsRepository.Records]::BypassLocks($item, $ModifyDocumentType)
@@ -92,6 +69,6 @@ function Set-HUSPComDocType {
     }
     while ($query.ListItemCollectionPosition -ne $null)
     
-    $web.AllowUnsafeUpdates = $false
-    $web.Dispose()
+    $SPWeb.AllowUnsafeUpdates = $false
+    $SPWeb.Dispose()
 }
