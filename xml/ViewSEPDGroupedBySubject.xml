@@ -12,7 +12,7 @@
 	</ViewFields>
 	<Query>
 		<!-- **YOU CAN ONLY GROUP BY TWO LEVELS** -->
-		<GroupBy Collapse='TRUE' GroupLimit='30'>
+		<GroupBy Collapse='TRUE' GroupLimit='25'>
 			<FieldRef Name='School_x0020_of_x0020_Education_x0020_and_x0020_Professional_x0020_Development_x0020_Course' Ascending='FALSE'/>
 			<FieldRef Name='Committee_x0020_Date1' Ascending='FALSE'/>
 		</GroupBy>
@@ -21,5 +21,5 @@
 			<FieldRef Name='Committee_x0020_Date1' Ascending='FALSE'/>
 		</OrderBy>
 	</Query>
-	<RowLimit Paged="TRUE">50</RowLimit>
+	<RowLimit Paged="TRUE">10</RowLimit>
 </View>

@@ -24,9 +24,9 @@ function Get-HUSPSiteCollectionPermissionsIneritance {
   
     ForEach($SPWeb in $SPSite.AllWebs) { 
         If ($SPWeb.HasUniqueRoleAssignments) {
-            Write-Host $SPWeb.Url "has unique permissions"
+            Write-Output $SPWeb.Url "has unique permissions"
         } Else {
-            Write-Host "** " $SPWeb.Url "inherits its permissions **"
+            Write-Output "** " $SPWeb.Url "inherits its permissions **"
         }
         $SPWeb.Dispose()
     }

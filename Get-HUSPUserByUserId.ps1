@@ -12,7 +12,7 @@ function Get-HUSPUserByUserId {
     $SPUser=$SPWeb.Users.GetByID($UserID) 
     $SPUserName=$SPUser.Name 
  
-    Write-Host $SPUserName
+    Write-Output $SPUserName
 
     $SPWeb.Dispose()      
     $SPSite.Dispose() 

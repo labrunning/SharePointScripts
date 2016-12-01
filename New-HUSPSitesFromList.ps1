@@ -79,7 +79,7 @@ function New-HUSPSitesFromList {
             # Update everything before we leave
             $SPWeb.Update()
             Write-Verbose -Message "Created site $SPWeb"
-            Write-Host "Site GUID is " $SPWeb.ID
+            Write-Output "Site GUID is " $SPWeb.ID
             $SPWeb.Dispose()
         }
     }

@@ -21,7 +21,7 @@ function GetAllWebApplications
     }
     catch [System.Exception]
     {
-        write-host -f red $_.Exception.ToString()
+        Write-Output -f red $_.Exception.ToString()
     }
 } 
 
@@ -39,7 +39,7 @@ function GetAllSitecollectionsInfoInWebapplication
     } 
     catch [System.Exception]
     {
-        write-host -f red $_.Exception.ToString()
+        Write-Output -f red $_.Exception.ToString()
     }
  } 
 

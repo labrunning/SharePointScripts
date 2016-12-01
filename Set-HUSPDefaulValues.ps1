@@ -46,13 +46,13 @@ function Set-HUSPDefaulValues {
     {
         if($item["University Committee Name"] -eq $null)
         {
-            write-host Setting $item["Document ID"] to $taxonomyFieldValue.ValidatedString
+            Write-Output Setting $item["Document ID"] to $taxonomyFieldValue.ValidatedString
             $item["University Committee Name"] = $taxonomyFieldValue.ValidatedString
             $item.Update()
         }
         else
         {
-            write-host Value set to $item["University Committee Name"] 
+            Write-Output Value set to $item["University Committee Name"] 
         }
     }
 

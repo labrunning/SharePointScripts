@@ -73,10 +73,10 @@ function New-HUSPPermissionsGroup {
             #Add the AD Group/User to the group, can’t be done during group creation when using Powershell otherwise errors so is done now.
             Set-SPUser -Identity $ADMemberSPFriendly -Web $SPWeb -Group $SPGroupName
         } else {
-            Write-Host "$SPGroupName already exists"
+            Write-Output "$SPGroupName already exists"
         }
     } else {
-            Write-Host "$SPWeb is not a site collection"
+            Write-Output "$SPWeb is not a site collection"
     }
     
     $SPWeb.Dispose()

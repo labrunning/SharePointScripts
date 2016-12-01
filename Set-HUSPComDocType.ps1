@@ -28,43 +28,39 @@ function Set-HUSPComDocType {
     $SPWeb = Get-SPWeb $url
     $SPList = $SPWeb.Lists[$list]
 
-    Write-Host Examining $SPList.Title 
+    Write-Output Examining $SPList.Title 
     
     $SPWeb.AllowUnsafeUpdates = $true
-
+    
     $query = New-Object Microsoft.SharePoint.SPQuery
     $query.ViewAttributes = "Scope='Recursive'"
-    $query.RowLimit = 2000
-    $caml = '<FieldRef Name="_dlc_DocId" /><FieldRef Name="Document Description" /><FieldRef Name="Title" /><FieldRef Name="FileLeafRef" /><FieldRef Name="BaseName" /><FieldRef Name="Committee Document Type" />' 
+    $caml = '<FieldRef Name="_dlc_DocId" /><FieldRef Name="Title" /><FieldRef Name="FileLeafRef" /><FieldRef Name="Committee Document Type" />' 
     $query.Query = $caml 
 
     do {
-        $listItems = $SPList.GetItems($query)
-        $query.ListItemCollectionPosition = $listItems.ListItemCollectionPosition
+        $SPListItems = $SPList.GetItems($query)
+        $query.ListItemCollectionPosition = $SPListItems.ListItemCollectionPosition
         
-        foreach($item in $listItems) {
-            $CurrentRecord = $item['_dlc_DocId'].ToString()
-            $MyPrintTitle = $item['FileLeafRef'].ToString()
+        foreach($SPItem in $SPListItems) {
+            $CurrentRecord = $SPItem['_dlc_DocId'].ToString()
+            $MyPrintTitle = $SPItem['FileLeafRef'].ToString()
             $ModifyDocumentType = {
-                $MyTitle = $item['FileLeafRef']
+                $MyTitle = $SPItem['FileLeafRef']
                 # do change
                 If ($MyTitle -imatch "^tor | tor |terms of ref") {
                     $DocumentType = "Terms of Reference"
-                    $item['Committee Document Type'] = "Terms of Reference"
                 } ElseIf ($MyTitle -imatch "minutes|[\d _-]+?m(in)*?(inute)*?s*?[( _-]") {
                     $DocumentType = "Minutes"
-                    $item['Committee Document Type'] = "Minutes"
                 } ElseIf ($MyTitle -imatch "agenda|[^p\d\.?]?[_-]a(genda)*?[( _-]") {
                     $DocumentType = "Agenda"
-                    $item['Committee Document Type'] = "Agenda"
                 } Else {
                     $DocumentType = "Paper"
-                    $item['Committee Document Type'] = "Paper"
                 }
-                Write-Verbose -message "DocID|$CurrentRecord|Title|$MyPrintTitle|Document Type|$DocumentType"
-                $item.SystemUpdate($false)
+                $SPItem['Committee Document Type'] = $DocumentType
+                Write-Output "DocID|$CurrentRecord|Title|$MyPrintTitle|Document Type|$DocumentType" -ForegroundColor Green
+                $SPItem.SystemUpdate($false)
             }
-            [Microsoft.Office.RecordsManagement.RecordsRepository.Records]::BypassLocks($item, $ModifyDocumentType)
+            [Microsoft.Office.RecordsManagement.RecordsRepository.Records]::BypassLocks($SPItem, $ModifyDocumentType)
         }
     }
     while ($query.ListItemCollectionPosition -ne $null)

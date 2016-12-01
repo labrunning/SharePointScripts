@@ -41,7 +41,7 @@ function Set-HUSPChangeRecordCopy {
     
     $SPSourceMax = $item['Change_x0020_No']
 
-    Write-Host There are $SPSourceMax records in the source 
+    Write-Output There are $SPSourceMax records in the source 
 
     $i = 165
 
@@ -72,7 +72,7 @@ function Set-HUSPChangeRecordCopy {
             $SourceCreatedBy = $Sitem["Created By"]
             $SourceModifiedBy = $Sitem["Modified By"]
 
-            # Write-Host Record $i has description: $SPSourceItemDesc
+            # Write-Output Record $i has description: $SPSourceItemDesc
             # Copy this record to the destination list
             $Ditem = $SPDestinationList.AddItem()
             # Copy all the fields in
@@ -102,7 +102,7 @@ function Set-HUSPChangeRecordCopy {
             $Ditem["Modified By"] = $SPWeb.EnsureUser($SourceModifiedBy)
 
         } Catch {
-            Write-Host I guess we deleted record $i ! 
+            Write-Output I guess we deleted record $i ! 
             # So here we would create a record and mark it with something to delete 
         } 
         $i++

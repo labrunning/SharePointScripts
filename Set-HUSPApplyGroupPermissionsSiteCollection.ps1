@@ -15,10 +15,10 @@ function Set-HUSPApplyGroupPermissionsSiteCollection {
     ForEach ($SPWeb in $SPSite.AllWebs) {
 
         If ($SPWeb.HasUniquePerm -eq $false) {
-                Write-Host "Breaking inheritance for $SPWeb"
+                Write-Output "Breaking inheritance for $SPWeb"
                 $SPWeb.BreakRoleInheritance($true, $true)
             } else {
-                Write-Host "Inheritance is broken for $SPWeb"
+                Write-Output "Inheritance is broken for $SPWeb"
         }
 
         $SPGroup = $SPWeb.SiteGroups[$group]

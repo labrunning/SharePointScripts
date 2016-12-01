@@ -42,7 +42,7 @@ function Set-HUSPTheme {
         # add an if here to set to parameter if there is a value for image
         # $imageUrl = [Microsoft.SharePoint.Utilities.SPUrlUtility]::CombineUrl($SPSite.ServerRelativeUrl, "/images/Unifunctions_logo.png")
         $SPWeb.ApplyTheme($themeUrl, $fontSchemeUrl, $imageUrl, $true);
-        write-host $SPWeb.Title " theme has been set to " $themeName
+        Write-Output $SPWeb.Title " theme has been set to " $themeName
         $SPWeb.allowunsafeupdates = $false
         $SPWeb.Dispose()
     }  

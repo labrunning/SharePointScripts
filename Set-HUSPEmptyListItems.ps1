@@ -40,11 +40,11 @@ function Set-HUSPEmptyListItems {
     
     foreach($item in $SPListItems | where {$_[$field] -eq $null} ) {
         $CurrentRecord = $item['_dlc_DocId'].ToString()
-        Write-Host "Checking" $CurrentRecord
+        Write-Output "Checking" $CurrentRecord
         If ($item[$field] -eq $null) {
-            Write-Host $CurrentRecord "has a null field"
+            Write-Output $CurrentRecord "has a null field"
         } else {
-            Write-Host "Field check passed:" $item[$field]
+            Write-Output "Field check passed:" $item[$field]
         }
     }
     

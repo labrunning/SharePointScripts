@@ -32,7 +32,7 @@ function Old-HUSPContentOrganizerRules {
     
     # Loop through all the entries in the spreadsheet
     foreach ($contentRule in $contentRulesList) {
-        write-host Building $contentRule.Value content rule...
+        Write-Output Building $contentRule.Value content rule...
         # Get web to create rules in
         $urlPath = $col + $contentRule.Web        
         [Microsoft.SharePoint.SPWeb]$web = Get-SPWeb $urlPath

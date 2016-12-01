@@ -10,7 +10,7 @@ Function GetTaxonomyTerm {
 	[string]$label
 	)
 		
-  Write-Host "Getting term for $($label)..."
+  Write-Output "Getting term for $($label)..."
 	$taxonomySession = Get-SPTaxonomySession -Site $spsite
 	$taxonomyField = $spsite.RootWeb.Fields.GetField($field)
 	

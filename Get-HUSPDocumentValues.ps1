@@ -42,7 +42,7 @@ function Get-HUSPDocumentValues {
                 }
                 New-Object PSObject -Property $fieldValues | Select @("Display Name","Internal Name","Value")
             }            
-            Write-Host "+++------------------------------------------------------+++"
+            Write-Output "+++------------------------------------------------------+++"
         }
     } else {
         Write-Verbose "Id '$Id' specified"

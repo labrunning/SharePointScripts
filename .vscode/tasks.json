@@ -2,24 +2,30 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "0.1.0",
-    "command": "robocopy",
+    "command": "PowerShell.exe",
     "isShellCommand": true,
-    "args": [],
-    "showOutput": "always",
+    "args": [
+        "-NoProfile"
+    ],
     "echoCommand": true,
     "suppressTaskName": true,
+    "showOutput": "never",
     "tasks": [
         {
-            "taskName": "Dev Push",
+            "taskName": "Push",
             "args": [
-                "${workspaceRoot}", "A:\\scripts\\", "/S", "/xd", ".git", ".vscode", "/xf", "*.sublime-*", "/mir", "/b"
-            ]
-        },
-        {
-            "taskName": "Live Push",
-            "args": [
-                "${workspaceRoot}", "B:\\scripts\\", "/S", "/xd", ".git", ".vscode", "/xf", "*.sublime-*", "/mir", "/b"
-            ]
+                "robocopy", "${workspaceRoot}", "A:\\scripts\\", "/S", "/xd", ".git", ".vscode", "/xf", "*.sublime-*", "/mir", "/b", "&", "robocopy", "${workspaceRoot}", "B:\\scripts\\", "/S", "/xd", ".git", ".vscode", "/xf", "*.sublime-*", "/mir", "/b"
+            ],
+            "isBuildCommand": true,
         }
+        /*,
+        {
+            "taskName": "Check",
+            "args": [
+                "Invoke-ScriptAnalyzer", "${relativeFile}"
+            ],
+            "isTestCommand": true,
+            "showOutput": "never"            
+        }*/
     ]
 }

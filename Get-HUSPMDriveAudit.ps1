@@ -54,6 +54,6 @@ function Get-HUSPMDriveAudit {
         $myAuditCollection | Format-Table -Autosize
     
     } else {
-        Write-Host "Wrong Directory!" 
+        Write-Output "Wrong Directory!" 
     }
 }

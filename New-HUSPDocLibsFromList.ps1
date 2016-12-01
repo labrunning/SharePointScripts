@@ -30,7 +30,7 @@ function New-HUSPDocLibsFromList {
     
     $SPWeb = Get-SPWeb $url
   
-    Write-Host "You are about to create the following Document Libraries;"
+    Write-Output "You are about to create the following Document Libraries;"
     $libList
     $confirmation = Read-Host "Are you sure you want to proceeed? (press 'y' to proceed)"
         

@@ -39,7 +39,7 @@ function Set-HUSPDocumentLibraryPermissions {
     $SPAssignment.RoleDefinitionBindings.Add($SPRole)
     $SPList.RoleAssignments.Add($SPAssignment)
 
-    Write-Host "Added $SPFriendlyAccount to $SPList with $SPRole permissions"
+    Write-Output "Added $SPFriendlyAccount to $SPList with $SPRole permissions"
 
     $SPWeb.Dispose()
 }

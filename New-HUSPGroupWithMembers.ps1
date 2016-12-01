@@ -70,10 +70,10 @@ function New-HUSPGroupWithMembers {
             }
     
         } else {
-            Write-Host "$SPGroupName already exists"
+            Write-Output "$SPGroupName already exists"
         }
     } else {
-            Write-Host "$SPWeb is not a site collection"
+            Write-Output "$SPWeb is not a site collection"
     }
     
     $SPWeb.Dispose()

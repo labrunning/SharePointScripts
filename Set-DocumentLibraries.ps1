@@ -28,7 +28,7 @@ $docList = Import-Csv -Path "$csv"
 $libList = $docList
 
 # Confirm the document libraries to be created
-Write-Host You are about to create the following sites;
+Write-Output You are about to create the following sites;
 $libList
 $confirmation = Read-Host "Are you sure you want to proceeed? (press 'y' to proceed)"
 

@@ -38,7 +38,7 @@ function Set-HUSPChangeRecordITSystem {
         $SPSourceField = $SPLookupField.LookupField
         $SPLookupItem = $SPLookupList.Items | Where-Object {$_.Name -eq $ITSystem }
         $SPLookupString = ($SPLookupItem.ID).ToString() + ";#" + ($SPLookupItem.Name).ToString()
-        Write-Host Setting IT System to $SPLookupString on $Item["ID"]
+        Write-Output Setting IT System to $SPLookupString on $Item["ID"]
         $Item["IT System"] = $SPLookupString
         $Item.SystemUpdate($false)
     }

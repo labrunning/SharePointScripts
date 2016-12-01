@@ -6,10 +6,10 @@ $spWebApp = $rootSite.WebApplication
 foreach($site in $spWebApp.Sites)
 {
     $MySiteCollectionTitle = $site.Title
-    Write-Host $MySiteCollectionTitle
+    Write-Output $MySiteCollectionTitle
     foreach($siteAdmin in $site.RootWeb.SiteAdministrators)
     {
-        Write-Host "$($siteAdmin.ParentWeb.Url) - $($siteAdmin.DisplayName)"
+        Write-Output "$($siteAdmin.ParentWeb.Url) - $($siteAdmin.DisplayName)"
     }
     $site.Dispose()
 }

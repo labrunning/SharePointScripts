@@ -35,7 +35,7 @@ function Set-HUSPSiteCollectionTheme {
         $themeUrl = [Microsoft.SharePoint.Utilities.SPUrlUtility]::CombineUrl($SPSite.ServerRelativeUrl, "/_catalogs/theme/15/" + $theme + ".spcolor")
         $imageUrl = Out-Null
         $SPWeb.ApplyTheme($themeUrl, $fontSchemeUrl, $imageUrl, $true);
-        write-host $SPWeb.Title
+        Write-Output $SPWeb.Title
         $SPWeb.allowunsafeupdates = $false
         $SPWeb.Dispose()
     }  

@@ -29,11 +29,11 @@ function Set-HUSPMigrationFlag {
         $SPSubWeb = Get-SPWeb $SPWeb.Url
         ForEach ( $SPList in $SPSubWeb.Lists | Where-Object { $_.Hidden -eq $false -and $_.Title -NotLike "*Drop*" -and $_.Title -NotLike "*Audit Reports" } ) {
             $SPList.Title
-            Write-Host ++++++++++++++++++++++++++++++++++++
+            Write-Output ++++++++++++++++++++++++++++++++++++
             $SPItems = $SPList.Items
             ForEach ($SPItem in $SPItems | Where-Object { $_.Properties['vti_modifiedby'] -ne 'SHAREPOINT\system' } ) {
             <#ForEach ($SPItem in $SPItems) {#>
-                <#Write-Host $SPItem.Id "|" $SPItem.Name "|" $SPItem.Properties['vti_modifiedby'] "|" $SPItem.Properties['Committee Paper Number']#>
+                <#Write-Output $SPItem.Id "|" $SPItem.Name "|" $SPItem.Properties['vti_modifiedby'] "|" $SPItem.Properties['Committee Paper Number']#>
                 $SPItem.Fields | foreach {
                     $SPFieldValues = @{
                         "Display Name" = $_.Title

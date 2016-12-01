@@ -25,7 +25,7 @@ function Get-HUSPListEfficient {
         $SPCount = $SPItems.Count
  
     while ($i -le ($count-1)) {
-        write-host $i
+        Write-Output $i
         $item = $items[$i]
     
         $stringbuilder.AppendFormat("<Method ID=`"{0}`">", $i) > $null
@@ -43,8 +43,8 @@ function Get-HUSPListEfficient {
     }
 
     catch {
-        Write-Host -ForegroundColor Red $_.Exception.ToString()
+        Write-Output -ForegroundColor Red $_.Exception.ToString()
     }
  
-    write-host -ForegroundColor Green "done."    
+    Write-Output -ForegroundColor Green "done."    
 }

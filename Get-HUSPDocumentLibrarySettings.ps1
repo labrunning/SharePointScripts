@@ -48,9 +48,9 @@ function Get-HUSPDocumentLibrarySettings {
             New-Object PSOBject -Property $SPListValues | Select @("Site","Title","Url","Author","EnableVersioning","MajorVersionLimit","MajorWithMinorVersionsLimit","ItemCount")
 
             <#If ($SPListVersionsEnabled -eq $true) {
-                    Write-Host "$SPList in $SPWeb has versioning set to $SPListVersionsEnabled" -foregroundcolor green
+                    Write-Output "$SPList in $SPWeb has versioning set to $SPListVersionsEnabled" -foregroundcolor green
                 } else {
-                    Write-Host "$SPList in $SPWeb has versioning set to $SPListVersionsEnabled" -foregroundcolor red
+                    Write-Output "$SPList in $SPWeb has versioning set to $SPListVersionsEnabled" -foregroundcolor red
             }#>
         }
         $SPWeb.Dispose()       

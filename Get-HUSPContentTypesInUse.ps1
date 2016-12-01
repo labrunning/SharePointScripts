@@ -17,7 +17,7 @@ function Get-HUSPContentTypesInUse {
         try {
             $SPUsages = [Microsoft.Sharepoint.SPContentTypeUsage]::GetUsages($SPCType)
             foreach ($SPUsage in $SPUsages) {
-                Write-Host $SPUsage.Url
+                Write-Output $SPUsage.Url
             }
         } catch {}
         

@@ -28,7 +28,7 @@ function Get-HUSPAmendedPostMigration {
     $SPWeb = Get-SPWeb $url
     $SPList = $SPWeb.Lists[$list]
 
-    Write-Host Checking $SPList
+    Write-Output Checking $SPList
 
     $IdPresent = $PSBoundParameters.ContainsKey('id')
 
@@ -37,9 +37,9 @@ function Get-HUSPAmendedPostMigration {
         ForEach ($SPItem in $SPItems) {    
             $SPItem.Fields["Archived Metadata"] | ForEach {
                 If ( $SPItem[$_.InternalName] -eq $null ) {
-                    Write-Host There is no archived Metadata for item ID $SPItem['_dlc_DocId'] it was created on $SPItem['Created']
+                    Write-Output There is no archived Metadata for item ID $SPItem['_dlc_DocId'] it was created on $SPItem['Created']
                 } else {    
-                    # Write-Host There is Archived Metadata for item ID $SPItem['_dlc_DocId']
+                    # Write-Output There is Archived Metadata for item ID $SPItem['_dlc_DocId']
                     # $SPItem[$_.InternalName]
                 }
             }
@@ -52,9 +52,9 @@ function Get-HUSPAmendedPostMigration {
         $SPItem = $SPList.GetItems($query)[0] 
         $SPItem.Fields["Archived Metadata"] | ForEach {
             If ( $SPItem[$_.InternalName] -eq $null ) {
-                Write-Host There is no archived Metadata for item ID $SPItem['_dlc_DocId'] it was created on $SPItem['CreatedDate']
+                Write-Output There is no archived Metadata for item ID $SPItem['_dlc_DocId'] it was created on $SPItem['CreatedDate']
             } else {    
-                # Write-Host There is Archived Metadata for item ID $SPItem['_dlc_DocId']
+                # Write-Output There is Archived Metadata for item ID $SPItem['_dlc_DocId']
                 # $SPItem[$_.InternalName]
             }
         }             

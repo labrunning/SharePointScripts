@@ -26,7 +26,7 @@ function Remove-HUSPSitesSubsites {
 
     $SPWeb = Get-SPWeb $web
     
-    Write-Host "You are about to delete the following site and ALL SUBSITES;"
+    Write-Output "You are about to delete the following site and ALL SUBSITES;"
     $web
     $ConfirmCreateSites = Read-Host "Are you Sure You Want To Proceed: (press 'y' to proceed)"
 

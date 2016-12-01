@@ -8,8 +8,8 @@ function GetWebSizes ($StartWeb)
     $totalInMb = "{0:N2}" -f $totalInMb
     $totalInGb = (($total/1024)/1024)/1024
     $totalInGb = "{0:N2}" -f $totalInGb
-    write-host "Total size of all sites below" $StartWeb "is" $total "Bytes,"
-    write-host "which is" $totalInMb "MB or" $totalInGb "GB"
+    Write-Output "Total size of all sites below" $StartWeb "is" $total "Bytes,"
+    Write-Output "which is" $totalInMb "MB or" $totalInGb "GB"
     $web.Dispose()
 }
 
@@ -20,7 +20,7 @@ function GetWebSize ($Web)
     {
         $subtotal += GetFolderSize -Folder $folder
     }
-    write-host "Site" $Web.Title "is" $subtotal "KB"
+    Write-Output "Site" $Web.Title "is" $subtotal "KB"
     return $subtotal
 }
 
@@ -34,7 +34,7 @@ function GetSubWebSizes ($Web)
         {
             $webtotal += GetFolderSize -Folder $folder
         }
-        write-host "Site" $subweb.Title "is" $webtotal "Bytes"
+        Write-Output "Site" $subweb.Title "is" $webtotal "Bytes"
         $subtotal += $webtotal
         $subtotal += GetSubWebSizes -Web $subweb
     }

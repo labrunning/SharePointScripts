@@ -30,21 +30,21 @@ function Set-HUSPAccessRequestEmails {
     $newEmail = $email
 
     foreach($SPSite in $SPWebApp.Sites) {
-        Write-Host "Site URL is" $SPSite
+        Write-Output "Site URL is" $SPSite
         foreach($SPWeb in $SPSite.AllWebs) {
             $SPurl = $SPWeb.url
-            Write-host "Site Url: " $SPurl
+            Write-Output "Site Url: " $SPurl
             if (!$SPWeb.HasUniquePerm) {
-                Write-Host "Access Request Settings is inherted from parent."
+                Write-Output "Access Request Settings is inherted from parent."
                 } else { # does not inherit permissions from parent
                     if($SPWeb.RequestAccessEnabled) {
-                        Write-Host "Access Request Setting is enabled"
-                        Write-Host "Email updated to $email"
+                        Write-Output "Access Request Setting is enabled"
+                        Write-Output "Email updated to $email"
                         $SPWeb.RequestAccessEmail = $newEmail
                         $SPWeb.Update()
-                        Write-Host "Email changed successfully!"
+                        Write-Output "Email changed successfully!"
                     } else {
-                    Write-Host "Access Request Settings not enabled."
+                    Write-Output "Access Request Settings not enabled."
                 }
             } 
         } # end webs loop

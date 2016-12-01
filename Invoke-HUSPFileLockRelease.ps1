@@ -44,7 +44,7 @@ function Invoke-HUSPFileLockRelease {
         $SPItem = $SPList.GetItemById($SPItem)
         $SPItem.File.ReleaseLock($SPItem.File.LockId)
     } catch [System.SystemException] {
-        write-host "The script has stopped because there has been an error.  "$_.Message   
+        Write-Output "The script has stopped because there has been an error.  "$_.Message   
     }
 
     $SPWeb.Dispose()

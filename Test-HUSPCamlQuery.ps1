@@ -15,7 +15,7 @@ function Test-HUSPCamlQuery {
     $SPList = $SPWeb.Lists[$list]
     
     $spQuery = New-Object Microsoft.SharePoint.SPQuery
-    $spQuery.ViewAttributes = "Scope='Recursive'";
+    $spQuery.ViewAttributes = "Scope='Recursive'"
     $caml = Get-Content $xml -Raw
     $spQuery.Query = $caml 
     
@@ -29,7 +29,9 @@ function Test-HUSPCamlQuery {
     while ($spQuery.ListItemCollectionPosition -ne $null)
 
     $SPQueryCount = $SPListItems.Count
-    Write-Host "--------------------------------------`nTotal number of items is $SPQueryCount`n--------------------------------------"
+    Write-Output "--------------------------------------------------------------------------------"
+    Write-Output "Total number of items in $SPList is $SPQueryCount"
+    Write-Output "--------------------------------------------------------------------------------"
 
     $SPWeb.Dispose()
 }

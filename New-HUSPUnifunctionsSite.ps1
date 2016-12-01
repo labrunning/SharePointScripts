@@ -81,7 +81,7 @@ function New-HUSPUnifunctionSite {
     # apply all settings
     $SPWeb.Update()
     Write-Verbose -Message "Created site $SPWeb"
-    Write-Host "Site GUID is " $SPWeb.ID
+    Write-Output "Site GUID is " $SPWeb.ID
     $SPWeb.Dispose()
 
 }    

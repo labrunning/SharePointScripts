@@ -23,8 +23,8 @@ function Get-HUSPSiteGUIDs {
     
     $SPSite = Get-SPSite $site
     $SPWeb = $SPSite.OpenWeb($web)
-    write-host "Site: " + $SPSite.id
-    write-host "Web: " + $SPWeb.id
+    Write-Output "Site: " + $SPSite.id
+    Write-Output "Web: " + $SPWeb.id
     $SPWeb.lists | Format-Table title,id -AutoSize
     $SPWeb.Dispose()
     $SPSite.Dispose()

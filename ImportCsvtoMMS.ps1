@@ -147,7 +147,7 @@ function createTerm($currentlevelTerm,$levelName)
                             {
                                 if($currentlevelTerm.IsPinned -eq $false)
                                 {
-                                    Write-Host "Createing Term-"$levelName
+                                    Write-Output "Createing Term-"$levelName
                                     $nextLevelTerm = $currentlevelTerm.CreateTerm($levelName, 1033)
                                     $termStore.CommitAll();
                                     $termStore.UpdateCache();
@@ -209,7 +209,7 @@ function updateExisitngTerm($obj)
             }
         }
 
-        Write-Host "Updating Term-"$UpdatedTitle
+        Write-Output "Updating Term-"$UpdatedTitle
         if($Level5)
         {            
            updateTermProperties -term $level5term -obj $obj;           
@@ -252,7 +252,7 @@ function updateTermProperties($term,$obj)
             $termStore.FlushCache();
         }catch [Microsoft.SharePoint.Taxonomy.TermStoreOperationException]
         {
-            Write-Host "Term already present - "$term.Name
+            Write-Output "Term already present - "$term.Name
         }
 }
 

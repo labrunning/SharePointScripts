@@ -103,7 +103,7 @@ function Set-HUSPDocumentMetadataMulti {
 }
 
 function Set-HUSPDate {
-    Write-Host "Setting date..."
+    Write-Output "Setting date..."
 }
 
 function Get-HUSPMetadataValue {

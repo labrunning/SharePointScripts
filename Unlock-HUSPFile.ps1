@@ -32,10 +32,10 @@ function Unlock-HUSPFile {
     $SPFile = $SPItem.File
     $SPFile { Where $_ -like "*Lock" }
     $SPLockType = $SPFile.LockType
-    Write-Host "File lock type is: $SPLockType"
+    Write-Output "File lock type is: $SPLockType"
 
     If ($SPLockType -eq "Exclusive") {
-        Write-Host "Attempting Unlock..."
+        Write-Output "Attempting Unlock..."
         $SPUserToken = New-Object Microsoft.SharePoint.SPSite($SPWeb.site.id, $SPItem.File.LockedByUser.UserToken)
         $SPTokenWeb = $SPUserToken.OpenWeb($SPWeb.Id)
         $SPTokenList = $SPTokenWeb.Lists[$SPList]
@@ -45,7 +45,7 @@ function Unlock-HUSPFile {
     }
 
     $SPLockType = $SPFile.LockType
-    Write-Host "File lock type is: $SPLockType"
+    Write-Output "File lock type is: $SPLockType"
     $SPWeb.Dispose()
 
 }

@@ -18,11 +18,11 @@ function Export-SPTermStoreGroupTerms()
  
     if ($isValid -eq $false)
     {
-        write-host "ERROR OCCURRED`t$message"
-        write-host "NAME`tExport-SPTermStoreGroupTerms"
-        write-host "SYNOPSIS`tReturns a CSV file containing a listing of term names and identifiers from the supplied term set."
-        write-host "SYNTAX`tExport-SPTermStoreGroupTerms centralAdminUrl termStoreName termGroupName termSetName outPutDir"
-        write-host "EXAMPLES Export-SPTermStoreGroupTerms ""http://sp2010"" ""Managed Metadata Service"" ""Enterprise Metadata"" ""Business Units"""
+        Write-Output "ERROR OCCURRED`t$message"
+        Write-Output "NAME`tExport-SPTermStoreGroupTerms"
+        Write-Output "SYNOPSIS`tReturns a CSV file containing a listing of term names and identifiers from the supplied term set."
+        Write-Output "SYNTAX`tExport-SPTermStoreGroupTerms centralAdminUrl termStoreName termGroupName termSetName outPutDir"
+        Write-Output "EXAMPLES Export-SPTermStoreGroupTerms ""http://sp2010"" ""Managed Metadata Service"" ""Enterprise Metadata"" ""Business Units"""
         return;
     }
  
@@ -65,7 +65,7 @@ function Export-SPTermStoreGroupTerms()
 
                                         foreach ($term in $termSet.Terms)
                                         { 
-                                            write-host $termgroupName ","$termsetName","$termName
+                                            Write-Output $termgroupName ","$termsetName","$termName
                                             $termName = $term.Name.Replace([System.Text.Encoding]::UTF8.GetString($ampersand), "&")
 
                                             $custProp1 = $term.LocalCustomProperties["_Sys_Nav_SimpleLinkUrl"]
@@ -110,7 +110,7 @@ function Export-SPTermStoreGroupTerms()
                         $sw = new-object system.IO.StreamWriter($outPutFile);
                         $sw.Write($sb.ToString());
                         $sw.close();
-                        write-host "Your CSV has been created at $outPutFile";
+                        Write-Output "Your CSV has been created at $outPutFile";
                     }
                     catch
                     {
@@ -193,7 +193,7 @@ function GetChildTerms($term, [object]$path, $sb){
 
             $sb.AppendLine();
             $sb.Append($sb11.ToString());
-            write-host $childpath;
+            Write-Output $childpath;
             $sb11.Clear()
             #$sw.writeline($towrite);
             

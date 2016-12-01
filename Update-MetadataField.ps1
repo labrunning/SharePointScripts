@@ -27,12 +27,12 @@ function Clear-MetadataField{
 						ClearTaxonomyFieldValue -item $file.Item -taxonomyField ($file.Item.Fields[$MetadataFieldInternalName] -as [Microsoft.SharePoint.Taxonomy.TaxonomyField])
 						$file.CheckIn("Updated Taxonomy Field Value");
 						$msg = [String]::Format("Item, {0}, updated.",$file.Name);
-						Write-Host $msg -ForegroundColor Green;
+						Write-Output $msg -ForegroundColor Green;
 					}
 					else
 					{
 						$msg = [String]::Format("This file, {0}, is checked out and cannot be edited at the moment",$file.Name);
-						Write-Host $msg -ForegroundColor DarkYellow;
+						Write-Output $msg -ForegroundColor DarkYellow;
 					}					
 				}
 			}
@@ -47,12 +47,12 @@ function Clear-MetadataField{
 					ClearTaxonomyFieldValue -item $file.Item -taxonomyField ($file.Item.Fields[$MetadataFieldInternalName] -as [Microsoft.SharePoint.Taxonomy.TaxonomyField])
 					$file.CheckIn("Updated Taxonomy Field Value");
 					$msg = [String]::Format("Item, {0}, updated.",$file.Name);
-					Write-Host $msg -ForegroundColor Green;
+					Write-Output $msg -ForegroundColor Green;
 				}
 				else
 				{
 					$msg = [String]::Format("This file, {0}, is checked out and cannot be edited at the moment",$file.Name);
-					Write-Host $msg -ForegroundColor DarkYellow;
+					Write-Output $msg -ForegroundColor DarkYellow;
 				}
 			}
 		}
@@ -66,7 +66,7 @@ function Clear-MetadataField{
 				{
 					ClearTaxonomyFieldValue -item $item -taxonomyField ($item.Fields[$MetadataFieldInternalName] -as [Microsoft.SharePoint.Taxonomy.TaxonomyField])
 					$msg = [String]::Format("Item, {0}, updated.",$item.Title);
-					Write-Host $msg -ForegroundColor Green;
+					Write-Output $msg -ForegroundColor Green;
 				}
 			}
 			if($ItemId -ne $null -and $ClearAllItems -eq $false)
@@ -74,13 +74,13 @@ function Clear-MetadataField{
 				$item = $list.GetItemById($ItemId);			
 				ClearTaxonomyFieldValue -item $item -taxonomyField ($item.Fields[$MetadataFieldInternalName] -as [Microsoft.SharePoint.Taxonomy.TaxonomyField])
 				$msg = [String]::Format("Item, {0}, updated.",$item.Title);
-				Write-Host $msg -ForegroundColor Green;
+				Write-Output $msg -ForegroundColor Green;
 			}
 		}
 	}
 	catch [System.SystemException]
     { 
-        write-host "The script has stopped because there has been an error.  "$_  -foregroundcolor Red
+        Write-Output "The script has stopped because there has been an error.  "$_  -foregroundcolor Red
     }
     finally
     {
@@ -118,12 +118,12 @@ function Update-MetadataField{
 						UpdateTaxonomyFieldValue -item $file.Item -taxonomyField ($file.Item.Fields[$MetadataFieldInternalName] -as [Microsoft.SharePoint.Taxonomy.TaxonomyField]) -taxonomyFieldValueId $taxonomyFieldValueId;
 						$file.CheckIn("Updated Taxonomy Field Value");
 						$msg = [String]::Format("Item, {0}, updated.",$file.Name);
-						Write-Host $msg -ForegroundColor Green;
+						Write-Output $msg -ForegroundColor Green;
 					}
 					else
 					{
 						$msg = [String]::Format("This file, {0}, is checked out and cannot be edited at the moment",$file.Name);
-						Write-Host $msg -ForegroundColor DarkYellow;
+						Write-Output $msg -ForegroundColor DarkYellow;
 					}					
 				}
 			}
@@ -138,12 +138,12 @@ function Update-MetadataField{
 					UpdateTaxonomyFieldValue -item $file.Item -taxonomyField ($file.Item.Fields[$MetadataFieldInternalName] -as [Microsoft.SharePoint.Taxonomy.TaxonomyField]) -taxonomyFieldValueId $taxonomyFieldValueId;
 					$file.CheckIn("Updated Taxonomy Field Value");
 					$msg = [String]::Format("Item, {0}, updated.",$file.Name);
-					Write-Host $msg -ForegroundColor Green;
+					Write-Output $msg -ForegroundColor Green;
 				}
 				else
 				{
 					$msg = [String]::Format("This file, {0}, is checked out and cannot be edited at the moment",$file.Name);
-					Write-Host $msg -ForegroundColor DarkYellow;
+					Write-Output $msg -ForegroundColor DarkYellow;
 				}
 			}
 		}
@@ -157,7 +157,7 @@ function Update-MetadataField{
 				{
 					UpdateTaxonomyFieldValue -item $item -taxonomyField ($item.Fields[$MetadataFieldInternalName] -as [Microsoft.SharePoint.Taxonomy.TaxonomyField]) -taxonomyFieldValueId $taxonomyFieldValueId;
 					$msg = [String]::Format("Item, {0}, updated.",$item.Title);
-					Write-Host $msg -ForegroundColor Green;
+					Write-Output $msg -ForegroundColor Green;
 				}
 			}
 			if($ItemId -ne $null -and $UpdateAllItems -eq $false)
@@ -165,13 +165,13 @@ function Update-MetadataField{
 				$item = $list.GetItemById($ItemId);			
 				UpdateTaxonomyFieldValue -item $item -taxonomyField ($item.Fields[$MetadataFieldInternalName] -as [Microsoft.SharePoint.Taxonomy.TaxonomyField]) -taxonomyFieldValueId $taxonomyFieldValueId;
 				$msg = [String]::Format("Item, {0}, updated.",$item.Title);
-				Write-Host $msg -ForegroundColor Green;
+				Write-Output $msg -ForegroundColor Green;
 			}
 		}
 	}
 	catch [System.SystemException]
     { 
-        write-host "The script has stopped because there has been an error.  "$_  -foregroundcolor Red
+        Write-Output "The script has stopped because there has been an error.  "$_  -foregroundcolor Red
     }
     finally
     {

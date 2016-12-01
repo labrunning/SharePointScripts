@@ -50,7 +50,7 @@ function Copy-HUSPFilesToSP
     if ($PSBoundParameters.ContainsKey('ManifestFilePath')) {    
         $metadataManifest = [xml] (Get-Content ($ManifestFilePath))
         } else {
-        write-host "Manifest file not specified for categorising uploaded documents"
+        Write-Output "Manifest file not specified for categorising uploaded documents"
     }
     
     #Check for the LibraryStartFolder parameter to specify a root folder
@@ -94,12 +94,12 @@ function Copy-HUSPFilesToSP
                 $testFolder = $currentFolder.SubFolders[$LegalFolderName]
 
                 if ($testFolder -eq $null) {
-                    write-host "`nAdding folder '" $LegalFolderName "' to '" $docLibrary.Title "' in '" $web.Title "'..." -foregroundcolor Green
+                    Write-Output "`nAdding folder '" $LegalFolderName "' to '" $docLibrary.Title "' in '" $web.Title "'..." -foregroundcolor Green
                     $newFolder = $currentFolder.SubFolders.Add($LegalFolderName)
                 }
                 else
                 {
-                    write-host "`nFolder" $LegalFolderName "already exists in" $docLibrary.Title "and shall not be created" -foregroundcolor Red
+                    Write-Output "`nFolder" $LegalFolderName "already exists in" $docLibrary.Title "and shall not be created" -foregroundcolor Red
                 }
             }
         }
@@ -118,7 +118,7 @@ function Copy-HUSPFilesToSP
             #Check if the file exists and the overwrite option is selected before adding the file
             if ((!$web.GetFile($spFullPath).Exists) -or ($Overwrite)) {
                 #Add file
-                write-host "`nCopying" $_.Name "to" $spFullPath.Replace("/" + $_.Name,"") "in" $web.Title "..." -foregroundcolor Green
+                Write-Output "`nCopying" $_.Name "to" $spFullPath.Replace("/" + $_.Name,"") "in" $web.Title "..." -foregroundcolor Green
                 $spFile = $folder.Files.Add($spFullPath, $_.OpenRead(), $true)
                 $spItem = $spFile.Item
         
@@ -134,10 +134,10 @@ function Copy-HUSPFilesToSP
                             ($_.Type -eq "Number") -or
                             ($_.Type -eq "Currency")) {
                             $columnName = $_.Name
-                            write-host "Setting value on column"$columnName "..." -foregroundcolor Blue
+                            Write-Output "Setting value on column"$columnName "..." -foregroundcolor Blue
                             $_.Values.Value | ForEach-Object {
                                 $spItem[$columnName] = $_
-                                write-host "Value set to"$_
+                                Write-Output "Value set to"$_
                             }
                         }
                     }
@@ -148,13 +148,13 @@ function Copy-HUSPFilesToSP
                     {
                         if ($_.Type -eq "Note") {
                             $columnName = $_.Name
-                            write-host "Setting value on column"$columnName "..." -foregroundcolor Blue
+                            Write-Output "Setting value on column"$columnName "..." -foregroundcolor Blue
                             [string]$multiLineValue = $null
                             $_.Values.Value | ForEach-Object {
                                 $multiLineValue = $multiLineValue + $_ + "`n"
                             }
                             $spItem[$columnName] = $multiLineValue
-                            write-host "Value on multiiple line text column set"
+                            Write-Output "Value on multiiple line text column set"
                         }
                     }
                     catch {}
@@ -164,11 +164,11 @@ function Copy-HUSPFilesToSP
                     {
                         if ($_.Type -eq "MultiChoice") {
                             $columnName = $_.Name
-                            write-host "Setting value on column"$columnName "..." -foregroundcolor Blue
+                            Write-Output "Setting value on column"$columnName "..." -foregroundcolor Blue
                             [string]$multiChoiceValue = ";#"
                             $_.Values.Value | ForEach-Object {
                                 $multiChoiceValue = $multiChoiceValue + $_ + ";#"
-                                write-host "Value"$_ "added to column"
+                                Write-Output "Value"$_ "added to column"
                             }
                             $spItem[$columnName] = $multiChoiceValue
                         }
@@ -180,7 +180,7 @@ function Copy-HUSPFilesToSP
                     {
                         if ($_.Type -eq "URL") {
                             $columnName = $_.Name
-                            write-host "Setting value on column"$columnName "..." -foregroundcolor Blue
+                            Write-Output "Setting value on column"$columnName "..." -foregroundcolor Blue
                             $urlFieldValue = New-Object Microsoft.SharePoint.SPFieldUrlValue
                             $_.Values.Description | ForEach-Object {
                                 $urlFieldValue.Description = $_
@@ -189,7 +189,7 @@ function Copy-HUSPFilesToSP
                                 $urlFieldValue.Url = $_
                             }
                             $spItem[$columnName] = $urlFieldValue
-                            write-host "Value set to"$urlFieldValue.Url
+                            Write-Output "Value set to"$urlFieldValue.Url
                         }
                     }
                     catch {}
@@ -200,7 +200,7 @@ function Copy-HUSPFilesToSP
                         if ($_.Type -eq "User") {
                             $columnName = $_.Name
                             $user = $null
-                            write-host "Setting value on column"$columnName "..." -foregroundcolor Blue
+                            Write-Output "Setting value on column"$columnName "..." -foregroundcolor Blue
                             $_.Values.Value | ForEach-Object {
                                 #Check to see if SharePoint group exists in the site collection
                                 if ($web.SiteGroups[$_])
@@ -214,7 +214,7 @@ function Copy-HUSPFilesToSP
                                     $account = $web.EnsureUser($_)
                                 }
                                 $spItem[$columnName] = $account
-                                write-host "Value set to"$_
+                                Write-Output "Value set to"$_
                             }
                         }
                     }
@@ -227,7 +227,7 @@ function Copy-HUSPFilesToSP
                             $columnName = $_.Name
                             $user = $null
                             $userField = New-Object Microsoft.SharePoint.SPFieldUserValueCollection
-                            write-host "Setting value on column"$columnName "..." -foregroundcolor Blue
+                            Write-Output "Setting value on column"$columnName "..." -foregroundcolor Blue
                             $_.Values.Value | ForEach-Object {
                                 #Check to see if SharePoint group exists in the site collection
                                 if ($web.SiteGroups[$_])
@@ -242,7 +242,7 @@ function Copy-HUSPFilesToSP
                                 }
                                 $userValue = New-Object Microsoft.SharePoint.SPFieldUserValue($web, $account.ID, $account.Name)
                                 $userField.Add($userValue)
-                                write-host "Value"$_ "added to column"
+                                Write-Output "Value"$_ "added to column"
                             }
                             $spItem[$columnName] = $userField
                         }
@@ -260,7 +260,7 @@ function Copy-HUSPFilesToSP
                             $taxonomyField = $docLibrary.Fields[$columnName]
                             
                             $termSet = $termStore.GetTermSet($taxonomyField.TermSetId)
-                            write-host "Setting value on column"$columnName "..." -foregroundcolor Blue
+                            Write-Output "Setting value on column"$columnName "..." -foregroundcolor Blue
                             $_.Values.Value | ForEach-Object {
                                 $termCollection = $termSet.GetTerms($_, $true)
                                 if ($termCollection.Count -eq 0)
@@ -273,7 +273,7 @@ function Copy-HUSPFilesToSP
                                     $term = $termCollection[0]
                                 }
                                 $taxonomyField.SetFieldValue($spItem, $term)
-                                write-host "Value set to"$_
+                                Write-Output "Value set to"$_
                             }
                         }
                     }
@@ -291,7 +291,7 @@ function Copy-HUSPFilesToSP
                             $tfvc = New-Object Microsoft.SharePoint.Taxonomy.TaxonomyFieldValueCollection($taxonomyField)
                                                                     
                             $termSet = $termStore.GetTermSet($taxonomyField.TermSetId)
-                            write-host "Setting value on column"$columnName "..." -foregroundcolor Blue
+                            Write-Output "Setting value on column"$columnName "..." -foregroundcolor Blue
                             $_.Values.Value | ForEach-Object {
                                 $termCollection = $termSet.GetTerms($_, $true)
                                 if ($termCollection.Count -eq 0)
@@ -306,7 +306,7 @@ function Copy-HUSPFilesToSP
                                 $valueString = "-1;#" + $term.Name + "|" + $term.Id.ToString()
                                 $taxonomyValue = New-Object Microsoft.SharePoint.Taxonomy.TaxonomyFieldValue($valueString)
                                 $tfvc.Add($taxonomyValue)
-                                write-host "Value"$_ "added to column"
+                                Write-Output "Value"$_ "added to column"
                             }
                             $taxonomyField.SetFieldValue($spItem, $tfvc)
                         }
@@ -322,7 +322,7 @@ function Copy-HUSPFilesToSP
                 if ($CheckIn) {
                     if ($spFile.CheckOutStatus -ne "None") {
                         $spFile.CheckIn("File copied from " + $filePath, 1)
-                        write-host $spfile.Name"checked in"
+                        Write-Output $spfile.Name"checked in"
                     }
                 }
             
@@ -330,22 +330,22 @@ function Copy-HUSPFilesToSP
                 if ($Approve) {
                     if ($spItem.ListItems.List.EnableModeration -eq $true) {
                         $spFile.Approve("File automatically approved after copying from " + $filePath)
-                        if ($spItem["Approval Status"] -eq 0) { write-host $spfile.Name"approved" }
+                        if ($spItem["Approval Status"] -eq 0) { Write-Output $spfile.Name"approved" }
                     }
                 }
             }
             else
             {
-                write-host "`nFile"$_.Name "already exists in" $spFullPath.Replace("/" + $_.Name,"") "and shall not be uploaded" -foregroundcolor Red
+                Write-Output "`nFile"$_.Name "already exists in" $spFullPath.Replace("/" + $_.Name,"") "and shall not be uploaded" -foregroundcolor Red
             }
         }
 
     }
-    write-host "`nAll files copied" -foregroundcolor Yellow
+    Write-Output "`nAll files copied" -foregroundcolor Yellow
     }
     catch [System.SystemException]
     { 
-        write-host "The script has stopped because there has been an error." $_.Message
+        Write-Output "The script has stopped because there has been an error." $_.Message
     }
     finally
     {
@@ -353,4 +353,4 @@ function Copy-HUSPFilesToSP
     }
 
 }
-write-host "SharePoint 2010 Multiple File Upload Script - Get-SPScripts.com"
+Write-Output "SharePoint 2010 Multiple File Upload Script - Get-SPScripts.com"

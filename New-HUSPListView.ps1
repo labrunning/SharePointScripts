@@ -63,7 +63,7 @@ function New-HUSPListView {
             $newview = $SPList.Views.Add($viewTitle, $viewFields, $viewQuery, $viewRowLimit, $viewPaged, $viewDefaultView)
             $aggregations = Select-XML "//Aggregations" $viewData
             if ( $aggregations -eq $null ) {
-                    Write-Host "No aggreations set."
+                    Write-Output "No aggreations set."
                 } else {
                     $SPView = $SPList.Views[$viewTitle]
                     $SPView.Aggregations = $aggregations
@@ -71,9 +71,9 @@ function New-HUSPListView {
                     $SPView.Update()
             }
             $SPList.Update()
-            Write-Host "Created view $viewTitle for $list"
+            Write-Output "Created view $viewTitle for $list"
         } else {
-            Write-Host "View $viewTitle already exists; will not be created"
+            Write-Output "View $viewTitle already exists; will not be created"
     }
 
     $SPWeb.Dispose()
