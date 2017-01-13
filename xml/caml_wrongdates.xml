@@ -1,12 +1,5 @@
 <Where>
-    <Or>
-        <Gt>
-            <FieldRef Name='Committee_x0020_Date1' />
-            <Value Type="DateTime">2017-09-01</Value>
-        </Gt>
-        <Lt>
-            <FieldRef Name='Committee_x0020_Date1' />
-            <Value Type="DateTime">1983-08-31</Value>
-        </Lt>
-    </Or>
+    <IsNull>
+        <FieldRef Name='Committee_x0020_Date1' />
+    </IsNull>
 </Where>

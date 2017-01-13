@@ -11,7 +11,7 @@
       A valid XML path for the archived metadata field value
     .PARAMETER field
       A valid SharePoint field you want to write to
-    .PARAMETER xml
+    .PARAMETER caml
       A valid path to an XML file with a CAML query for the items you want to use
     .PARAMETER write
       A flag to state whether you want to actually write the values
@@ -22,19 +22,21 @@
     .OUTPUTS
       All the documents in the list will have the metadata term applied
     .EXAMPLE 
-      Edit-HUSPMetadataFromXML -url https://unishare.hud.ac.uk/unifunctions/COM/University-Committees -list "University Health and Safety Committee" -xpath "subjects" -field "School of Education and Professional Development Subject" -xml ".\scripts\xml\caml_nullsubjects.xml" -group "UF Fileplan" -set "Subjects"
+      Edit-HUSPMetadataFromXML -url https://unishare.hud.ac.uk/unifunctions/COM/University-Committees -list "University Health and Safety Committee" -xpath "subjects" -field "School of Education and Professional Development Subject" -caml ".\scripts\xml\caml_nullsubjects.xml" -group "UF Fileplan" -set "Subjects"
 #>
 
 function Get-HUSPTaxonomyValue($value) {
-    $SPTaxonomyValue = $value.Replace("&amp;","&")
+    $SPTaxonomyValue = $value.Trim()
+    Write-Verbose -Message "Looking for $SPTaxonomyValue"
     $SPTaxonomySession = Get-SPTaxonomySession -Site $SPWeb.Site
     $SPTermStore = $SPTaxonomySession.TermStores[0] 
     $SPTermStoreGroup = $SPTermStore.Groups[$group] 
     $SPTermSet = $SPTermStoreGroup.TermSets[$set] 
     # This is currently only going to work for the subjects due to the 'WHERE' function at the end
     try {    
-        $SPTerm =  $SPTermSet.GetTerms($SPTaxonomyValue,$true) | Where-Object { $_.Parent.Name -eq $SPWeb.Title }
+        $SPTerm = $SPTermSet.GetTerms($SPTaxonomyValue,$true) | Where-Object { $_.Parent.Name -eq $SPWeb.Title }
         $SPTermValueGuid = $SPTerm.Id
+        Write-Verbose -Message "Term ID is $SPTermValueGuid"
         $SPTaxonomyField = [Microsoft.SharePoint.Taxonomy.TaxonomyField]$SPList.Fields[$field]
         [Microsoft.SharePoint.Taxonomy.TaxonomyFieldValue]$SPTaxonomyFieldValue = New-Object Microsoft.SharePoint.Taxonomy.TaxonomyFieldValue($SPTaxonomyField)    
         $SPTaxonomyFieldValue.PopulateFromLabelGuidPair([Microsoft.SharePoint.Taxonomy.TermSet]::NormalizeName($SPTaxonomyValue) + "|" + $SPTermValueGuid)
@@ -89,7 +91,7 @@ function Get-HUSPDateTimeValue($value,$pathstr) {
             ## Seperate into first and second years
             $myFirstYear = $matches[1]
             $mySecondYear = $matches[2]
-            Write-Verbose -Message "The first year is $myFirstYear the second year is $mySecondYear - Now looking for a month in $value"
+            Write-Verbose -Message "The first year is $myFirstYear the second year is $mySecondYear"
         } # end looking for a **YEAR** (if there wasn't a year, I'm not sure we should look further)
 
         # Look for a **MONTH**
@@ -155,12 +157,12 @@ function Get-HUSPDateTimeValue($value,$pathstr) {
         Write-Verbose -Message "They did not know the rhyme; month limit is $monthLimit"
         [int]$myDate = [int]$monthLimit
     } else { 
-        Write-Verbose -Message "They knew the rhyme!"
+        # Write-Verbose -Message "They knew the rhyme!"
     } # end check to see if they know the limit of days in a month and decide which year to use
     try {
         $setFieldValue = Get-Date -Year $myYear -Month $myMonthInt -day $myDate
         $myLongDate = $setFieldValue.ToLongDateString()
-        Write-Verbose -Message "We have a validated date of $myLongDate"
+        Write-Host "We have a validated date of $myLongDate"
         if ($PSCmdlet.ShouldProcess($value)) {
             Write-Verbose -Message "Processing Command"
             $ModifyRecord = {
@@ -190,7 +192,7 @@ function Edit-HUSPMetadataFromXML {
         [Parameter(Mandatory=$true,Position=5)]
         [String]$field,
         [Parameter(Mandatory=$true,Position=6)]
-        [String]$xml,
+        [String]$caml,
         [Parameter(Mandatory=$false,Position=7)]
         [String]$group="UF Fileplan",
         [Parameter(Mandatory=$false,Position=8)]
@@ -207,68 +209,68 @@ function Edit-HUSPMetadataFromXML {
     $SPWeb.AllowUnsafeUpdates = $true
     
     $spQuery = New-Object Microsoft.SharePoint.SPQuery
-    $caml = Get-Content $xml -Raw
-    $spQuery.Query = $caml 
+    $camlQuery = Get-Content $caml -Raw
+    $spQuery.Query = $camlQuery 
 
     do {
         $SPListItems = $SPList.GetItems($spQuery)
         $spQuery.ListItemCollectionPosition = $SPListItems.ListItemCollectionPosition
+        
         foreach($SPItem in $SPListItems) {
             # Get current record information
             $SPItemId = $SPItem['_dlc_DocId'].ToString()
-            Write-Output "---+++Start Item $SPItemId+++---" 
-            
+            Write-Host "----====++++Start Item $SPItemId++++====----" -ForegroundColor DarkGreen
+            $SPItemArchivedMetadata = $SPItem["Archived Metadata"].ToString()
+            # Write-Verbose $SPItemArchivedMetadata
             # Get field value information
             try {
-                # Replace the ampersands with some proper XML ones!
-                # This will break any ampersands in the term store so we will need to convert them back before looking for a match in the term store
-                $GBDodgyXml = $SPItem["Archived Metadata"].ToString()
-                $GBDodgyXml = $GBDodgyXml.Replace("&","&amp;")
-                [xml]$SPItemXML = $GBDodgyXml
+                [xml]$SPItemXML = $SPItem["Archived Metadata"].ToString()
                 # Devise a method using XPath and Namespaces to get any value in the archived metadata
                 $SPXmlNs = $SPItemXML.DocumentElement.NamespaceURI
+                # Write-Verbose -Message "XML Namespace is $SPXmlNs"
                 $ns = @{ns0=$SPXmlNs}
-                $SPParamXmlNode = Select-Xml -Xml $SPItemXML -xpath "//ns0:$xpath" -Namespace $ns | Select-Object -ExpandProperty Node    
-                [String]$SPParamXmlValue = $SPParamXmlNode.'#text'
+                $SPParamXmlNode = Select-Xml -Xml $SPItemXML -xpath "//ns0:$xpath" -Namespace $ns | Select-Object -ExpandProperty Node
+                # CHECKME - this seems to work with text and cdata but in case not we need to use either .'#text' or .'#cdata-section' 
+                [String]$SPParamXmlValue = $SPParamXmlNode.InnerText
+                $SPParamXmlValue = $SPParamXmlValue.Trim()
+                Write-Verbose $SPParamXmlValue
                 # Get the WISDOM archive string as well in case we need to look for some date into in there
                 $SPPathXmlNode = Select-Xml -Xml $SPItemXML -xpath "//ns0:archiveurlstr" -Namespace $ns | Select-Object -ExpandProperty Node    
-                [String]$SPPathXmlValue = $SPPathXmlNode.'#text'
-                $SPPathXmlValue
+                [String]$SPPathXmlValue = $SPPathXmlNode.'#cdata-section'
+                $SPPathXmlValue = $SPPathXmlValue.Trim()
             } catch [Exception]{
                     Write-Error $_.Exception | format-list -force
             }
 
             Switch ($SPFieldType) {
-                "Boolean" {Write-Output "The field type is Boolean"}
-                "Calculated" {Write-Output "The field type is Calculated"}
-                "Choice" {Write-Output "The field type is Choice"}
-                "Computed" {Write-Output "The field type is Computed"}
-                "ContentTypeId" {Write-Output "The field type is ContentTypeId"}
-                "Counter" {Write-Output "The field type is Counter"}
+                "Boolean" {Write-Host "The field type is Boolean"}
+                "Calculated" {Write-Host "The field type is Calculated"}
+                "Choice" {Write-Host "The field type is Choice"}
+                "Computed" {Write-Host "The field type is Computed"}
+                "ContentTypeId" {Write-Host "The field type is ContentTypeId"}
+                "Counter" {Write-Host "The field type is Counter"}
                 "DateTime" {
-                    Write-Verbose -Message "Field type is DateTime"
-                    Write-Verbose -Message $SPParamXmlValue
+                    Write-Verbose -Message "Field type is DateTime, searching '$SPParamXmlValue' for a date..."
                     Get-HUSPDateTimeValue -value $SPParamXmlValue -pathstr $SPPathXmlValue
                 }
-                "ExemptField" {Write-Output "The field type is ExemptField"}
-                "File" {Write-Output "The field type is File"}
-                "Guid" {Write-Output "The field type is Guid"}
-                "Integer" {Write-Output "The field type is Integer"}
-                "Lookup" {Write-Output "The field type is Lookup"}
-                "LookupMulti" {Write-Output "The field type is LookupMulti"}
-                "ModStat" {Write-Output "The field type is ModStat"}
-                "Note" {Write-Output "The field type is Note"}
-                "Number" {Write-Output "The field type is Number"}
+                "ExemptField" {Write-Host "The field type is ExemptField"}
+                "File" {Write-Host "The field type is File"}
+                "Guid" {Write-Host "The field type is Guid"}
+                "Integer" {Write-Host "The field type is Integer"}
+                "Lookup" {Write-Host "The field type is Lookup"}
+                "LookupMulti" {Write-Host "The field type is LookupMulti"}
+                "ModStat" {Write-Host "The field type is ModStat"}
+                "Note" {Write-Host "The field type is Note"}
+                "Number" {Write-Host "The field type is Number"}
                 "TaxonomyFieldType" {
                     Write-Verbose -Message "Field type is TaxonomyFieldType"
-                    Write-Verbose -Message $SPParamXmlValue                    
                     Get-HUSPTaxonomyValue -value $SPParamXmlValue
                 }
-                "TaxonomyFieldTypeMulti" {Write-Output "The field type is TaxonomyFieldTypeMulti"}
-                "Text" {Write-Output "The field type is Text"}
-                "URL" {Write-Output "The field type is URL"}
-                "User" {Write-Output "The field type is User"}
-                default {Write-Output "The field type could not be detemined"}
+                "TaxonomyFieldTypeMulti" {Write-Host "The field type is TaxonomyFieldTypeMulti"}
+                "Text" {Write-Host "The field type is Text"}
+                "URL" {Write-Host "The field type is URL"}
+                "User" {Write-Host "The field type is User"}
+                default {Write-Host "The field type could not be determined"}
             } 
 
         } # end for each loop

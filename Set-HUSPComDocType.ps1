@@ -28,7 +28,7 @@ function Set-HUSPComDocType {
     $SPWeb = Get-SPWeb $url
     $SPList = $SPWeb.Lists[$list]
 
-    Write-Output Examining $SPList.Title 
+    Write-Host "Examining $SPList" 
     
     $SPWeb.AllowUnsafeUpdates = $true
     
@@ -57,7 +57,7 @@ function Set-HUSPComDocType {
                     $DocumentType = "Paper"
                 }
                 $SPItem['Committee Document Type'] = $DocumentType
-                Write-Output "DocID|$CurrentRecord|Title|$MyPrintTitle|Document Type|$DocumentType" -ForegroundColor Green
+                Write-Host "DocID|$CurrentRecord|Title|$MyPrintTitle|Document Type|$DocumentType" -ForegroundColor Green
                 $SPItem.SystemUpdate($false)
             }
             [Microsoft.Office.RecordsManagement.RecordsRepository.Records]::BypassLocks($SPItem, $ModifyDocumentType)

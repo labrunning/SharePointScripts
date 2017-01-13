@@ -1,6 +1,6 @@
 <#
     .SYNOPSIS
-    Sets Content Organizer Rules for a document library
+    Sets a Content Organizer Rule for a given document library
     .DESCRIPTION
     This script will create a content organizer rule for a document library.
     .PARAMETER url
@@ -12,12 +12,12 @@
     .PARAMETER ts
     a valid SharePoint term set
     .EXAMPLE
-    New-HUSPTestContentOrganizerRules -url https://testunifunctions.hud.ac.uk/COM/University-Committees -lib "Athena Swan" -tsg "UF Fileplan" -ts "Committees"  
+    New-HUSPTestContentOrganizerRules -url https://unifunctions.hud.ac.uk/COM/University-Committees -list "Athena Swan" -tsg "UF Fileplan" -ts "Committees"  
     .NOTES
     ! ! WARNING ! ! Use this script with caution, there is no error checking. Do not run unless you are exactly sure you know what to expect
 #>
 
-function New-HUSPContentOrganizerRules {
+function New-HUSPContentOrganizerRule {
     
     [CmdletBinding()]
     Param(
@@ -72,7 +72,7 @@ function New-HUSPContentOrganizerRules {
     $rule.Priority = "5"
     $rule.TargetPath = $SPWeb.Lists[$committeeName].RootFolder.ServerRelativeUrl
     $rule.Enabled = $true
-    Write-Verbose -message "Creating organise rule in $SPWeb for $committeeName with $taxonomyFieldValue "
+    Write-Verbose -message "Creating organiser rule in $SPWeb for $committeeName with $taxonomyFieldValue "
     $rule.Update()
     # Let go!
     $SPWeb.Dispose()

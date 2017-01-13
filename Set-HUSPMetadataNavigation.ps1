@@ -53,8 +53,11 @@ function Set-HUSPMetadataNavigation {
     $SPList.RootFolder.Update()
 
     #Enable Tree View on the site so that navigation hierarchies can be used in the UI
-    $SPWeb.TreeViewEnabled = $true
-    $SPWeb.Update()
+    if ($SPWeb.TreeViewEnabled -eq $false) {
+      Write-Verbose -Message "Tree view is not on, setting this now..."
+      $SPWeb.TreeViewEnabled = $true
+      $SPWeb.Update()
+    }
 
     #Dispose of the Web object
     $SPWeb.Dispose()

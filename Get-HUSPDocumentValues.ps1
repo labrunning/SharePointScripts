@@ -14,52 +14,62 @@
 #>
 
 function Get-HUSPDocumentValues {
-    [CmdletBinding()]
+    [CmdletBinding(
+        SupportsShouldProcess=$true,
+        ConfirmImpact="High"
+    )]
     Param(
         [Parameter(Mandatory=$true,Position=1)]
         [string]$url,
         [Parameter(Mandatory=$true,Position=2)]
         [string]$list,
-        [Parameter(Mandatory=$false)]
+        [Parameter(Mandatory=$false,Position=3)]
         [AllowEmptyString()]
-        [int]$Id
+        [String]$caml
     )
     
     $SPWeb = Get-SPWeb $url
     $SPList = $SPWeb.Lists[$list]
 
-    $IdPresent = $PSBoundParameters.ContainsKey('id') 
+    $CamlPresent = $PSBoundParameters.ContainsKey('caml') 
 
-    If ($IdPresent -eq $false) {
-        Write-Verbose "No specified file"
-        $FullList = $SPList.GetItems()
-        ForEach ($item in $FullList) {
-            $item.Fields | foreach {
-                $fieldValues = @{
+    If ($CamlPresent -eq $false) {
+        Write-Host "No CAML query specified, getting all values..."
+        $SPFullList = $SPList.GetItems()
+        ForEach ($SPItem in $SPFullList) {
+            $SPItemId = $SPItem['_dlc_DocId'].ToString()
+            $SPItem.Fields | foreach {
+                $SPFieldValues = @{
                     "Display Name" = $_.Title
                     "Internal Name" = $_.InternalName
-                    "Value" = $item[$_.InternalName]
+                    "Value" = $SPItem[$_.InternalName]
                 }
-                New-Object PSObject -Property $fieldValues | Select @("Display Name","Internal Name","Value")
+                New-Object PSObject -Property $SPFieldValues | Select @("Display Name","Internal Name","Value")
             }            
-            Write-Output "+++------------------------------------------------------+++"
+            Write-Host "----====++++End Item: $SPItemId ++++====----" -ForegroundColor Cyan
         }
     } else {
-        Write-Verbose "Id '$Id' specified"
-        [string]$queryString = $null 
-        $queryString = "<Where><Eq><FieldRef Name='ID' /><Value Type='Counter'>" + $Id + "</Value></Eq></Where>"
-        $query = New-Object Microsoft.SharePoint.SPQuery
-        $query.Query = $queryString
-        $item = $SPList.GetItems($query)[0] 
-        
-        $item.Fields | foreach {
-            $fieldValues = @{
-                "Display Name" = $_.Title
-                "Internal Name" = $_.InternalName
-                "Value" = $item[$_.InternalName]
+        Write-Host "CAML query provided..."
+        $spQuery = New-Object Microsoft.SharePoint.SPQuery
+        $camlQuery = Get-Content $caml -Raw
+        $spQuery.Query = $camlQuery
+
+        do {
+            $SPListItems = $SPList.GetItems($spQuery)
+            $spQuery.ListItemCollectionPosition = $SPListItems.ListItemCollection
+            ForEach($SPItem in $SPListItems) {
+                $SPItemId = $SPItem['_dlc_DocId'].ToString()
+                $SPItem.Fields | foreach {
+                    $SPFieldValues = @{
+                        "Display Name" = $_.Title
+                        "Internal Name" = $_.InternalName
+                        "Value" = $SPItem[$_.InternalName]
+                    }
+                    New-Object PSObject -Property $SPFieldValues | Select @("Display Name","Internal Name","Value")
+                }
+                Write-Host "----====++++End Item: $SPItemId ++++====----"
             }
-            New-Object PSObject -Property $fieldValues | Select @("Display Name","Internal Name","Value")
-        }
+        }  while ($null -ne $spQuery.ListItemCollectionPosition)
     }
     $SPWeb.Dispose()
 }
