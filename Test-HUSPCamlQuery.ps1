@@ -9,14 +9,20 @@
      A valid SharePoint site url
     .Parameter list
      A valid SharePoint list
-    .Paramater caml 
+    .Parameter caml
      A file path to a valid SharePoint CAML query file
     .Parameter fields
      An array of list fields you want returned when using the verbose parameter
     .OUTPUTS
-     A description of what the script outputs
+     Outputs a list of items matching the query, and if more than one is returned, an output object of that list title
     .EXAMPLE
-     An example of the command in use
+     An example of the command in use;
+
+        Test-HUSPCamlQuery -url $mySPWeb.Url -list $_.Title -caml .\scripts\xml\caml_nulldates.xml
+
+    You can pipe this out to a variable to use with another command;
+
+        $myNullDateComs = $mySPWeb.Lists | Where-Object {$_.Hidden -eq $false -and $_.Title -notlike "@*"} | % { Test-HUSPCamlQuery -url $mySPWeb.Url -list $_.Title -caml .\scripts\xml\caml_nulldates.xml}
     ################################################################
 #>
 
@@ -52,6 +58,10 @@ function Test-HUSPCamlQuery {
 
     $SPQueryCount = $SPListItems.Count
     Write-Host "Total number of items matching query in $SPList is $SPQueryCount" -foregroundcolor darkyellow
+    
+    if ($SPQueryCount -ne 0) {
+        Write-Output @($SPList.Title)
+    }
 
     $SPWeb.Dispose()
 }

@@ -1,0 +1,1 @@
+<Where><Eq><FieldRef Name='ID' /><Value Type='Number'>6</Value></Eq></Where>

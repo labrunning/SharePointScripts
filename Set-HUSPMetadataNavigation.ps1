@@ -34,6 +34,7 @@ function Set-HUSPMetadataNavigation {
     $listNavSettings = [Microsoft.Office.DocumentManagement.MetadataNavigation.MetadataNavigationSettings]::GetMetadataNavigationSettings($SPList)
 
     #Clear current metadata navigation settings on the list
+    #CHECKME ; should we always do this?
     $listNavSettings.ClearConfiguredHierarchies()
     $listNavSettings.ClearConfiguredKeyFilters()
 

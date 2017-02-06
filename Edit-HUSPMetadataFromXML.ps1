@@ -92,6 +92,8 @@ function Get-HUSPDateTimeValue($value,$pathstr) {
             $myFirstYear = $matches[1]
             $mySecondYear = $matches[2]
             Write-Verbose -Message "The first year is $myFirstYear the second year is $mySecondYear"
+        } else {
+            Write-Verbose -Message "Could not find a year in $pathstr"
         } # end looking for a **YEAR** (if there wasn't a year, I'm not sure we should look further)
 
         # Look for a **MONTH**
@@ -162,7 +164,7 @@ function Get-HUSPDateTimeValue($value,$pathstr) {
     try {
         $setFieldValue = Get-Date -Year $myYear -Month $myMonthInt -day $myDate
         $myLongDate = $setFieldValue.ToLongDateString()
-        Write-Host "We have a validated date of $myLongDate"
+        Write-Host "We have a validated date of $myLongDate" -ForegroundColor "Green"
         if ($PSCmdlet.ShouldProcess($value)) {
             Write-Verbose -Message "Processing Command"
             $ModifyRecord = {
@@ -279,5 +281,7 @@ function Edit-HUSPMetadataFromXML {
     $SPWeb.AllowUnsafeUpdates = $false
 
     $SPWeb.Dispose()
+
+    Write-Host "Remember that GB uses 'subjects' and not 'Subjects' in his Archive Metadata" -ForegroundColor Red
 
 }
