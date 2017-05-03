@@ -1,5 +1,0 @@
-<Where>
-    <IsNull>
-        <FieldRef Name='Archived_x0020_Metadata1' />
-    </IsNull>
-</Where>

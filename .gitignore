@@ -3,6 +3,7 @@ data
 dev
 test
 xml
+.vscode
 *Cred.xml
 Profile.ps1
 !/.gitignore

@@ -1,5 +1,0 @@
-<Where>
-    <IsNotNull>
-        <FieldRef Name="GUID"/>
-    </IsNotNull>
-</Where>
