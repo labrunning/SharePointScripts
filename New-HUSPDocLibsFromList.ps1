@@ -1,18 +1,18 @@
 <#
     .SYNOPSIS
-    Creates a number of document libraries from a CSV list
+     Creates a number of document libraries from a CSV list
     .DESCRIPTION
-    This script will create a number of document libraries from a valid CSV file which contains the titles and descriptions for each of the document libraries. There must be a title for each document library but there does not need to be a description. The content types must be seperated with a semi-colon.
-    EXAMPLE
-    -------
-    Title,Description,ContentType
-    "University Health and Safety Committee","","UF University Committee"
+     This script will create a number of document libraries from a valid CSV file which contains the titles and descriptions for each of the document libraries. There must be a title for each document library but there does not need to be a description. The content types must be seperated with a semi-colon.
+     EXAMPLE
+     -------
+     Title,Description,ContentType
+     "University Health and Safety Committee","","UF University Committee"
     .PARAMETER url
-    a valid SharePoint Site Url
+     a valid SharePoint Site Url
     .PARAMETER csv
-    a valid CSV file
+     a valid CSV file
     .EXAMPLE
-    New-HUSPDocumentLibraries -url https://devunishare.hud.ac.uk/unifunctions/committees/University-Committees -csv .\DocLibList.csv
+     New-HUSPDocumentLibraries -url https://devunishare.hud.ac.uk/unifunctions/committees/University-Committees -csv .\DocLibList.csv
 #>
 function New-HUSPDocLibsFromList {
     [CmdletBinding()]

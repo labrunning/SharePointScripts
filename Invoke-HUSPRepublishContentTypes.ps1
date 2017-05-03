@@ -25,7 +25,7 @@ function Invoke-HUSPRepublishContentTypes {
             $CurrentContentType = $_.Name
             if ($spCTPublish.IsPublished($_)) {
                 $spCTPublish.Publish($_)
-                Write-Output "*** Content type $CurrentContentType has been republished ***" -foregroundcolor Green
+                Write-Host "*** Content type $CurrentContentType has been republished ***" -foregroundcolor Green
             } else { 
                 Write-Verbose -message "Content type $CurrentContentType is not a published content type"
             }

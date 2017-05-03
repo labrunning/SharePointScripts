@@ -51,6 +51,7 @@ function Get-HUSPDocumentValues {
     } else {
         Write-Host "CAML query provided..."
         $spQuery = New-Object Microsoft.SharePoint.SPQuery
+        $spQuery.ViewAttributes = "Scope='RecursiveAll'"
         $camlQuery = Get-Content $caml -Raw
         $spQuery.Query = $camlQuery
 

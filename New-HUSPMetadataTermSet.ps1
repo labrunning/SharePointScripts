@@ -51,9 +51,9 @@ function New-HUSPMetadataTermSet {
     $SPTaxonomySession = Get-SPTaxonomySession -site $SPTaxonomySite 
     
     <#
-    We can specify the term store by name, but as there is just usually one, and this
-    is certainly the case in our environment I am just going to use the first one
-    $TermStore = $TaxonomySession.TermStores["Managed Metadata Service Application Proxy"]
+        We can specify the term store by name, but as there is just usually one, and this
+        is certainly the case in our environment I am just going to use the first one
+        $TermStore = $TaxonomySession.TermStores["Managed Metadata Service Application Proxy"]
     #> 
     
     $SPTermStore = $SPTaxonomySession.TermStores[0] 

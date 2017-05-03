@@ -121,6 +121,7 @@ function Get-HUSPDateTimeValue($value,$pathstr) {
     # Let's try to create a date
     <#
         DO THEY KNOW THE RHYME?!
+        (They don't in SEPD...)
         Thirty days has September,
         April, June, and November.
         All the rest have thirty-one,
@@ -212,6 +213,7 @@ function Edit-HUSPMetadataFromXML {
     
     $spQuery = New-Object Microsoft.SharePoint.SPQuery
     $camlQuery = Get-Content $caml -Raw
+    $spQuery.RowLimit = 100
     $spQuery.Query = $camlQuery 
 
     do {
@@ -274,9 +276,8 @@ function Edit-HUSPMetadataFromXML {
                 "User" {Write-Host "The field type is User"}
                 default {Write-Host "The field type could not be determined"}
             } 
-
         } # end for each loop
-    } while ($null -ne $spQuery.ListItemCollectionPosition)
+    } while ($spQuery.ListItemCollectionPosition -ne $null)
 
     $SPWeb.AllowUnsafeUpdates = $false
 

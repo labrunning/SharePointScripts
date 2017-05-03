@@ -23,16 +23,18 @@ function Unlock-HUSPFile {
         [Parameter(Mandatory=$True,Position=2)]
         [string]$list,
         [Parameter(Mandatory=$True,Position=3)]
-        [string]$id
-        )
+        [string]$Id
+    )
 
     $SPWeb = Get-SPWeb $url
     $SPList = $SPWeb.Lists[$list]
+
     # FIXME this is really slow; change to using a CAML query to speed it up?
+    # Nope, didn't really work
     $SPItem = $SPList.GetItemById($id)
     $SPFile = $SPItem.File
     # FIXME we are only interested in the lock info, can we filter the properties returned to speed it up?
-    Write-Verbose ( $SPFile | Format-List | Out-String )
+    $SPFile
     $SPLockType = $SPFile.LockType
     Write-Output "File lock type is: $SPLockType"
 

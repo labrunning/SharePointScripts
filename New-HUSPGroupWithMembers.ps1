@@ -17,7 +17,7 @@
     .OUTPUTS
      Adds a group to the site collection groups with default permissions and members stated
     .EXAMPLE 
-     New-HUSPGroupWithMembers -web https://devunifunctions.hud.ac.uk/COM -name "UF Committees Testers 006" -description "All the SharePoint testing accounts." -permission "UF Read" -members AD\spuftest1,AD\spuftest2,AD\spuftest3
+     New-HUSPGroupWithMembers -web https://devunifunctions.hud.ac.uk/COM -name "UF Committees Testers 006" -description "All the SharePoint testing accounts." -permission "UF Read" -members ("AD\spuftest1","AD\spuftest2","AD\spuftest3")
     ################################################################
 #>
 
@@ -35,7 +35,7 @@ function New-HUSPGroupWithMembers {
         [string]$permission,
         [Parameter(Mandatory=$True,Position=5)]
         [string[]]$members
-        )
+    )
 
     $SPGroupName = $name
     $SPGroupDescription = $description
@@ -47,7 +47,7 @@ function New-HUSPGroupWithMembers {
     if ($SPWeb.IsRootWeb -eq $true) {
 
         if ($SPWeb.SiteGroups[$SPGroupName] -eq $null) {
-            #Create the SharePoint Group – Group Name, Group Owner, Group Member, Group Description. Can’t add AD group yet…
+            #Create the SharePoint Group – Group Name, Group Owner, Group Member, Group Description. Can’t add AD group yet...
             $NewSPGroup = $SPWeb.SiteGroups.Add($SPGroupName, $SPWeb.Author, $SPWeb.Author, $SPGroupDescription)
             $SPWeb.AssociatedGroups.Add($SPWeb.SiteGroups[$SPGroupName])
             $NewSPAccount = $SPWeb.SiteGroups[$SPGroupName]

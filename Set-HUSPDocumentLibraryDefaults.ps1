@@ -26,8 +26,10 @@ function Set-HUSPDocumentLibraryDefaults {
     $SPList = $SPWeb.Lists[$list]
     Write-Verbose -message "Setting library defaults for $SPList"
     $SPList.EnableFolderCreation = $false
-    $SPList.DisableGridEditing = $true
+    # changed DisableGridEditing to $false so that people can edit bulk uploads
+    $SPList.DisableGridEditing = $false
     $SPList.Update()
+    $SPWeb.Update()
     
     $SPWeb.Dispose()
 }
