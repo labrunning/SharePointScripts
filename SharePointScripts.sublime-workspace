@@ -1,0 +1,826 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Hi",
+				"HideSPField"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "test/Invoke-HUSPPolicyReview.ps1",
+			"settings":
+			{
+				"buffer_size": 7152,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 357.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Local Dependency"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Discover Packages"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reins",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"prev",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"html",
+				"Markdown Preview: Save to HTML"
+			],
+			[
+				"markdown",
+				"Markdown Preview: Save to HTML"
+			],
+			[
+				"in",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"fold",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"previ",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"",
+				"ANF: New File"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 510.0
+	},
+	"console":
+	{
+		"height": 297.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts"
+	],
+	"file_history":
+	[
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/Add-HUSPMemberToGroups.ps1",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/SharePointScripts.sublime-project",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewSEPDBulkUploadSubjects.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewSHUMBulkUploadSubject.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewSHUMBulkUpload.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewSEPDBulkUpload.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewSCENBulkUpload.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewSCENBulkUploadSubject.xml",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/HUSPPSTools.sublime-build",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewUCBulkUpload.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewEFBulkUpload.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/xml/ViewSEPDBulkUploadSubject.xml",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/powershell recipes.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/films to see.txt",
+		"/B/SPOutput/informatics.cmp/import.log",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I show the value of a field like archived metadata in a list in SharePoint via powershell.txt",
+		"/B/SPOutput/informatics.cmp.export.log",
+		"/C/Users/cmsxlb/Dropbox/Work/project reference/edrms/field_types.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I get a list of document libraries and their created date from unifunctions.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/response-export.json",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I add a term to the managed metadata via powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq where have I used regular expressions in powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/Vienna.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/infopath.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I design InfoPath forms.txt",
+		"/C/Users/cmsxlb/Scripts/Enter-HUSPServer.ps1",
+		"/B/SPLogs/2016-10-18T08-53-51.log",
+		"/Users/lukebrunning/Dropbox/Apps/Notes/qq how did I install hugo.txt",
+		"/Users/lukebrunning/Dropbox/Apps/Notes/qq which apps so I need to reinstall on macOS.txt",
+		"/Users/lukebrunning/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/lukebrunning/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/lukebrunning/Dropbox/Apps/Sublime/Default/Preferences (OSX).sublime-settings",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how can I take better notes.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what can I do when we have problems with the SharePoint farm.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/powershell remoting onto server.txt",
+		"/C/Users/cmsxlb/AppData/Local/Microsoft/Windows/Temporary Internet Files/WebTempDir/UFCOMGetUserProfileByName.udcx",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/sublime text 3.txt",
+		"/B/SPLogs/2016-10-03T11-46-38.log",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/LogView/logview.sublime-settings",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq where is managed metadata term store data saved in the SharePoint farm.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what is our team email group address.txt",
+		"/B/SPLogs/2016-09-27T14-29-57.log",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/active directory and windows admin commands.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/work photos.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/xbox achievements.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I poach eggs in the microwave.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I use InfoPath and the GetUserProfileByName.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/qq what regular expression type does SharePoint designer use.txt",
+		"//unishare.hud.ac.uk@SSL/DavWWWRoot/lcm/LCM Connection Library/LCMGetUserProfileByName.udcx",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/user profile service.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/SharePoint Themes.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/colours.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I get a unique id in a SharePoint list with leading digits.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what is my static ip address.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do i run the staff hub usage report.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I grant permissions for workflows to use app permissions in SharePoint.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/profile backup script.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what are the properties of SharePoint lists I can get from powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I access my voicemail messages on my phone at work.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I query the registry from the command line.txt",
+		"//unishare.hud.ac.uk@SSL/DavWWWRoot/uniwide/Data Connection Library/UniwideGetUserProfileByName.udcx",
+		"//unifunctions.hud.ac.uk@SSL/DavWWWRoot/COM/Committees Connection Library/UFCOMGetUserProfileByName.udcx",
+		"/C/Users/cmsxlb/Dropbox/Outlook/Luke/Premises.xml",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I loop through a set of document libraries in a site.txt",
+		"//unishare.hud.ac.uk@SSL/DavWWWRoot/uniwide/ucasclearing/Documents/ConfClearFAQs.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/50 electronic albums you should own.txt",
+		"/B/SPLogs/2016-08-04T11-51-57.log",
+		"/B/SPLogs/2016-08-04T16-16-58.log",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/imagemagik.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do i create a site collection with a content database in sharepoint via powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what is Guy's clipboard copy feature called in SharePoint site collection features.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I count all the files in a directory.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how can I delete all the mac temporary files on windows drives.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/MDriveAudit2016.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how can i check what template was used to create a SharePoint site.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I set xmllint to have more than two spaces in the output.txt",
+		"/B/SPLogs/2016-07-29T13-32-58.log",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I show the top 5 largest files on a drive with powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I remember things.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I access my voicemail settings at work.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what is the name of the method of adding a prefix to variables names to indicate their type.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I tell which powershell I have installed.txt",
+		"/T/COM Access Requests/AR-COM-ad_cmsxlb-2016-07-08T13_58_15.xml",
+		"/B/SPLogs/2016-07-13-0915-ComDocType-UTUG.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I redirect messages from powershell scripts to a log file.txt",
+		"/A/SPLogs/2016-07-07T11-48-27.log",
+		"/A/SPLogs/2016-07-01T14-20-10.log",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/User/MarkdownPreview.sublime-settings",
+		"/C/Users/cmsxlb/Dropbox/Work/journal/2015-08-07.taskpaper",
+		"/B/SPLogs/2016-07-06T11-05-44.log",
+		"//testunifunctions.hud.ac.uk@SSL/DavWWWRoot/COM/COM Data Connections/TUFCOMGetUserProfileByName.udcx",
+		"//unifunctions.hud.ac.uk@SSL/DavWWWRoot/Unifunctions Data Connections/UFGetUserProfileByName.udcx",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq what is university blue or uniblue in HTML code.txt",
+		"/B/SPLogs/2016-07-05T15-34-12.log",
+		"//unishare.hud.ac.uk@SSL/DavWWWRoot/cls/se/CLS Service DC/GetUserProfileByNameCLS.udcx",
+		"/B/SPLogs/2016-07-06T09-51-22.log",
+		"/C/Users/cmsxlb/AppData/Roaming/Sublime Text 3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I list all the permission groups applied to sites in a site collection.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I filter a SharePoint REST API request for a list of document libraries.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I log into Which at home.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/GetUserProfileByNameCLS.udcx",
+		"/B/SPLogs/2016-07-05T15-18-36.log",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/TUFCOMGetUserProfileByName.udcx",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq which model fridge did I buy when I moved in to Bradley View.txt",
+		"/B/SPLogs/2016-07-01T10-14-18.log",
+		"/B/error.txt",
+		"/C/Users/cmsxlb/Downloads/TESTUFCOM-34752598-2.xml",
+		"/Users/luke/Dropbox/Apps/Notes/qq how do I add a SharePoint content database to an SQL availability group.txt",
+		"/A/scripts/xml/ViewCLSCommitteesMetadataAudit.xml",
+		"/A/scripts/xml/ViewUniversityCommitteesMetadataAudit.xml",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I turn on my voicemail at work.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/SPWebAPiRoles.xml",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I get a value from a powershell object table into a variable.txt",
+		"/A/SPLogs/2016-06-06T13-49-47.log",
+		"/A/SPLogs/2016-06-06T14-17-36.log",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/SPWebApiRef.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/SPWebApiUsersRef.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/SPWebAPiUsers.xml",
+		"/C/Users/cmsxlb/Dropbox/Work/wktmp/SPWebApi.xml",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how can i tell if a file is locked in SharePoint.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I login as a different user in SharePoint.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I add a SharePoint content database to an SQL availability group.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/sharepoint powershell recipes.txt",
+		"/C/Users/cmsxlb/Dropbox/Work/SharePointScripts/qq how do I get a value from a powershell object table into a variable.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/qq how do I list all the permission groups applied to sites in a site collection.ps1",
+		"/A/SPLogs/2016-05-20T11-45-48.log",
+		"/Users/luke/Dropbox/Work/SharePointScripts/qq how do I register the SharePoint workflow service with powershell.txt",
+		"/C/Users/cmsxlb/Dropbox/Apps/Notes/powershell.txt"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			"<current file>,<open folders>",
+			"<current file>",
+			"<current file>,<open folders>",
+			"<current file>",
+			"<current file>,<open folders>",
+			"<current file>",
+			"<current file>,<open folders>",
+			"<current file>",
+			"<open folders>",
+			"/Users/luke/Dropbox/Apps/Sublime/User",
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work\\project reference,<open folders>",
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work\\project reference",
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work\\project reference,\\\\accra\\d$\\SPLogs",
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work\\project reference",
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes,C:\\Users\\cmsxlb\\Dropbox\\Work",
+			"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Notes",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"PSCmdlet.ShouldProcess",
+			" ",
+			"regular expression",
+			"regex",
+			"Get-Date",
+			"infiltrator",
+			"pattern",
+			"archived",
+			"tail",
+			"template",
+			"content",
+			"organizer",
+			"archive",
+			"foreach",
+			"task",
+			"time",
+			"infopath",
+			"Archived",
+			"DocumentRouting",
+			"foreach",
+			"-match",
+			"archived",
+			"metadata",
+			"sublime",
+			"get-date",
+			"blue",
+			"eval",
+			"remote",
+			"foreach",
+			"; ",
+			"photos",
+			"infopath",
+			"user profile",
+			"Get-Date",
+			"Get-SPSite",
+			"get-date",
+			"Tea#ex1138",
+			"where-object",
+			"dget",
+			"dsquery",
+			"portal",
+			"voicemail",
+			"views",
+			"registry",
+			"user profile",
+			"where-object",
+			"user profile",
+			"static",
+			"fixed",
+			"hidden",
+			"•",
+			"foreach",
+			"unifunctions",
+			"get-user",
+			"size",
+			"mac files",
+			"and",
+			"Internal",
+			"or",
+			"-or",
+			"output",
+			"pipe",
+			"-notlike",
+			"powershell",
+			"log",
+			"-",
+			"infopath",
+			"workflow",
+			"foreach",
+			"views",
+			"foreach",
+			"database",
+			"content",
+			"template",
+			"spcontentdatabase",
+			"foreach",
+			"application",
+			"**\n",
+			"AllWebs",
+			"Web Application",
+			"wisdom",
+			"udcx",
+			"ucdx",
+			"metadata",
+			"hidden",
+			"browser",
+			"hide",
+			"huburi",
+			"hcitool",
+			"message",
+			"phone",
+			"voice",
+			"Audit%20Committee",
+			"Audit%20Committe",
+			"folder",
+			"TestUnifunctions",
+			"12:48",
+			"policy",
+			"AD",
+			"active directory",
+			"lock",
+			"the",
+			"foreach",
+			"for each",
+			"database",
+			"log",
+			"correlation",
+			"order",
+			"SharePoint order",
+			"azure",
+			"database",
+			"backup",
+			"new-spweb",
+			"import",
+			"copy site",
+			"site collection",
+			"osx",
+			"[OSX]",
+			"sputility",
+			"countryField",
+			"master page",
+			"content database",
+			"lock",
+			"import",
+			"SharePoint Designer",
+			"mysite",
+			"lock",
+			"correlation"
+		],
+		"highlight": true,
+		"in_selection": true,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"_x0020_",
+			"\\n",
+			"/n",
+			"(/n)",
+			"\\\\n",
+			"//n",
+			"/n",
+			"\\n",
+			"&bull;",
+			"or",
+			"Display",
+			"and",
+			" -and",
+			" ",
+			"ReferralActionTakenField"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "test/Invoke-HUSPPolicyReview.ps1",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5957,
+								5957
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 66.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.markdown":
+	{
+		"height": 124.0
+	},
+	"pinned_build_system": "Packages/User/HUSP.sublime-build",
+	"project": "SharePointScripts.sublime-project",
+	"replace":
+	{
+		"height": 90.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"invoke",
+				"test\\Invoke-HUSPPolicyReview.ps1"
+			],
+			[
+				"powershell",
+				"powershell recipes.txt"
+			],
+			[
+				"active",
+				"active directory and windows admin commands.txt"
+			],
+			[
+				"profile",
+				"user profile service.txt"
+			],
+			[
+				"permission",
+				"qq how do I grant permissions for workflows to use app permissions in SharePoint.txt"
+			],
+			[
+				"sitecollection",
+				"qq how do i create a site collection with a content database in sharepoint via powershell.txt"
+			],
+			[
+				"magi",
+				"imagemagik.txt"
+			],
+			[
+				"directory",
+				"qq how do I count all the files in a directory.txt"
+			],
+			[
+				"voicemail",
+				"qq how do I access my voicemail messages on my phone at work.txt"
+			],
+			[
+				"files",
+				"qq how do I count all the files in a directory.txt"
+			],
+			[
+				"temp",
+				"qq how can I delete all the mac temporary files on windows drives.txt"
+			],
+			[
+				"workflow",
+				"qq how do I grant permissions for workflows to use app permissions in SharePoint.txt"
+			],
+			[
+				"remote",
+				"powershell remoting onto server.txt"
+			],
+			[
+				"permissions",
+				"qq how do I list all the permission groups applied to sites in a site collection.txt"
+			],
+			[
+				"log",
+				"qq how do I redirect messages from powershell scripts to a log file.txt"
+			],
+			[
+				"archived",
+				"qq how do I show the value of a field like archived metadata in a list in SharePoint via powershell.txt"
+			],
+			[
+				"voice",
+				"qq how do I turn on my voicemail at work.txt"
+			],
+			[
+				"foreah",
+				"qq how do I use foreach on the command line with powershell.txt"
+			],
+			[
+				"user",
+				"user profile service.txt"
+			],
+			[
+				"proxy",
+				"qq what are the proxy details at work.txt"
+			],
+			[
+				"infopath",
+				"infopath.txt"
+			],
+			[
+				"infopat",
+				"InfoPath and the User Profile Service.txt"
+			],
+			[
+				"logs",
+				"qq how do i search SharePoint log files.txt"
+			],
+			[
+				"content",
+				"qq how do i create a site collection with a content database in sharepoint via powershell.txt"
+			],
+			[
+				"powersh",
+				"powershell.txt"
+			],
+			[
+				"userprofile",
+				"InfoPath and the User Profile Service.txt"
+			],
+			[
+				"allstaff",
+				"qq what is the name of the active directory group to use for all staff.txt"
+			],
+			[
+				"database",
+				"qq how do i create a site collection with a content database in sharepoint via powershell.txt"
+			],
+			[
+				"adgroup",
+				"qq which AD group do the SharePoint team belong to that we use to give admin access across the SharePoint farm.txt"
+			],
+			[
+				"staff",
+				"staffhub notes.txt"
+			],
+			[
+				"master",
+				"qq how do I apply the default master page.txt"
+			],
+			[
+				"template",
+				"qq how do I get a list of sharepoint site template codes.txt"
+			],
+			[
+				"qqsitecollection",
+				"qq how do i create a site collection with a content database in sharepoint via powershell.txt"
+			],
+			[
+				"exam",
+				"ecdl exam invigilation.txt"
+			],
+			[
+				"dryer",
+				"qq which dryers should i avoid for the kitchen upgrade.txt"
+			],
+			[
+				"qqstaff",
+				"qq who can i get to work as my staff.txt"
+			],
+			[
+				"qqad",
+				"qq what is the name of the AD group to use for all staff.txt"
+			],
+			[
+				"pi",
+				"raspberry pi.txt"
+			],
+			[
+				"lock",
+				"qq how can i tell if a file is locked in SharePoint.txt"
+			],
+			[
+				"siteadmini",
+				"qq how do i run the site collection administrators report for it support.txt"
+			],
+			[
+				"foreach",
+				"qq how do I use foreach on the command line with powershell.txt"
+			],
+			[
+				"qqlog",
+				"qq how do i search SharePoint log files.txt"
+			],
+			[
+				"browser",
+				"qq how do I set a SharePoint document library or list to hidden from browser with powershell.txt"
+			],
+			[
+				"static",
+				"qq what is my static ip address.txt"
+			],
+			[
+				"qqdirectory",
+				"qq how can I list unique filetypes in a directory.txt"
+			],
+			[
+				"qqsharepoint",
+				"qq how do i search SharePoint log files.txt"
+			],
+			[
+				"windows",
+				"windows.txt"
+			],
+			[
+				"for",
+				"qq how do I use foreach on the command line with powershell.txt"
+			],
+			[
+				"consec",
+				"qq how do I run powershell commands consecutively.txt"
+			],
+			[
+				"",
+				"sharepoint powershell.txt"
+			],
+			[
+				"sharepointpowe",
+				"sharepoint powershell.txt"
+			],
+			[
+				"document",
+				"Office Documents Do Not Open From SharePoint.txt"
+			],
+			[
+				"documetn",
+				"EDRMS Document ID Settings.txt"
+			],
+			[
+				"sharepoint",
+				"sharepoint.txt"
+			],
+			[
+				"sharepointpower",
+				"sharepoint powershell.txt"
+			],
+			[
+				"sharpointpowershell",
+				"sharepoint powershell.txt"
+			],
+			[
+				"power",
+				"powershell.txt"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\cmsxlb\\Dropbox\\Work\\LIVE projects\\Projects.sublime-project"
+			],
+			[
+				"j",
+				"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Sublime\\User\\journal.sublime-project"
+			],
+			[
+				"n",
+				"C:\\Users\\cmsxlb\\Dropbox\\Apps\\Sublime\\User\\notes.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 350.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
