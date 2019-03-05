@@ -22,7 +22,6 @@
 #>
 
 function New-HUSPMetadataTermSet {
-    # FIXME - need to add a what if here!
     [CmdletBinding(
         SupportsShouldProcess=$true,
         ConfirmImpact="High"
@@ -85,6 +84,7 @@ function New-HUSPMetadataTermSet {
         
         # Check all the terms present in the current term location for existing values
         $SPTermAddLocationName = $SPTermAddLocation.Name
+        
         foreach ($SPTerm in $SPTermAddLocation.Terms) {
             $SPTermName = $SPTerm.Name
             Write-Verbose -message "Checking '$SPTermName' for '$SPTermToAdd'"
@@ -100,7 +100,7 @@ function New-HUSPMetadataTermSet {
             $SPTermAddLocation.CreateTerm($SPTermToAdd, 1033)
             # $SPTermAddLocation.SetDescription("This is a test", 1033) 
             # $SPTermAddLocation.CreateLabel("This is a test synonym", 1033, $false) 
-            # Update the Term Store - we need to do this after each single term is added 
+            # Update the Term Store - we need to do this after each term is added 
             $SPTermStore.CommitAll()
             }  
         } else {
