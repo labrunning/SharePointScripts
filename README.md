@@ -6,16 +6,14 @@ A repository of SharePoint scripts intended for my own personal use on a work pr
 
 These scripts only perform the most rudimentary of checks, do NOT run them unless you know the effects.
 
+## Usage
+
+All the scripts are written as functions, which you need to load with the Import-Module command. Use the force flag to refresh any changes you make
+
+    Import-Module .\Get-HUSPDocumentValues.ps1 -Force
+
 ## Help
 
-Each script contains a help file using the standard PowerShell Get-Help functionality. Well, most of them do but often I forget! To access this, first load the script;
-
-    Import-Module .\Get-HUSPDocumentValues.ps1
-
-If you make changes to a script, use the force flag `-Force` as well to make sure the changes are loaded. You can then get help on the script by running
+Most files have the standard powershell comment based help, so you can see more information about the commands by using the Get-Help command;
 
     Get-Help Get-HUSPDocumentValues
-
-All the scripts are named with a description of what they do so hopefully you can find one that does what you need. The verbs are prefixed with 'HU' to prevent clashes with standard Powershell commands.
-
-Added to GitHub for redundancy and maybe, just maybe, someone else like me may find them useful.
